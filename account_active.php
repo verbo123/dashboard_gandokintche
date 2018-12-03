@@ -1,4 +1,6 @@
 <h2 id="redi">Vous serai réédirigé bientôt....</h2>
+
+
 <?php
         include 'Tools/database.php';
         include 'Tools/fonction.php';
