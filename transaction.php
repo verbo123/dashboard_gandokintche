@@ -62,11 +62,17 @@ include 'pages/control/trans.php';
                         <td>
                             <?php
 
-                            if($tran->code_user_sender == getUserLogin()){
-                                echo ' <span class="status--denied">Virement de fond</span>';
+                            if(substr($tran->no_trans,0,2) == "TR")
+                            {
+                                echo ' <span style="color:#fbad16;" class="">Achat en ligne</span>';
                             }else{
-                                echo '<span class="status--process">Reception de fond</span>';
+                                if($tran->code_user_sender == getUserLogin()){
+                                    echo ' <span class="status--denied">Virement de fond</span>';
+                                }else{
+                                    echo '<span class="status--process">Reception de fond</span>';
+                                }
                             }
+                      
                             ?>
 
                         </td>
