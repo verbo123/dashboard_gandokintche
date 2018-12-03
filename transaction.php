@@ -72,7 +72,7 @@ include 'pages/control/trans.php';
                                     echo '<span class="status--process">Reception de fond</span>';
                                 }
                             }
-                      
+
                             ?>
 
                         </td>
