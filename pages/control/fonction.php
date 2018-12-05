@@ -12,6 +12,50 @@ function verify($table,$field, $code)
     }
 }
 
+
+function getCommission($value)
+{
+    $response =0;
+
+    if($value >=100 && $value<=250000)
+    {
+        $response = 100;
+    }elseif ($value >250000 && $value <= 500000)
+    {
+        $response = 200;
+    }elseif ($value > 500000 && $value <= 750000)
+    {
+        $response = 300;
+    }elseif ($value > 750000 && $value <=1000000){
+        $response=  400;
+    }else{
+        $response = 500;
+    }
+    return $response;
+
+}
+
+
+function sommeCommission()
+{
+    global $bdd;
+    $result=array();
+    $sql=$bdd->prepare("select * from trace_recharge where codeDist=? order by created_at desc");
+    $sql->execute(array(getUserLogin()));
+    if($sql->rowCount() >0 )
+    {
+
+        while ($row=$sql->fetch(PDO::FETCH_OBJ))
+        {
+            $result[]=$row;
+        }
+
+    }
+
+    return $result;
+
+}
+
 function getTransa($no)
 {
     global $bdd;
@@ -134,7 +178,12 @@ function updateMontantRecharge($code,$value)
     $sql->execute(array($value,$code));
 }
 
-
+function updateCommission($code,$value)
+{
+    global $bdd;
+    $sql = $bdd->prepare("update solde set montant_commission=? where code_user_solde=?");
+    $sql->execute(array($value,$code));
+}
 
 
 
@@ -401,6 +450,25 @@ function get_all_notif_vu()
 }
 
 
+function getCommissionData()
+{
+    global  $bdd;
+    $login=getUserLogin();
+    $result=array();
+    $sql=$bdd->prepare("select * from trace_recharge where  codeDist=? order by created_at desc ");
+    $sql->execute(array($login));
+    if($sql)
+    {
+        while ($row=$sql->fetch(PDO::FETCH_OBJ))
+        {
+            $result[]=$row;
+        }
+    }
+    return $result;
+
+}
+
+
 function generateToken($nbre)
 {
     $token=openssl_random_pseudo_bytes($nbre);
@@ -424,6 +492,13 @@ function getMontantUser($code)
 }
 
 function updateMontant($code,$value)
+{
+    global $bdd;
+    $sql = $bdd->prepare("update solde set total=? where code_user_solde=?");
+    $sql->execute(array($value,$code));
+}
+
+function updateMontantPerso($code,$value)
 {
     global $bdd;
     $sql = $bdd->prepare("update solde set total=? where code_user_solde=?");

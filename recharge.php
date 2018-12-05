@@ -1,6 +1,7 @@
 <?php session_start(); ?>
 <?php
 $active = "recharge";
+$devop= "Recharger un compte";
 require 'pages/header.php';?>
 <div class="page-wrapper">
     <!-- HEADER MOBILE-->
@@ -334,6 +335,7 @@ require 'pages/header.php';?>
         </div>
 
 
+
         <?php
         require 'pages/htmfooter.php';
         ?>
@@ -408,7 +410,6 @@ require 'pages/footer.php';
                 },
                 success: function(data) {
                     data = JSON.parse(data);
-                    console.log(data);
                     setTimeout(function () {
                         if(data != false){
                             $("#loader").modal('hide');
@@ -427,7 +428,7 @@ require 'pages/footer.php';
     });
     contenair=$('#content');
     function remplir(data){
-        html = 'Vous voulez effectuer une recharge à '+data.nom+' '+data.prenom;
+        html = 'Vous voulez effectuer une recharge de '+$('#montant').val()+' FCFA à '+data.nom+' '+data.prenom;
         return contenair.html(html);
     }
     $('#submit').click(function () {

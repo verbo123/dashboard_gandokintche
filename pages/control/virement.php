@@ -64,8 +64,9 @@ function virementPonctuel($montant,$login_destinataire=array(),$passe)
         {
             if(permission_service()->virement == "true")
             {
+                $toto=getMontantUser(getUserLogin())->total;
 
-                if(getMontantUser(getUserLogin())->total >0 && getMontantUser(getUserLogin())->total >= $montant*$nbre_login)
+                if($toto >0 && $toto >= $montant*$nbre_login)
                 {
                     foreach ($login_destinataire as $login)
                     {
@@ -86,14 +87,12 @@ function virementPonctuel($montant,$login_destinataire=array(),$passe)
                                 updateMontant($des,$tot1);
 
                                 //Diminuer chez moi
-                                $tot2=getMontantUser(getUserLogin())->total - $montant;
+                                $tot2=$toto - $montant;
                                 updateMontant(getUserLogin(),$tot2);
-
 
                                 echo '<div id="msg" class="alert alert-success"> <button type="button" class="close" data-dismiss="alert">&times;</button>' .
                                     'Virement effectué avec succès pour '. infos_user_op_data($login)->nom." ".infos_user_op_data($login)->prenom.
                                     '</div>';
-
                             }
 
                         }else{

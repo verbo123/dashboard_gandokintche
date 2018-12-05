@@ -13,7 +13,7 @@ if(isset($_POST['montant']) && isset($_POST['user']))
             $req=$bdd->prepare('select * from recharge_autorisation where utilisateur=?');
             $req->execute(array(getUserLogin()));
             $row=$req->fetch(PDO::FETCH_OBJ);
-            if($montant >=1000)
+            if($montant >=500)
             {
                 if($row->solde >= $montant)
                 {
@@ -27,7 +27,7 @@ if(isset($_POST['montant']) && isset($_POST['user']))
                     $result['msg']='Votre solde est insuffisant pour effectuer ce transfert. Veuillez nous contactez pour recharger votre compte de recharge';
                 }
             }else{
-                $result['msg']='Entrer un montant supérieur ou égal à 1000 FCFA';
+                $result['msg']='Entrer un montant supérieur ou égal à 500 FCFA';
             }
 
         }else{

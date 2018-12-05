@@ -25,14 +25,25 @@ if(isset($_POST["passe"]) && isset($_POST["montant"]) && isset($_POST['user']))
             inserNotif($des,"Vous avez reçu une recharge de ".$montant." FCFA venant de ".
                 infos_user(getUserLogin())->nom." ".infos_user(getUserLogin())->prenom).".ID de la transaction ".$no;
 
+            //la commission
+            $com=getCommission($montant) - (getCommission($montant)*0.1);
+            $benif=getCommission($montant)*0.1; //notre bénéfice 10%
+            $rec=$bdd->prepare("insert into trace_recharge(id_tans,codeDist, codeClient, depot_reel, commission, mt_rechargee) values (?,?,?,?,?,?)");
+            $rec->execute(array($no,getUserLogin(),$des,$montant,$com,$montant-getCommission($montant)));
+
+            //Nos Bénéfices après recharge
+            $benef=$bdd->prepare("insert into benefices(id_trans,benef) values (?,?)");
+            $benef->execute(array($no,getCommission($montant)*0.1));
+
             //augmenter chez lui
-            $tot1=getMontantUser($des)->total + $montant;
+            $tot1=getMontantUser($des)->total + ($montant-getCommission($montant));
             updateMontant($des,$tot1);
 
             //Diminuer chez moi dans mon compte de recharge
             $tot2=getMontantUserRecharge(getUserLogin())->solde - $montant;
             updateMontantRecharge(getUserLogin(),$tot2);
 
+            updateCommission(getUserLogin(),getMontantUser(getUserLogin())->montant_commission+$com);
 
             $result['msg'] = 'Transfert de '.$montant.' FCFA avec succès à '. infos_user_op_data($user)->nom." ".infos_user_op_data($user)->prenom.'. ID de la transaction '.$no;
 

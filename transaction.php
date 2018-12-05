@@ -6,6 +6,8 @@ require 'pages/header.php';
 
 <?php
 include 'pages/control/trans.php';
+
+//error_reporting(1);
 //var_dump(getTransaction());
 ?>
 
@@ -76,7 +78,8 @@ include 'pages/control/trans.php';
                             ?>
 
                         </td>
-                        <td><?php echo $tran->montant; ?> FCFA</td>
+                        <td>
+                            <?php echo $tran->montant; ?> FCFA</td>
                         <td>
                             <div class="table-data-feature">
                                 <a target="_blank" href="transaction_pdf?trans=<?php echo $tran->no_trans ?>" style="margin-right:25%" class="item" data-toggle="tooltip" data-placement="top" title="Exporter">

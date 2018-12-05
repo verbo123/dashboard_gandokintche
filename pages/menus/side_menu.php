@@ -33,8 +33,7 @@
                     <a href="payment">
                         <img class="ico" src="images/icon/ico_virement.png"/>Virements</a>
                 </li>
-
-                 <li  class="<?php if($active == "achat"){ echo "active";} ?>">
+                <li  class="<?php if($active == "achat"){ echo "active";} ?>">
                     <a href="shop">
                         <img class="ico" src="images/icon/panier.png"/>Achat en ligne</a>
                 </li>
@@ -45,11 +44,24 @@
                                 {
 
                         ?>
-                            <li  class="<?php if($active == "recharge"){ echo "active";} ?>" style="">
-                                <a  href="recharge">  <img class="ico" src="images/icon/ico_recha.png"/>Recharge de compte</a>
-                            </li>
+                                    <li class="has-sub">
+                                        <a class="js-arrow <?php if($active == "recharge"){ echo "open";} ?>"  href="#">
+                                            <img class="ico" src="images/icon/ico_recha.png"/>Distributeur</a>
+                                        <ul style="<?php if($active == "recharge"){ echo "display:block";} ?>" class="list-unstyled navbar__sub-list js-sub-list">
 
-                          <?php
+                                            <li  class="<?php if($devop == "Recharger un compte"){ echo "active";} ?>">
+                                                <a href="recharge">Recharge de compte</a>
+                                            </li>
+
+                                            <li  class="<?php if($devop == "Mes commissions"){ echo "active";} ?>">
+                                                <a href="history">Mes Historiques</a>
+                                            </li>
+
+                                        </ul>
+
+                                    </li>
+
+                                    <?php
 
                                 }
                         ?>
