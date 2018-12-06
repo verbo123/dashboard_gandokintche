@@ -115,7 +115,7 @@ $pe=_verify($table,$field,_getUserLogin());
                     <li class="has-sub">
                         <a class="js-arrow <?php if($active == "recharge"){ echo "open";} ?>"  href="#">
                             <img class="ico" src="images/icon/ico_recha.png"/>Distributeur</a>
-                        <ul style="<?php if($active == "recharge"){ echo "display:block";} ?>" class="list-unstyled navbar__sub-list js-sub-list">
+                        <ul style="<?php if($active == "recharge"){ echo "display:block";} ?>" class="navbar-mobile-sub__list list-unstyled js-sub-list">
 
                             <li  class="<?php if($devop == "Recharger un compte"){ echo "active";} ?>">
                                 <a href="recharge">Recharge de compte</a>

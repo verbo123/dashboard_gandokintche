@@ -69,7 +69,7 @@ include 'pages/control/trans.php';
                                                         <i class="fa fa-money-bill-alt"></i>
                                                     </div>
                                                     <div class="text">
-                                                        <h2><?php echo getMontantUser(getUserLogin())->total + getMontantUser(getUserLogin())->montant_commission + getMontantUser(getUserLogin())->montant_commerce; ?> CFA</h2>
+                                                        <h2><?php echo getMontantUser(getUserLogin())->total; ?> CFA</h2>
                                                         <a style="color:rgba(255, 255, 255, 0.6);font-size:18px" href="balance">Solde courant</a>
                                                     </div>
                                                 </div>

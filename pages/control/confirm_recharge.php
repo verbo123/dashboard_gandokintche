@@ -22,7 +22,7 @@ if(isset($_POST["passe"]) && isset($_POST["montant"]) && isset($_POST['user']))
         $sq->execute(array($no,$op,$typ,$montant,getUserLogin(),$des));
         if($sq)
         {
-            inserNotif($des,"Vous avez reçu une recharge de ".$montant." FCFA venant de ".
+            inserNotif($des,"Vous avez reçu une recharge de ".($montant-getCommission($montant))." FCFA venant de ".
                 infos_user(getUserLogin())->nom." ".infos_user(getUserLogin())->prenom).".ID de la transaction ".$no;
 
             //la commission
