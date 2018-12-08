@@ -3,6 +3,7 @@ if(!isset($_COOKIE["account_code"]))
 {
     header("location: login");
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">

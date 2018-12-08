@@ -13,6 +13,19 @@ function verify($table,$field, $code)
 }
 
 
+function verifyR($table,$field, $code)
+{
+    global $bdd;
+    $req=$bdd->prepare("select * from ".$table." where ".$field."= ? and valide=true");
+    $req->execute(array($code));
+    if($req->rowCount() > 0){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+
 function getCommission($value)
 {
     $response =0;

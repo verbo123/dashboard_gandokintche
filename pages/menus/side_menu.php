@@ -40,7 +40,7 @@
 
 
                         <?php 
-                                if(_verify('recharge_autorisation','utilisateur',_getUserLogin()) == true)
+                                if(_verifyR('recharge_autorisation','utilisateur',_getUserLogin()) == true)
                                 {
 
                         ?>

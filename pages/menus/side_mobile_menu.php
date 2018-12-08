@@ -14,6 +14,19 @@ function _verify($table,$field, $code)
 }
 
 
+function _verifyR($table,$field, $code)
+{
+    global $bdd;
+    $req=$bdd->prepare("select * from ".$table." where ".$field."= ? and valide=true");
+    $req->execute(array($code));
+    if($req->rowCount() > 0){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+
 function _getUserLogin()
 {
     return $_COOKIE["account_code"];
@@ -108,7 +121,7 @@ $pe=_verify($table,$field,_getUserLogin());
                 </li>
 
                 <?php
-                if(_verify('recharge_autorisation','utilisateur',_getUserLogin()) == true)
+                if(_verifyR('recharge_autorisation','utilisateur',_getUserLogin()) == true)
                 {
 
                     ?>

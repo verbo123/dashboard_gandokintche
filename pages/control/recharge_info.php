@@ -6,7 +6,7 @@ if(isset($_POST['montant']) && isset($_POST['user']))
 {
     extract($_POST);
     $result=array();
-    if(verify('recharge_autorisation','utilisateur',getUserLogin()) == true)
+    if(verifyR('recharge_autorisation','utilisateur',getUserLogin()) == true)
     {
         if(verify('users','op_code',$user) == true)
         {

@@ -2,7 +2,12 @@
 <?php
 $active = "recharge";
 $devop= "Recharger un compte";
-require 'pages/header.php';?>
+require 'pages/header.php';
+
+
+?>
+
+
 <div class="page-wrapper">
     <!-- HEADER MOBILE-->
     <?php require 'pages/menus/side_mobile_menu.php';?>
@@ -15,7 +20,9 @@ require 'pages/header.php';?>
     <!-- PAGE CONTAINER-->
     <div class="page-container">
         <!-- HEADER DESKTOP-->
-        <?php require 'pages/menus/head_menu.php';?>
+        <?php
+        require 'pages/menus/head_menu.php';
+        ?>
         <!-- END HEADER DESKTOP-->
 
         <!-- MAIN CONTENT-->
@@ -390,6 +397,20 @@ require 'pages/footer.php';
 ?>
 <script src="js/qrcode_reader.js"></script>
 <script type="text/javascript">
+
+
+
+    $.ajax({
+        url:'pages/control/redirectRecharge.php',
+        success : function (data) {
+            data=JSON.parse(data);
+            if(data === false)
+            {
+                window.location.href=history.back(-1);
+            }
+        }
+    });
+
 
     function remplirsucess(data){
         html ='<img src="images/tre.gif"/><p style="text-align: center">'+data.msg+'</p>';

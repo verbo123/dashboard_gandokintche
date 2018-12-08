@@ -167,6 +167,17 @@ require 'pages/footer.php';
 <script src="js/qrcode_reader.js"></script>
 
 <script type="text/javascript">
+    $.ajax({
+        url:'pages/control/redirectRecharge.php',
+        success : function (data) {
+            data=JSON.parse(data);
+            if(data === false)
+            {
+                window.location.href=history.back(-1);
+            }
+        }
+    });
+
     if(screen.width <= 500 ){
         $('#example').addClass(' table-responsive');
     }else {
