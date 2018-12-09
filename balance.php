@@ -57,6 +57,10 @@ require 'pages/header.php';?>
                                     <div class="card-header">
                                         <i class="mr-2 fa fa-align-justify"></i>
                                         <strong class="card-title" v-if="headerText">Balance</strong>
+
+                                        <a href="myrecharge" style="float: right;padding: 10px;color: #0d1c3f;" class="badge badge-pill badge-warning">
+                                            Historiques des recharges
+                                        </a>
                                     </div>
                                     <div class="card-body">
                                         <div style="margin-top: 8px" class="erro">

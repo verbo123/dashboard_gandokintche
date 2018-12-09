@@ -26,6 +26,46 @@ function verifyR($table,$field, $code)
 }
 
 
+
+function getTraceRecharge()
+{
+    global $bdd;
+    $result=array();
+    $req=$bdd->prepare("select * from trace_recharge where codeClient=? order by created_at desc ");
+    $req->execute(array(getUserLogin()));
+    if($req)
+    {
+        while ($row=$req->fetch(PDO::FETCH_OBJ))
+        {
+            $result[]=$row;
+        }
+
+    }
+
+    return $result;
+}
+
+
+function findTraceBenefice($code)
+{
+    global $bdd;
+    $result=null;
+    $req=$bdd->prepare("select * from benefices where id_trans=?");
+    $req->execute(array($code));
+    if($req)
+    {
+        if($req)
+        {
+            $result=$req->fetch(PDO::FETCH_OBJ);
+        }
+
+    }
+
+    return $result;
+}
+
+
+
 function getCommission($value)
 {
     $response =0;
