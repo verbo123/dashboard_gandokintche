@@ -25,7 +25,7 @@ require 'pages/header.php';?>
                                 <div class="card">
                                     <div class="card-header">
                                         <i class="mr-2 fa fa-align-justify"></i>
-                                        <strong class="card-title" v-if="headerText">Historiques de recharges de compte</strong>
+                                        <strong class="card-title" v-if="headerText"><?php echo ma_tra("Historiques de recharges de compte")?></strong>
                                     </div>
                                     <div class="card-body">
                                         <?php
@@ -38,10 +38,10 @@ require 'pages/header.php';?>
                                                 <tr>
                                                     <th>ID</th>
                                                     <th>Date</th>
-                                                    <th>Distributeur</th>
-                                                    <th>Dépôt réel</th>
-                                                    <th>Prélèvement</th>
-                                                    <th>Montant rechargé</th>
+                                                    <th><?php echo ma_tra("Distributeur")?></th>
+                                                    <th><?php echo ma_tra("Dépôt réel")?></th>
+                                                    <th><?php echo ma_tra("Prélèvement")?></th>
+                                                    <th><?php echo ma_tra("Montant rechargé")?></th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>
@@ -79,7 +79,7 @@ require 'pages/header.php';?>
 
                                             <h3>
 
-                                                Aucune recharge effectuée!
+                                            <?php echo ma_tra("Aucune recharge effectuée!")?>
 
                                             </h3>
 

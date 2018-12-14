@@ -28,10 +28,9 @@ include 'pages/header.php';?>
                                 <div class="card">
                                     <div class="card-header">
                                         <i class="mr-2 fa fa-align-justify"></i>
-                                        <strong class="card-title" v-if="headerText">Rôles</strong><br>
+                                        <strong class="card-title" v-if="headerText"><?php echo ma_tra("Rôles")?></strong><br>
                                         <small>
-                                           Les rôles définissent les autorisations accordées aux membres de
-                                            l'équipe dans votre compte GANDOKINTCHE.
+                                           <?php echo ma_tra("Les rôles définissent les autorisations accordées aux membres de l'équipe dans votre compte GANDOKINTCHE.")?>
                                         </small>
                                     </div>
 

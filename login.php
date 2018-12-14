@@ -1,4 +1,5 @@
 ﻿<?php
+require 'Tools/localization.php';
 if(isset($_COOKIE["account_code"]))
 {
     if(isset($_GET['return']) &&  $_GET['return'] == true)
@@ -28,7 +29,7 @@ if(isset($_COOKIE["account_code"]))
 <body>
 <div class="container">
     <a href="http://www.gandokintche.com/index" class="lip" style="color: #00A0D1;">
-        <span> <i class="fa fa-arrow-left"></i> </span> Retour à la page d'accueil
+        <span> <i class="fa fa-arrow-left"></i> </span> <?php echo ma_tra("Retour à la page d'accueil") ?>
     </a>
 
     <div class="row main">
@@ -56,7 +57,7 @@ if(isset($_COOKIE["account_code"]))
                 </div>
 
                 <div class="form-group">
-                    <label for="password" class="cols-sm-2 control-label">Mot de passe</label>
+                    <label for="password" class="cols-sm-2 control-label"><?php echo ma_tra("Mot de passe") ?></label>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
@@ -68,16 +69,16 @@ if(isset($_COOKIE["account_code"]))
                 <div class="form-group ">
                     <div class="call-to-action">
                         <button style="width: 319px; height: 50px" name="valider" type="submit" value="submit your quote" class="btn submint_btn form-control">
-                            Se connecter
+                            <?php echo ma_tra("Se connecter")?>
                         </button>
                     </div>
                 </div>
                 <div class="login-register">
-                    <a href="register">Créez un compte</a>
+                    <a href="register"><?php echo ma_tra("Créez un compte")?></a>
                 </div>
 
                 <div class="login-register">
-                    <a style="color: red;font-weight: 800" href="forgot-password">Mot de passe oublié ?</a>
+                    <a style="color: red;font-weight: 800" href="forgot-password"><?php echo ma_tra("Mot de passe oublié ?")?></a>
                 </div>
             </form>
         </div>
@@ -162,10 +163,10 @@ if(isset($_COOKIE["account_code"]))
         </div>
         <div class="pull-right">
             <ul>
-               <li><a href="#">Terme & Condition</a></li>
-                <li><a  href="http://www.gandokintche.com/tarif">Tarifs</a></li>
-                <li><a  href="http://www.gandokintche.com/developpeur">Développeurs</a></li>
-                <li><a href="#">Nous contactez</a></li>
+                <li><a href="#">Terme & Condition</a></li>
+                <li><a href="http://www.gandokintche.com/tarif"><?php echo ma_tra("Tarifs")?></a></li>
+                <li><a  href="http://www.gandokintche.com/developpeur"><?php echo ma_tra("Développeurs")?></a></li>
+                <li><a href="#"><?php echo ma_tra("Nous contactez")?></a></li>
             </ul>
         </div>
     </div>

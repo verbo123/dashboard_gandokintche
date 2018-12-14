@@ -27,9 +27,9 @@ include 'pages/header.php';?>
                             <div class="card">
                                 <div class="card-header">
                                     <i class="mr-2 fa fa-align-justify"></i>
-                                    <strong class="card-title" v-if="headerText">Rôles</strong>
+                                    <strong class="card-title" v-if="headerText"><?php echo ma_tra("Mes autorisations")?></strong>
 
-                                    <a href="#" class="pull-right">Accedez à la doumentation <span><i class="fa fa-arrow-right"></i> </span></a>
+                                    <a href="#" class="pull-right"><?php echo ma_tra("Accedez à la doumentation")?> <span><i class="fa fa-arrow-right"></i> </span></a>
                                 </div>
 
                                 <div class="table-data__tool" style="margin-bottom: 0px;">
@@ -41,7 +41,8 @@ include 'pages/header.php';?>
 
                                     <div class="table-data__tool-right">
                                         <button data-toggle="modal" data-target="#staticModal" style="margin: 10px" class="au-btn au-btn-icon au-btn--green au-btn--small">
-                                            <i class="zmdi zmdi-plus"></i>Créer un utilisateur
+                                            <i class="zmdi zmdi-plus"></i>
+                                            <?php echo ma_tra("Créer un utilisateur")?>
                                         </button>
 
                                     </div>
@@ -80,9 +81,9 @@ include 'pages/header.php';?>
                                     <table class="table table-responsive-lg">
                                         <thead>
                                         <tr>
-                                            <td>Nom & Prénoms</td>
-                                            <td>Role</td>
-                                            <td>Description</td>
+                                            <td><?php echo ma_tra("Nom & Prénoms")?></td>
+                                            <td><?php echo ma_tra("Role")?></td>
+                                            <td><?php echo ma_tra("Description")?></td>
                                             <td></td>
                                         </tr>
                                         </thead>
@@ -100,11 +101,11 @@ include 'pages/header.php';?>
                                                 </td>
 
                                                 <td>
-                                                    <span class="role admin">Administrateur</span>
+                                                    <span class="role admin"><?php echo ma_tra("Administrateur")?></span>
                                                 </td>
 
                                                 <td>
-                                                    Accès complet du système, les autorisations et la facturation
+                                                    <?php echo ma_tra("Accès complet du système, les autorisations et la facturation")?>
                                                 </td>
 
 
@@ -161,7 +162,7 @@ include 'pages/header.php';?>
                                                     </td>
                                                     <td>
                                                         <div class="table-data-feature">
-                                                            <button onclick="popu('<?php echo infos_user($user->code_user_invite)->adresse; ?>','<?php echo getGroupe($user->groupe)->libelle; ?>')"  class="item modif"  data-placement="top" title="Modifier">
+                                                            <button onclick="popu('<?php echo infos_user($user->code_user_invite)->adresse; ?>','<?php echo getGroupe($user->groupe)->libelle; ?>')"  class="item modif"  data-placement="top" title="<?php echo ma_tra("Modifier")?>">
                                                                 <i class="zmdi zmdi-edit"></i>
                                                             </button>
                                                         </div>
@@ -193,7 +194,7 @@ include 'pages/header.php';?>
             <div class="modal-dialog modal-sm" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="staticModalLabel">Invité un membre</h5>
+                        <h5 class="modal-title" id="staticModalLabel"><?php echo ma_tra("Invité un membre")?></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -202,13 +203,13 @@ include 'pages/header.php';?>
                         <form data-parsley-validate method="post" novalidate="novalidate" autocomplete="off">
 
                             <div class="form-group">
-                                <label for="cc-payment" class="control-label mb-1">Email de la personne</label>
+                                <label for="cc-payment" class="control-label mb-1"><?php echo ma_tra("Email de la personne")?></label>
                                 <input data-parsley-trigger="keypress"  required="required" id="cc-pament" value="" name="mail" type="email" class="form-control" aria-required="true" aria-invalid="false">
                             </div>
 
 
                             <div class="form-group">
-                                <label for="selectSm" class=" form-control-label">Groupe</label>
+                                <label for="selectSm" class=" form-control-label"><?php echo ma_tra("Groupe")?></label>
                                 <select required="required" name="groupe" class=" form-control">
                                     <option value=""> </option>
                                     <?php
@@ -225,8 +226,8 @@ include 'pages/header.php';?>
                             </div>
 
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-                                <button type="submit" name="valider" class="btn btn-primary">Enregistrer</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal"><?php echo ma_tra("Annuler")?></button>
+                                <button type="submit" name="valider" class="btn btn-primary"><?php echo ma_tra("Enregistrer")?></button>
                             </div>
 
                         </form>
@@ -242,7 +243,7 @@ include 'pages/header.php';?>
             <div class="modal-dialog modal-sm" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="staticModalLabel">Modification</h5>
+                        <h5 class="modal-title" id="staticModalLabel"><?php echo ma_tra("Modification")?></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -251,13 +252,13 @@ include 'pages/header.php';?>
                         <form data-parsley-validate method="post" novalidate="novalidate" autocomplete="off">
 
                             <div id="for1" class="form-group">
-                                <label for="cc-payment" class="control-label mb-1">Email de la personne</label>
+                                <label for="cc-payment" class="control-label mb-1"><?php echo ma_tra("Email de la personne")?></label>
                                 <input id="mail" data-parsley-trigger="keypress"  required="required"  name="mail2" type="email" class="form-control" >
                             </div>
 
 
                             <div id="for2" class="form-group">
-                                <label for="selectSm" class=" form-control-label">Groupe</label>
+                                <label for="selectSm" class=" form-control-label"><?php echo ma_tra("Groupe")?></label>
                                 <select id="groupe" required="required" name="groupe2" class="form-control">
                                     <option value="">  </option>
                                     <?php
@@ -273,8 +274,8 @@ include 'pages/header.php';?>
                             </div>
 
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-                                <button type="submit" name="modifier" class="btn btn-primary">Modifier</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal"><?php echo ma_tra("Annuler")?></button>
+                                <button type="submit" name="modifier" class="btn btn-primary"><?php echo ma_tra("Modifier")?></button>
                             </div>
 
                         </form>

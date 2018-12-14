@@ -10,7 +10,7 @@
             <div class="header-wrap">
                 <form class="form-header" action="" method="POST">
                                        <div style="line-height: 5" class="au-form-icon--sm">
-                        <input id="recho" style="border-radius: 25px" class="valu au-input--w435 au-input--style2" type="text" placeholder="Recherche...">
+                        <input id="recho" style="border-radius: 25px" class="valu au-input--w435 au-input--style2" type="text" placeholder="<?php echo ma_tra("Recherche..."); ?>">
                         <a  style="top: 20px;" class="sea au-btn--submit2" href="">
                             <i class="zmdi zmdi-search"></i>
                         </a>
@@ -22,10 +22,10 @@
                             <img src="images/icon/livre.png">
                             <div class="mess-dropdown js-dropdown">
                                 <div class="mess__title">
-                                    <a href="#">Accedez à la documentation</a>
+                                    <a href="#"><?php echo ma_tra("Accedez à la documentation")?></a>
                                 </div>
                                 <div class="mess__item">
-                                    <a href="#">Support</a>
+                                    <a href="#"><?php echo ma_tra("Support")?></a>
                                 </div>
 
                             </div>
@@ -66,7 +66,7 @@
                                         if (get_nbre_notif() >= 4) {
                                             ?>
                                             <div class="notifi__footer">
-                                                <a href="all_notify">Toutes les notifications</a>
+                                                <a href="all_notify"><?php echo ma_tra("Toutes les notifications")?></a>
                                             </div>
                                             <?php
                                         }
@@ -89,27 +89,30 @@
                                 </a>
                             </div>
                             <div class="account-dropdown js-dropdown">
+
                                 <div class="info clearfix">
-                                  
                                     <div class="">
                                         <h5 class="name">
                                             <a href="#">
                                                 <?php echo infos_user($_COOKIE["account_code"])->prenom.' '.infos_user($_COOKIE["account_code"])->nom.' ';?>
                                             </a>
                                         </h5>
-                                        <span class="email">Administrateur</span>
+                                        <span class="email"><?php echo ma_tra("Administrateur")?></span>
                                     </div>
                                 </div>
+
                                 <div class="account-dropdown__body">
                                     <div class="account-dropdown__item">
                                         <a href="profil">
-                                            <i class="zmdi zmdi-account"></i>Profil</a>
+                                            <i class="zmdi zmdi-account"></i><?php echo ma_tra("Profil")?></a>
                                     </div>
                                 </div>
+
                                 <div class="account-dropdown__footer">
                                     <a href="logout">
                                         <i class="zmdi zmdi-power"></i>Logout</a>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -118,3 +121,4 @@
         </div>
     </div>
 </header>
+

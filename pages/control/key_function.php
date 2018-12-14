@@ -15,23 +15,55 @@ function creatKey_app($app)
             $req->execute(array(strtolower($app),$app,getUserLogin(),$tk_token,$active,$prod,$test));
             if($req)
             {
-                echo '<div id="msg" class="alert alert-success"> <button type="button" class="close" data-dismiss="alert">&times;</button>' .
-                    'Application crée avec succès !'.
-                    '</div>';
+                if(isset($_COOKIE['lang']) && $_COOKIE['lang'] == "en_US")
+                {
+                    echo '<div id="msg" class="alert alert-success"> <button type="button" class="close" data-dismiss="alert">&times;</button>' .
+                        'Application creates successfully !'.
+                        '</div>';
+                }else{
+                    echo '<div id="msg" class="alert alert-success"> <button type="button" class="close" data-dismiss="alert">&times;</button>' .
+                        'Application crée avec succès !'.
+                        '</div>';
+                }
+
             }else{
-                echo '<div id="msg" class="alert alert-warning"> <button type="button" class="close" data-dismiss="alert">&times;</button>' .
-                    'Une erreur s\'est produite, veuillez réessayer plus tard.'.
-                    '</div>';
+                if(isset($_COOKIE['lang']) && $_COOKIE['lang'] == "en_US")
+                {
+                    echo '<div id="msg" class="alert alert-warning"> <button type="button" class="close" data-dismiss="alert">&times;</button>' .
+                        'An error occured, please try again later.'.
+                        '</div>';
+                }else{
+                    echo '<div id="msg" class="alert alert-warning"> <button type="button" class="close" data-dismiss="alert">&times;</button>' .
+                        'Une erreur s\'est produite, veuillez réessayer plus tard.'.
+                        '</div>';
+                }
+
             }
         }else{
-            echo '<div id="msg" class="alert alert-danger"> <button type="button" class="close" data-dismiss="alert">&times;</button>' .
-                'Désolé, cette application existe déjà !.'.
-                '</div>';
+            if(isset($_COOKIE['lang']) && $_COOKIE['lang'] == "en_US")
+            {
+                echo '<div id="msg" class="alert alert-danger"> <button type="button" class="close" data-dismiss="alert">&times;</button>' .
+                    'Sorry, this app already exists !.'.
+                    '</div>';
+            }else{
+                echo '<div id="msg" class="alert alert-danger"> <button type="button" class="close" data-dismiss="alert">&times;</button>' .
+                    'Désolé, cette application existe déjà !.'.
+                    '</div>';
+            }
+
         }
     }else{
-        echo '<div id="msg" class="alert alert-danger"> <button type="button" class="close" data-dismiss="alert">&times;</button>' .
-            'Désolé, vous n\'avez pas un compte marchand !.<a href="auth_marchand">Cliquez ici</a> pour enregistrer un compte marchand'.
-            '</div>';
+        if(isset($_COOKIE['lang']) && $_COOKIE['lang'] == "en_US")
+        {
+            echo '<div id="msg" class="alert alert-danger"> <button type="button" class="close" data-dismiss="alert">&times;</button>' .
+                'Sorry, you do not have a merchant account !.<a href="auth_marchand">Click here</a> to register a merchant account'.
+                '</div>';
+        }else{
+            echo '<div id="msg" class="alert alert-danger"> <button type="button" class="close" data-dismiss="alert">&times;</button>' .
+                'Désolé, vous n\'avez pas un compte marchand !.<a href="auth_marchand">Cliquez ici</a> pour enregistrer un compte marchand'.
+                '</div>';
+        }
+
     }
 
 

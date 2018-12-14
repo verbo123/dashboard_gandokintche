@@ -20,7 +20,7 @@ $sender=infos_user($data->code_user_sender);
             <div class="card">
                 <div class="card-header">
                     <i class="mr-2 fa fa-align-justify"></i>
-                    <strong class="card-title" v-if="headerText">Détail transation  N° <?php echo $_GET["trans"]; ?> </strong>
+                    <strong class="card-title" v-if="headerText"><?php echo ma_tra("Détail")?> transation  N° <?php echo $_GET["trans"]; ?> </strong>
                 </div>
 
                             <div class="table-data__tool">
@@ -29,21 +29,21 @@ $sender=infos_user($data->code_user_sender);
                                 </div>
                                 <div style="margin-right: 10px;margin-left: 10px" class="table-data__tool-right">
                                     <a target="_blank" href="transaction_pdf?trans=<?php echo $_GET["trans"]; ?>" style="margin-top: 10px"  class="btn btn-info au-btn--small">
-                                        Exporter
+                                        <?php echo ma_tra("Exporter")?>
                                     </a>
                                 </div>
 
                              </div>
 
                 <div style="padding-left: 18px; padding-right: 18px;padding-bottom: 18px" >
-                    <strong>Envoyeur</strong>
+                    <strong><?php echo ma_tra("Envoyeur")?></strong>
                     <table id="example" class=" table table-striped table-bordered"">
                     <thead>
                     <tr>
-                        <th>Nom et Prénom(s)</th>
+                        <th><?php echo ma_tra("Nom et Prénom(s)")?></th>
                         <th>Email</th>
-                        <th>Téléphone</th>
-                        <th>Photo</th>
+                        <th><?php echo ma_tra("Téléphone")?></th>
+                        <th><?php echo ma_tra("Photo")?></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -71,14 +71,14 @@ $sender=infos_user($data->code_user_sender);
 
 
                 <div style="padding-left: 18px; padding-right: 18px;padding-bottom: 18px" >
-                    <strong>Reçeveur</strong>
+                    <strong><?php echo ma_tra("Reçeveur")?></strong>
                     <table id="example2" class=" table table-striped table-bordered"">
                     <thead>
                     <tr>
-                        <th>Nom et Prénom(s)</th>
+                        <th><?php echo ma_tra("Nom et Prénom(s)")?></th>
                         <th>Email</th>
-                        <th>Téléphone</th>
-                        <th>Photo</th>
+                        <th><?php echo ma_tra("Téléphone")?></th>
+                        <th><?php echo ma_tra("Photo")?></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -106,8 +106,8 @@ $sender=infos_user($data->code_user_sender);
 
 
                 <div class="text-right" style="padding-left: 18px; padding-right: 18px;padding-bottom: 18px" >
-                        <p>Montant : <strong><?php echo $data->montant; ?> CFA</strong></p>
-                          <p>Date de l'opération  : <strong><?php echo date_conversion($data->date); ?> </strong></p>
+                        <p><?php echo ma_tra("Montant")?> : <strong><?php echo $data->montant; ?> CFA</strong></p>
+                          <p><?php echo ma_tra("Date de l'opération")?>  : <strong><?php echo date_conversion($data->date); ?> </strong></p>
                 </div>
 
             </div>

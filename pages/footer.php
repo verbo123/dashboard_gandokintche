@@ -31,6 +31,7 @@
 <script src="js/bootstrap-select.js"></script>
 <script src="js/jquery.easy-autocomplete.min.js"></script>
 <script src="build/js/intlTelInput.js"></script>
+<script src="js/cookies.js"></script>
 
 <script type="text/javascript">
 
@@ -98,9 +99,9 @@ setInterval(function () {
             $(".quantity").html(data);
             var cont="";
             if(data==0){
-                cont = '<p>Vous n\'avez aucune notification</p>';
+                cont = "<p><?php echo ma_tra("Vous n\'avez aucune notification")?></p>";
             }else {
-                cont="<p>Vous avez "+data+" nouvelle(s) notification(s)</p>";
+                cont="<p><?php echo ma_tra("Vous avez")?> "+data+" <?php echo ma_tra("nouvelle(s) notification(s)")?></p>";
                 i=0;
                 $.ajax({
                     url:'pages/control/get_all_notif.php',
@@ -140,47 +141,87 @@ setInterval(function () {
         });
 
 
-    tAds = $(".example").dataTable({
-        "paging": true,
-        "lengthChange": true,
-        "searching": true,
-        "ordering": true,
-        "info": true,
-        "autoWidth": false,
-        "aaSorting": [[0,'desc']],
-        "language": {
-            "decimal": ",",
-            "thousands": ".",
-            "sProcessing":     "Traitement en cours...",
-            "sSearch":         "Rechercher&nbsp;:",
-            "sLengthMenu":     "Afficher _MENU_ &eacute;l&eacute;ments",
-            "sInfo":           "Affichage des &eacute;l&eacute;ments _START_ &agrave; _END_ sur _TOTAL_ &eacute;l&eacute;ments",
-            "sInfoEmpty":      "Affichage des &eacute;l&eacute;ments 0 &agrave; 0 sur 0 &eacute;l&eacute;ments",
-            "sInfoFiltered":   "(filtr&eacute; de _MAX_ &eacute;l&eacute;ments au total)",
-            "sInfoPostFix":    "",
-            "sLoadingRecords": "Chargement en cours...",
-            "sZeroRecords":    "Aucun &eacute;l&eacute;ment &agrave; afficher",
-            "sEmptyTable":     "Aucune donnée enregistr&eacute;.",
-            "buttons": {
-                "copyTitle": 'C\'est Copié !',
-                "copyKeys": 'Appuyez sur <i>ctrl</i> ou <i>\u2318</i> + <i>C</i> pour copier les données du tableau dans votre presse-papiers. <br><br>Pour annuler, cliquez sur ce message ou appuyez sur Echap.',
-                "copySuccess": {
-                    _: '%d lignes copiées dans le presse-papier',
-                    1: '1 ligne copiée dans le presse papier'
-                }
-            },
-            "oPaginate": {
-                "sFirst":      "Premier",
-                "sPrevious":   "Pr&eacute;c&eacute;dent",
-                "sNext":       "Suivant",
-                "sLast":       "Dernier"
-            },
-            "oAria": {
-                "sSortAscending":  ": Trier la colonne par ordre croissant",
-                "sSortDescending": ": Trier la colonne par ordre d&eacute;croissant"
-            }
-        }
-    });
+   if(Cookies.get("lang")=="en_US")
+   {
+       tAds = $(".example").dataTable({
+           "paging": true,
+           "lengthChange": true,
+           "searching": true,
+           "ordering": true,
+           "info": true,
+           "autoWidth": false,
+           "aaSorting": [[0,'desc']],
+           "language": {
+               "decimal": ",",
+               "thousands": ".",
+               "sEmptyTable":     "No data available in table",
+               "sInfo":           "Showing _START_ to _END_ of _TOTAL_ entries",
+               "sInfoEmpty":      "Showing 0 to 0 of 0 entries",
+               "sInfoFiltered":   "(filtered from _MAX_ total entries)",
+               "sInfoPostFix":    "",
+               "sInfoThousands":  ",",
+               "sLengthMenu":     "Show _MENU_ entries",
+               "sLoadingRecords": "Loading...",
+               "sProcessing":     "Processing...",
+               "sSearch":         "Search:",
+               "sZeroRecords":    "No matching records found",
+               "oPaginate": {
+                   "sFirst":    "First",
+                   "sLast":     "Last",
+                   "sNext":     "Next",
+                   "sPrevious": "Previous"
+               },
+               "oAria": {
+                   "sSortAscending":  ": activate to sort column ascending",
+                   "sSortDescending": ": activate to sort column descending"
+               }
+           }
+       });
+
+   }else{
+       tAds = $(".example").dataTable({
+           "paging": true,
+           "lengthChange": true,
+           "searching": true,
+           "ordering": true,
+           "info": true,
+           "autoWidth": false,
+           "aaSorting": [[0,'desc']],
+           "language": {
+               "decimal": ",",
+               "thousands": ".",
+               "sProcessing":     "Traitement en cours...",
+               "sSearch":         "Rechercher&nbsp;:",
+               "sLengthMenu":     "Afficher _MENU_ &eacute;l&eacute;ments",
+               "sInfo":           "Affichage des &eacute;l&eacute;ments _START_ &agrave; _END_ sur _TOTAL_ &eacute;l&eacute;ments",
+               "sInfoEmpty":      "Affichage des &eacute;l&eacute;ments 0 &agrave; 0 sur 0 &eacute;l&eacute;ments",
+               "sInfoFiltered":   "(filtr&eacute; de _MAX_ &eacute;l&eacute;ments au total)",
+               "sInfoPostFix":    "",
+               "sLoadingRecords": "Chargement en cours...",
+               "sZeroRecords":    "Aucun &eacute;l&eacute;ment &agrave; afficher",
+               "sEmptyTable":     "Aucune donnée enregistr&eacute;.",
+               "buttons": {
+                   "copyTitle": 'C\'est Copié !',
+                   "copyKeys": 'Appuyez sur <i>ctrl</i> ou <i>\u2318</i> + <i>C</i> pour copier les données du tableau dans votre presse-papiers. <br><br>Pour annuler, cliquez sur ce message ou appuyez sur Echap.',
+                   "copySuccess": {
+                       _: '%d lignes copiées dans le presse-papier',
+                       1: '1 ligne copiée dans le presse papier'
+                   }
+               },
+               "oPaginate": {
+                   "sFirst":      "Premier",
+                   "sPrevious":   "Pr&eacute;c&eacute;dent",
+                   "sNext":       "Suivant",
+                   "sLast":       "Dernier"
+               },
+               "oAria": {
+                   "sSortAscending":  ": Trier la colonne par ordre croissant",
+                   "sSortDescending": ": Trier la colonne par ordre d&eacute;croissant"
+               }
+           }
+       });
+
+   }
 
 
 </script>

@@ -28,7 +28,7 @@ include 'pages/header.php';?>
                             <div class="card">
                                 <div class="card-header">
                                     <i class="mr-2 fa fa-align-justify"></i>
-                                    <strong class="card-title" v-if="headerText">Facturation</strong>
+                                    <strong class="card-title" v-if="headerText"><?php echo ma_tra("Facturation")?></strong>
                                 </div>
 
                                 <div class="table-data__tool" style="margin-bottom: 0px;">
@@ -60,11 +60,11 @@ include 'pages/header.php';?>
                                         <table class="example table table-responsive-lg table-striped table-bordered" style="width:100%">
                                             <thead>
                                             <tr>
-                                                <th>Référence</th>
-                                                <th>Client</th>
+                                                <th><?php echo ma_tra("Référence")?></th>
+                                                <th><?php echo ma_tra("Client")?></th>
                                                 <th>Date</th>
-                                                <th>Montant</th>
-                                                <th>Actions</th>
+                                                <th><?php echo ma_tra("Montant")?></th>
+                                                <th><?php echo ma_tra("Actions")?></th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -80,10 +80,10 @@ include 'pages/header.php';?>
                                                 <td><?php echo (getMontantTotal($facture->ref)+infoVente($facture->ref)->frais)*(1+infoVente($facture->ref)->tax); ?>  FCFA</td>
                                                 <td>
                                                     <div class="table-data-feature">
-                                                        <a href="invoice_detail?product=<?php echo $facture->ref; ?>&token_ID=<?php echo sha1($facture->ref); ?>" class="item" data-toggle="tooltip" data-placement="top" title="Détails">
+                                                        <a href="invoice_detail?product=<?php echo $facture->ref; ?>&token_ID=<?php echo sha1($facture->ref); ?>" class="item" data-toggle="tooltip" data-placement="top" title="<?php echo ma_tra("Détails")?>">
                                                             <i class="zmdi zmdi-more"></i>
                                                         </a>
-                                                        <a target="_blank" href="invoice_pdf?pdf=<?php echo $facture->ref; ?>&token_ID=<?php echo sha1($facture->ref); ?>"  class="item" data-toggle="tooltip" data-placement="top" title="Facture">
+                                                        <a target="_blank" href="invoice_pdf?pdf=<?php echo $facture->ref; ?>&token_ID=<?php echo sha1($facture->ref); ?>"  class="item" data-toggle="tooltip" data-placement="top" title="<?php echo ma_tra("Facture")?>">
                                                             <i class="zmdi zmdi-collection-pdf"></i>
                                                         </a>
                                                     </div>
@@ -97,7 +97,7 @@ include 'pages/header.php';?>
                                                 <div style="text-align: -webkit-center;text-align: -moz-center;margin-top: -52px;">
 
                                                     <h3  class="">
-                                                        Vous n'avez aucune ligne de commande
+                                                        <?php echo ma_tra("Vous n'avez aucune ligne de commande")?>
                                                     </h3>
 
                                                 </div>

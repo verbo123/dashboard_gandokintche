@@ -47,7 +47,7 @@ require 'pages/header.php';?>
 
                                                 <div style="width: 240px" class="rs-select2--light rs-select2--md">
                                                     <select id="app" class="js-select2" name="property">
-                                                        <option selected="selected">Toutes les applications</option>
+                                                        <option selected="selected"><?php echo ma_tra("Toutes les applications")?></option>
                                                         <?php
                                                             foreach (getAll_app() as $ap)
                                                             {
@@ -65,7 +65,8 @@ require 'pages/header.php';?>
                                             </div>
                                             <div class="table-data__tool-right">
                                                 <button data-toggle="modal" data-target="#staticModal" class="au-btn au-btn-icon au-btn--green au-btn--small">
-                                                    <i class="zmdi zmdi-plus"></i>Créer une application
+                                                    <i class="zmdi zmdi-plus"></i>
+                                                    <?php echo ma_tra("Créer une application")?>
                                                 </button>
                                             </div>
                                         </div>
@@ -73,9 +74,9 @@ require 'pages/header.php';?>
                                             <table class="table table-data2">
                                                 <thead>
                                                 <tr>
-                                                    <td>Projet</td>
-                                                    <td>Date de création</td>
-                                                    <td>Token</td>
+                                                    <td><?php echo ma_tra("Projet")?></td>
+                                                    <td><?php echo ma_tra("Date de création")?></td>
+                                                    <td><?php echo ma_tra("Jeton")?></td>
                                                     <td></td>
                                                     <td></td>
                                                 </tr>
@@ -113,10 +114,10 @@ require 'pages/header.php';?>
                                                         </td>
                                                         <td>
                                                             <div class="table-data-feature">
-                                                                <a href="javascript:delet('<?php echo $app->code_app; ?>')" id="del" class="item" data-toggle="tooltip" data-placement="top" title="Supprimer">
+                                                                <a href="javascript:delet('<?php echo $app->code_app; ?>')" id="del" class="item" data-toggle="tooltip" data-placement="top" title="<?php echo ma_tra("Supprimer")?>">
                                                                     <i class="zmdi zmdi-delete"></i>
                                                                 </a>
-                                                                <a href="application_key?project=<?php echo $app->code_app ?>&active=<?php echo $app->active ?>&ID_token=<?php echo $app->app_token ?>"   class="item" data-toggle="tooltip" data-placement="top" title="Détails">
+                                                                <a href="application_key?project=<?php echo $app->code_app ?>&active=<?php echo $app->active ?>&ID_token=<?php echo $app->app_token ?>"   class="item" data-toggle="tooltip" data-placement="top" title="<?php echo ma_tra("Détails")?>">
                                                                     <i class="zmdi zmdi-eye"></i>
                                                                 </a>
                                                             </div>
@@ -138,9 +139,10 @@ require 'pages/header.php';?>
 
                                         <div class="card">
                                             <div  style="text-align: -webkit-center; text-align: -moz-center"  class="card-body">
-                                                <h5 style="text-align: center">Aucune application pour le moment !</h5>
+                                                <h5 style="text-align: center"><?php echo ma_tra("Aucune application pour le moment")?> !</h5>
                                             <button style="margin-top: 30px" type="button" class="au-btn au-btn-icon au-btn--green au-btn--small" data-toggle="modal" data-target="#staticModal">
-                                                <i class="zmdi zmdi-plus"></i>Créer une application
+                                                <i class="zmdi zmdi-plus"></i>
+                                                <?php echo ma_tra("Créer une application")?>
                                             </button>
                                             </div>
                                         </div>
@@ -166,7 +168,7 @@ require 'pages/header.php';?>
             <div class="modal-dialog modal-sm" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="staticModalLabel">Création d'une application</h5>
+                        <h5 class="modal-title" id="staticModalLabel"><?php echo ma_tra("Création d'une application")?></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -175,13 +177,13 @@ require 'pages/header.php';?>
                         <form method="post" novalidate="novalidate" autocomplete="off">
 
                             <div class="form-group">
-                                <label for="cc-payment" class="control-label mb-1">Nom de l'application</label>
+                                <label for="cc-payment" class="control-label mb-1"><?php echo ma_tra("Nom de l'application")?></label>
                                 <input id="cc-pament" name="app_name" type="text" class="form-control" aria-required="true" aria-invalid="false">
                             </div>
 
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-                                <button type="submit" name="valider" class="btn btn-primary">Enregistrer</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal"><?php echo ma_tra("Annuler")?></button>
+                                <button type="submit" name="valider" class="btn btn-primary"><?php echo ma_tra("Enregistrer")?></button>
                             </div>
 
                         </form>

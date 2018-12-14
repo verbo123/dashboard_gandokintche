@@ -49,7 +49,13 @@ if(isset($_POST["passe"]) && isset($_POST["montant"]) && isset($_POST['user']))
             $fix=$bdd->prepare("update solde_benefice set montant = montant + ? where id=1");
             $fix->execute(array(getCommission($montant)*0.1));
 
-            $result['msg'] = 'Transfert de '.$montant.' FCFA avec succès à '. infos_user_op_data($user)->nom." ".infos_user_op_data($user)->prenom.'. ID de la transaction '.$no;
+            if(isset($_COOKIE['lang']) && $_COOKIE['lang'] == "en_US")
+            {
+                $result['msg'] = 'Transfer from '.$montant.' FCFA successfully to '. infos_user_op_data($user)->nom." ".infos_user_op_data($user)->prenom.'.Transaction ID '.$no;
+            }else{
+                $result['msg'] = 'Transfert de '.$montant.' FCFA avec succès à '. infos_user_op_data($user)->nom." ".infos_user_op_data($user)->prenom.'. ID de la transaction '.$no;
+
+            }
 
         }
     }else{

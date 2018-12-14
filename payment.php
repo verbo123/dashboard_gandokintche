@@ -31,7 +31,7 @@ require 'pages/header.php';?>
 
                                 <div class="card-header">
                                     <i class="mr-2 fa fa-align-justify"></i>
-                                    <strong class="card-title" v-if="headerText">Virement d'argent</strong>
+                                    <strong class="card-title" v-if="headerText"><?php echo ma_tra("Virement d'argent")?></strong>
                                 </div>
                                 <div class="card-body">
                                     <?php
@@ -67,22 +67,22 @@ require 'pages/header.php';?>
                                                 {
                                                     ?>
                                                     <button  data-toggle="modal" data-target="#mediumModal" class="au-btn au-btn-icon au-btn--green au-btn--small">
-                                                        Transfert manuel
+                                                        <?php echo ma_tra("Transfert manuel")?>
                                                     </button>
 
                                                     <button  data-toggle="modal" data-target="#qr" class="au-btn au-btn-icon au-btn--green au-btn--small">
-                                                        Utiliser un QRcode
+                                                        <?php echo ma_tra("Utiliser un QRcode")?>
                                                     </button>
 
                                                     <?php
                                                 }else{
                                                     ?>
                                                     <button  data-toggle="modal" data-target="#vireme"  class="btn btn-danger au-btn--small">
-                                                        Transfert manuel
+                                                        <?php echo ma_tra("Transfert manuel")?>
                                                     </button>
 
                                                     <button  data-toggle="modal" data-target="#vireme"  class="btn btn-danger au-btn--small">
-                                                        Utiliser un QRcode
+                                                        <?php echo ma_tra("Utiliser un QRcode")?>
                                                     </button>
 
                                                     <?php
@@ -97,10 +97,10 @@ require 'pages/header.php';?>
                                         <table id="example" class="example table table-striped table-bordered" style="width:100%">
                                             <thead>
                                             <tr>
-                                                <th>Nom & Prénoms</th>
-                                                <th>Identifiant</th>
+                                                <th><?php echo ma_tra("Nom & Prénoms")?></th>
+                                                <th><?php echo ma_tra("Identifiant")?></th>
                                                 <th>Date</th>
-                                                <th>Montant envoyé</th>
+                                                <th><?php echo ma_tra("Montant envoyé")?></th>
 <!--                                                <th>Actions</th>-->
                                             </tr>
                                             </thead>
@@ -145,13 +145,13 @@ require 'pages/header.php';?>
                                             {
                                             ?>
                                             <button  data-toggle="modal" data-target="#mediumModal" class="au-btn au-btn-icon au-btn--green au-btn--small">
-                                                Faite votre premier virement d'argent
+                                                <?php echo ma_tra("Faite votre premier virement d'argent")?>
                                             </button>
                                             <?php
                                             }else{
                                             ?>
                                                 <button  data-toggle="modal" data-target="#vireme" class="btn btn-danger au-btn--small">
-                                                    Faite votre premier virement d'argent
+                                                    <?php echo ma_tra("Faite votre premier virement d'argent")?>
                                                 </button>
                                             <?php
                                             }
@@ -182,7 +182,7 @@ require 'pages/header.php';?>
             <div class="modal-dialog modal-sm" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="mediumModalLabel">Service de virement d'argent</h5>
+                        <h5 class="modal-title" id="mediumModalLabel"><?php echo ma_tra("Service de virement d'argent")?></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -191,7 +191,7 @@ require 'pages/header.php';?>
                         <div class="card">
                             <div class="card-body">
 
-                                <p>Désolé, Le service de virement n'est pas activé sur votre compte. Veuillez l'activer dans <a href="settings">  Paramétrage de compte</a></p>
+                                <p><?php echo ma_tra("Désolé, Le service de virement n'est pas activé sur votre compte. Veuillez l'activer dans")?> <a href="settings">  <?php echo ma_tra("Paramétrage de compte")?></a></p>
 
                             </div>
                         </div>
@@ -207,7 +207,7 @@ require 'pages/header.php';?>
             <div class="modal-dialog modal-sm" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="mediumModalLabel">Nouveau paiement</h5>
+                        <h5 class="modal-title" id="mediumModalLabel"><?php echo ma_tra("Nouveau paiement")?></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -219,13 +219,13 @@ require 'pages/header.php';?>
                                 <form method="post" novalidate="novalidate" autocomplete="off">
 
                                     <div class="form-group">
-                                        <label for="cc-payment" class="control-label mb-1">Montant</label>
+                                        <label for="cc-payment" class="control-label mb-1"><?php echo ma_tra("Montant")?></label>
                                         <input id="cc-pament" name="montant" type="number" class="form-control" aria-required="true" aria-invalid="false" placeholder="00 FCFA">
                                     </div>
                                     <div class="row">
                                         <div class="col-md-8">
                                             <div class="form-group has-success">
-                                                <label for="cc-name" class="control-label mb-1">Login du destinataire</label>
+                                                <label for="cc-name" class="control-label mb-1"><?php echo ma_tra("Login du destinataire")?></label>
                                                 <input id="cc-name" name="login[]" type="text" class="form-control cc-name valid" data-val="true"
                                                        autocomplete="cc-name" aria-required="true" aria-invalid="false" aria-describedby="cc-name-error">
                                                 <span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span>
@@ -235,7 +235,7 @@ require 'pages/header.php';?>
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label for="cc-name" class="control-label mb-1"> &nbsp;&nbsp;&nbsp;&nbsp; </label>
-                                                <button id="ajout" type="button" class="btn btn-primary"> <i class="zmdi zmdi-plus"></i> Ajouter</button>
+                                                <button id="ajout" type="button" class="btn btn-primary"> <i class="zmdi zmdi-plus"></i><?php echo ma_tra("Ajouter")?></button>
                                                 <span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span>
                                             </div>
                                         </div>
@@ -245,7 +245,7 @@ require 'pages/header.php';?>
                                     <div id="champ"></div>
 
                                     <div class="form-group">
-                                        <label for="cc-number" class="control-label mb-1">Entrer votre mot de passe</label>
+                                        <label for="cc-number" class="control-label mb-1"><?php echo ma_tra("Entrer votre mot de passe")?></label>
                                         <input id="cc-number" name="password" type="password" class="form-control cc-number identified visa" value="" data-val="true"
                                                data-val-required="Please enter the card number"
                                                autocomplete="cc-number">
@@ -254,8 +254,8 @@ require 'pages/header.php';?>
                                     <div>
                                         <button id="payment-button" type="submit" name="valider" class="btn btn-lg btn-info btn-block">
                                             <i class="fa fa-lock fa-lg"></i>&nbsp;
-                                            <span id="payment-button-amount">Tranférer</span>
-                                            <span id="payment-button-sending" style="display:none;">Tranfère…</span>
+                                            <span id="payment-button-amount"><?php echo ma_tra("Tranférer")?></span>
+                                            <span id="payment-button-sending" style="display:none;"><?php echo ma_tra("Tranfère…")?></span>
                                         </button>
                                     </div>
                                 </form>
@@ -276,7 +276,7 @@ require 'pages/header.php';?>
             <div style="max-width: 600px" class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="mediumModalLabel">Nouveau paiement</h5>
+                        <h5 class="modal-title" id="mediumModalLabel"><?php echo ma_tra("Nouveau paiement")?></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -288,12 +288,12 @@ require 'pages/header.php';?>
                                 <form method="post" novalidate="novalidate" autocomplete="off">
 
                                     <div class="form-group">
-                                        <label for="cc-payment" class="control-label mb-1">Montant</label>
+                                        <label for="cc-payment" class="control-label mb-1"><?php echo ma_tra("Montant")?></label>
                                         <input  name="montant" type="number" class="form-control" aria-required="true" aria-invalid="false" placeholder="00 FCFA">
                                     </div>
                                     <div class="row">
                                         <div  style="display: flex;" class="col-md-8">
-                                            <input name="qrcode[]"  type=text style="height: 38px;cursor: pointer" placeholder="Charger le QRcode" class="form-control qrcode-text">
+                                            <input name="qrcode[]"  type=text style="height: 38px;cursor: pointer" placeholder="<?php echo ma_tra("Charger le QRcode")?>" class="form-control qrcode-text">
                                             <div style="cursor: pointer" class="upload-btn-wrapper">
                                                 <button style="cursor: pointer" type="button" class="btn btn-warning">QRcode</button>
                                                 <input style="cursor: pointer" title=" " type="file"  capture="environment" onchange="openQRCamera(this);" tabindex=-1 />
@@ -303,7 +303,7 @@ require 'pages/header.php';?>
 
                                         <div class="col-md-4">
                                             <div class="ca form-group">
-                                                <button id="ajout2" type="button" class="btn btn-primary"> <i class="zmdi zmdi-plus"></i> Ajouter</button>
+                                                <button id="ajout2" type="button" class="btn btn-primary"> <i class="zmdi zmdi-plus"></i><?php echo ma_tra("Ajouter")?></button>
                                                 <span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span>
                                             </div>
                                         </div>
@@ -314,7 +314,7 @@ require 'pages/header.php';?>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="cc-number" class="control-label mb-1">Entrer votre mot de passe</label>
+                                        <label for="cc-number" class="control-label mb-1"><?php echo ma_tra("Entrer votre mot de passe")?></label>
                                         <input  name="password" type="password" class="form-control cc-number identified visa" value="" data-val="true"
                                                data-val-required="Please enter the card number"
                                                autocomplete="cc-number">
@@ -323,8 +323,8 @@ require 'pages/header.php';?>
                                     <div>
                                         <button  type="submit" name="transfert" class="btn btn-lg btn-info btn-block">
                                             <i class="fa fa-lock fa-lg"></i>&nbsp;
-                                            <span id="payment-button-amount">Tranférer</span>
-                                            <span id="payment-button-sending" style="display:none;">Tranfère…</span>
+                                            <span id="payment-button-amount"><?php echo ma_tra("Tranférer")?></span>
+                                            <span id="payment-button-sending" style="display:none;"><?php echo ma_tra("Tranfère…")?></span>
                                         </button>
                                     </div>
                                 </form>
@@ -412,7 +412,7 @@ if(checkIt("edge") || checkIt("msie")){
             node.value = "";
             qrcode.callback = function(res) {
                 if(res instanceof Error) {
-                    alert("Aucun QRcode trouvé.");
+                    alert("<?php echo ma_tra("Aucun QRcode trouvé.")?>");
                 } else {
                     node.parentNode.previousElementSibling.value = res;
                     console.log(res);
@@ -440,7 +440,7 @@ if(checkIt("edge") || checkIt("msie")){
     $("#ajout").click(function () {
         i++;
         console.log(i);
-        html = '<div class="row" id="sup' + i + '"  ><div  class="col-md-8"><div class="form-group has-success"> <label for="cc-name" class="control-label mb-1">Login du destinataire</label><input  name="login[]" type="text" class="form-control cc-name valid" data-val="true" autocomplete="cc-name" aria-required="true" aria-invalid="false" aria-describedby="cc-name-error"><span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span></div></div><div class="col-md-3"><div id="' + i + '"  class="form-group"><label for="cc-name" class="control-label mb-1"> &nbsp;&nbsp;&nbsp;&nbsp; </label><button onclick="remove('+ i +')"  type="button" class="btn btn-danger"> <i class="zmdi zmdi-minus"></i> Enlever</button><span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span></div></div></div>';
+        html = '<div class="row" id="sup' + i + '"  ><div  class="col-md-8"><div class="form-group has-success"> <label for="cc-name" class="control-label mb-1"><?php echo ma_tra("Login du destinataire")?></label><input  name="login[]" type="text" class="form-control cc-name valid" data-val="true" autocomplete="cc-name" aria-required="true" aria-invalid="false" aria-describedby="cc-name-error"><span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span></div></div><div class="col-md-3"><div id="' + i + '"  class="form-group"><label for="cc-name" class="control-label mb-1"> &nbsp;&nbsp;&nbsp;&nbsp; </label><button onclick="remove('+ i +')"  type="button" class="btn btn-danger"> <i class="zmdi zmdi-minus"></i> <?php echo ma_tra("Enlever")?></button><span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span></div></div></div>';
         dataContenaire.append(html);
     });
 
@@ -459,7 +459,7 @@ if(checkIt("edge") || checkIt("msie")){
              html2 = '<div class="row" id="sup2' + i2 + '"  >' +
             '' +
             '<div  style="display: flex;"  class="col-md-8">' +
-            '<input name="qrcode[]"  type=text style="height: 38px;cursor: pointer" placeholder="Charger le QRcode" class="form-control qrcode-text">' +
+            '<input name="qrcode[]"  type=text style="height: 38px;cursor: pointer" placeholder="<?php echo ma_tra("Charger le QRcode")?>" class="form-control qrcode-text">' +
             '<div style="cursor: pointer" class="upload-btn-wrapper">' +
             '<button style="cursor: pointer" type="button" class="btn btn-warning">' +
             'QRcode' +
@@ -482,7 +482,7 @@ if(checkIt("edge") || checkIt("msie")){
              html2 = '<div class="row" id="sup2' + i2 + '"  >' +
             '' +
             '<div  style="display: flex;"  class="col-md-8">' +
-            '<input name="qrcode[]"  type=text style="height: 38px;cursor: pointer" placeholder="Charger le QRcode" class="form-control qrcode-text">' +
+            '<input name="qrcode[]"  type=text style="height: 38px;cursor: pointer" placeholder="<?php echo ma_tra('Charger le QRcode')?>" class="form-control qrcode-text">' +
             '<div style="cursor: pointer" class="upload-btn-wrapper">' +
             '<button style="cursor: pointer" type="button" class="btn btn-warning">' +
             'QRcode' +

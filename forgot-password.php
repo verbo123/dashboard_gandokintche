@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿<?php
+require 'Tools/localization.php';
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +20,7 @@
 <body>
 <div class="container">
     <a href="http://www.gandokintche.com/index" class="lip" style="color: #00A0D1;">
-        <span> <i class="fa fa-arrow-left"></i> </span> Retour à la page d'accueil
+        <span> <i class="fa fa-arrow-left"></i> </span> <?php echo ma_tra("Retour à la page d'accueil")?>
     </a>
     <div class="row main">
         <!-- <div class="panel-heading">
@@ -43,7 +46,7 @@
                 <div class="form-group ">
                     <div class="call-to-action">
                         <button style="width: 279px; height: 50px" type="submit" name="valider" class="btn submint_btn form-control">
-                            Valider
+                            <?php echo ma_tra("Valider")?>
                         </button>
                     </div>
                 </div>
@@ -130,10 +133,10 @@
         </div>
         <div class="pull-right">
             <ul>
-               <li><a href="#">Terme & Condition</a></li>
-                 <li><a  href="http://www.gandokintche.com/tarif">Tarifs</a></li>
-                <li><a  href="http://www.gandokintche.com/developpeur">Développeurs</a></li>
-                <li><a href="#">Nous contactez</a></li>
+                <li><a href="#">Terme & Condition</a></li>
+                <li><a href="http://www.gandokintche.com/tarif"><?php echo ma_tra("Tarifs")?></a></li>
+                <li><a  href="http://www.gandokintche.com/developpeur"><?php echo ma_tra("Développeurs")?></a></li>
+                <li><a href="#"><?php echo ma_tra("Nous contactez")?></a></li>
             </ul>
         </div>
     </div>

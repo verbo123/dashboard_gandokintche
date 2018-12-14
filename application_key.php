@@ -32,8 +32,8 @@ require 'pages/header.php';?>
 
                                 <div class="card-header">
                                     <i class="mr-2 fa fa-align-justify"></i>
-                                    <strong class="card-title" v-if="headerText">Votre projet</strong>
-                                    <a href="#" class="pull-right">Accedez à la doumentation <span ><i  class="fa fa-arrow-right"></i> </span></a>
+                                    <strong class="card-title" v-if="headerText"><?php echo ma_tra("Votre projet")?></strong>
+                                    <a href="#" class="pull-right"><?php echo ma_tra("Accedez à la doumentation")?> <span ><i  class="fa fa-arrow-right"></i> </span></a>
                                 </div>
                                 <div class="card-body">
 
@@ -54,22 +54,22 @@ require 'pages/header.php';?>
                                     <table class="table table-responsive">
                                         <tbody>
                                         <tr>
-                                            <td>Nom du projet</td>
+                                            <td><?php echo ma_tra("Nom du projet")?></td>
                                             <td><?php echo find_app_key()->nom_app; ?> <span data-toggle="modal" data-target="#staticModal" style="font-size: 20px; margin-left: 15px; cursor: pointer"><i class="zmdi zmdi-edit"></i></span></td>
                                         </tr>
 
                                         <tr>
-                                            <td>ID du projet</td>
+                                            <td><?php echo ma_tra("ID du projet")?></td>
                                             <td><?php echo find_app_key()->code_app; ?></td>
                                         </tr>
 
                                         <tr>
-                                            <td>Clé API serveur (mode test)</td>
+                                            <td><?php echo ma_tra("Clé API serveur (mode test)")?></td>
                                             <td><?php echo find_app_key()->test_key; ?></td>
                                         </tr>
 
                                         <tr>
-                                            <td>Clé API serveur (mode live)</td>
+                                            <td><?php echo ma_tra("Clé API serveur (mode live)")?></td>
                                             <td><?php echo find_app_key()->pro_key; ?></td>
                                         </tr>
 
@@ -79,7 +79,7 @@ require 'pages/header.php';?>
                                         </tr>
 
                                         <tr>
-                                            <td colspan="1">Connecter l'application à votre compte marchand</td>
+                                            <td colspan="1"><?php echo ma_tra("Connecter l'application à votre compte marchand")?></td>
                                             <td>
                                                 <label class="switch switch-text switch-success">
                                                     <input <?php if(app_verif(getUserLogin(),$_GET["project"]) == true){ echo 'checked="true"'; } ?>  id="para" type="checkbox" class="switch-input" >
@@ -114,7 +114,7 @@ require 'pages/header.php';?>
             <div class="modal-dialog modal-sm" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="staticModalLabel">Modification</h5>
+                        <h5 class="modal-title" id="staticModalLabel"><?php echo ma_tra("Modification")?></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -123,13 +123,13 @@ require 'pages/header.php';?>
                         <form method="post" novalidate="novalidate" autocomplete="off">
 
                             <div class="form-group">
-                                <label for="cc-payment" class="control-label mb-1">Nom de l'application</label>
+                                <label for="cc-payment" class="control-label mb-1"><?php echo ma_tra("Nom de l'application")?></label>
                                 <input id="cc-pament" value="<?php echo find_app_key()->nom_app;  ?>" name="app_name" type="text" class="form-control" aria-required="true" aria-invalid="false">
                             </div>
 
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-                                <button type="submit" name="valider" class="btn btn-primary">Enregistrer</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal"><?php echo ma_tra("Annuler")?></button>
+                                <button type="submit" name="valider" class="btn btn-primary"><?php echo ma_tra("Enregistrer")?></button>
                             </div>
 
                         </form>

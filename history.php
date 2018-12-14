@@ -29,7 +29,7 @@ require 'pages/header.php';?>
                             <div class="card">
                                 <div class="card-header">
                                     <i class="mr-2 fa fa-align-justify"></i>
-                                    <strong class="card-title">Mes commissions</strong>
+                                    <strong class="card-title"><?php echo ma_tra("Mes commissions")?></strong>
                                 </div>
                                 <div style="padding-top: 0px" class="card-body">
 
@@ -61,10 +61,10 @@ require 'pages/header.php';?>
                                                 <th>ID</th>
                                                 <th>Date</th>
                                                 <th>Code</th>
-                                                <th>Nom & Prénom</th>
-                                                <th>Dépôt réel</th>
-                                                <th>Commission</th>
-                                                <th>Montant rechargé</th>
+                                                <th><?php echo ma_tra("Nom & Prénom")?></th>
+                                                <th><?php echo ma_tra("Dépôt réel")?></th>
+                                                <th><?php echo ma_tra("Commission")?></th>
+                                                <th><?php echo ma_tra("Montant rechargé")?></th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -97,7 +97,7 @@ require 'pages/header.php';?>
 
                                         ?>
                                         <div style="text-align: -webkit-center;text-align: -moz-center">
-                                           <h3>Aucune commissions pour le moment</h3>
+                                           <h3><?php echo ma_tra("Aucune commissions pour le moment")?></h3>
                                         </div>
                                         <?php
                                     }

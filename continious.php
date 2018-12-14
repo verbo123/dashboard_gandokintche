@@ -1,6 +1,6 @@
-
-<!------ Include the above in your HEAD tag ---------->
-
+<?php
+require 'Tools/localization.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,12 +20,7 @@
 <body>
 <div class="container">
     <div class="row main">
-        <div style="padding-top: 50px" class="panel-heading">
-            <div class="panel-title text-center">
-                <h1 style="font-size: 50px;font-family: 'Pacifico';"><span style="color:#e0c3fc;">Pai</span><span style="color: #8ec5fc">Me</span></h1>
-                <hr />
-            </div>
-        </div>
+
         <div class="main-login main-center">
             <?php
             include 'pages/control/database.php';
@@ -38,7 +33,7 @@
                 <div class="form-group ">
                     <div class="call-to-action">
                         <button style="width: 319px; height: 70px;" type="submit"  name="valider" class="btn submint_btn form-control">
-                            Continuez en tant que <br>
+                            <?php echo ma_tra("Continuez en tant que")?> <br>
                             <span> <?php echo infos_user(getUserLogin())->prenom.' '.substr(infos_user($_COOKIE["account_code"])->nom,0,1).'.'; ?>
                              <i class="fa fa-arrow-right"></i> </span>
                         </button>
@@ -49,7 +44,7 @@
                 </div>
 
                 <div class="login-register">
-                    <a style="color: red;font-weight: 800" href="logout">Déconnecter</a>
+                    <a style="color: red;font-weight: 800" href="logout"><?php echo ma_tra("Déconnecter")?></a>
                 </div>
             </form>
         </div>
@@ -137,9 +132,9 @@
         <div class="pull-right">
             <ul>
                 <li><a href="#">Terme & Condition</a></li>
-                <li><a href="tarif">Tarifs</a></li>
-                <li><a href="developpeur">Développeurs</a></li>
-                <li><a href="#">Nous contactez</a></li>
+                <li><a href="http://www.gandokintche.com/tarif"><?php echo ma_tra("Tarifs")?></a></li>
+                <li><a  href="http://www.gandokintche.com/developpeur"><?php echo ma_tra("Développeurs")?></a></li>
+                <li><a href="#"><?php echo ma_tra("Nous contactez")?></a></li>
             </ul>
         </div>
     </div>

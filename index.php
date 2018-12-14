@@ -45,7 +45,6 @@ require 'pages/header.php';
 <?php require 'pages/menus/side_mobile_menu.php';?>
     <!-- MENU SIDEBAR-->
 <?php require 'pages/menus/side_menu.php';?>
-
         <!-- PAGE CONTAINER-->
         <div class="page-container">
 <?php
@@ -70,7 +69,7 @@ include 'pages/control/trans.php';
                                                     </div>
                                                     <div class="text">
                                                         <h2><?php echo getMontantUser(getUserLogin())->total; ?> CFA</h2>
-                                                        <a style="color:rgba(255, 255, 255, 0.6);font-size:18px" href="balance">Solde courant</a>
+                                                        <a style="color:rgba(255, 255, 255, 0.6);font-size:18px" href="balance"><?php echo ma_tra("Solde courant")?></a>
                                                     </div>
                                                 </div>
                                                 <div class="overview-chart">
@@ -90,7 +89,7 @@ include 'pages/control/trans.php';
                                                     <div class="text">
                                                         <h2><?php echo get_nbre_achat(); ?></h2>
                                                 
-                                                        <a style="color:rgba(255, 255, 255, 0.6);font-size:18px" href="transaction">Achats en ligne</a>
+                                                        <a style="color:rgba(255, 255, 255, 0.6);font-size:18px" href="transaction"><?php echo ma_tra("Achats en ligne")?></a>
                                                     </div>
                                                 </div>
                                                 <div class="overview-chart">
@@ -110,7 +109,7 @@ include 'pages/control/trans.php';
                                                     <div class="text">
                                                         <h2><?php echo get_nbre_virement(); ?></h2>
                                                         
-                                                         <a style="color:rgba(255, 255, 255, 0.6);font-size:18px" href="transaction">Virements effectués</a>
+                                                         <a style="color:rgba(255, 255, 255, 0.6);font-size:18px" href="transaction"><?php echo ma_tra("Virements effectués")?></a>
                                                     </div>
                                                 </div>
                                                 <div class="overview-chart">
@@ -131,7 +130,7 @@ include 'pages/control/trans.php';
                                                     <div class="text">
                                                         <h2><?php echo get_nbre_app(); ?></h2>
                                                         
-                                            <a style="color:rgba(255, 255, 255, 0.6);font-size:18px" href="apikeys">Applications</a>
+                                            <a style="color:rgba(255, 255, 255, 0.6);font-size:18px" href="apikeys"><?php echo ma_tra("Applications")?></a>
 
                                                     </div>
                                                 </div>

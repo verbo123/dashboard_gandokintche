@@ -1,0 +1,1244 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: site\n"
+"POT-Creation-Date: 2018-12-14 15:32+0100\n"
+"PO-Revision-Date: 2018-12-14 15:33+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ../../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: ma_tra\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: apikeys.php:50
+msgid "Toutes les applications"
+msgstr "All applications"
+
+#: apikeys.php:69 apikeys.php:145
+msgid "Créer une application"
+msgstr "Create an application"
+
+#: apikeys.php:77
+msgid "Projet"
+msgstr "Project"
+
+#: apikeys.php:78
+msgid "Date de création"
+msgstr "Creation date"
+
+#: apikeys.php:79
+msgid "Jeton"
+msgstr "Token"
+
+#: apikeys.php:117
+msgid "Supprimer"
+msgstr "Remove"
+
+#: apikeys.php:120 invoice.php:83 shop.php:65 shop_detail.php:32
+#: transaction.php:94
+msgid "Détails"
+msgstr "Details"
+
+#: apikeys.php:142
+msgid "Aucune application pour le moment"
+msgstr "No apps yet"
+
+#: apikeys.php:171
+msgid "Création d'une application"
+msgstr "Creating an application"
+
+#: apikeys.php:180 application_key.php:126
+msgid "Nom de l'application"
+msgstr "Application name"
+
+#: apikeys.php:185 application_key.php:131 auth_marchand.php:395
+#: permission.php:229 permission.php:277 profil.php:352
+msgid "Annuler"
+msgstr "Cancel"
+
+#: apikeys.php:186 application_key.php:132 auth_marchand.php:399
+#: permission.php:230 register.php:146
+msgid "Enregistrer"
+msgstr "Save"
+
+#: application_key.php:35
+msgid "Votre projet"
+msgstr "Your project"
+
+#: application_key.php:36 permission.php:32 settings.php:30
+msgid "Accedez à la doumentation"
+msgstr "See the documentation"
+
+#: application_key.php:57
+msgid "Nom du projet"
+msgstr "Name of the project"
+
+#: application_key.php:62
+msgid "ID du projet"
+msgstr "Project ID"
+
+#: application_key.php:67
+msgid "Clé API serveur (mode test)"
+msgstr "Server API key (test mode)"
+
+#: application_key.php:72
+msgid "Clé API serveur (mode live)"
+msgstr "Server API key (live mode)"
+
+#: application_key.php:82
+msgid "Connecter l'application à votre compte marchand"
+msgstr "Connect the app to your merchant account"
+
+#: application_key.php:117 permission.php:246
+msgid "Modification"
+msgstr "Edit"
+
+#: auth_marchand.php:36
+msgid "Informations de votre compte marchand"
+msgstr "Your merchant account information"
+
+#: auth_marchand.php:39
+msgid ""
+"Les informations fournies ci-dessous seront visibles par vos clients. "
+"Utiliez-le pour fournir des informations de contact spécifiques à "
+"l'assistance."
+msgstr ""
+"The information provided below will be visible to your customers. Use it to "
+"provide support-specific contact information."
+
+#: auth_marchand.php:92
+msgid "Nom de l'entreprise"
+msgstr "Company Name"
+
+#: auth_marchand.php:98
+msgid "Site web"
+msgstr "Website"
+
+#: auth_marchand.php:103 detail_transaction.php:45 detail_transaction.php:80
+#: invoice_pdf.php:108 profil.php:149 profil.php:345 transaction_pdf.php:115
+#: transaction_pdf.php:134
+msgid "Téléphone"
+msgstr "Phone"
+
+#: auth_marchand.php:114 auth_marchand.php:120
+msgid "Pays"
+msgstr "Country"
+
+#: auth_marchand.php:382
+msgid "Ville"
+msgstr "City"
+
+#: auth_marchand.php:387 invoice_pdf.php:107 transaction_pdf.php:129
+msgid "Adresse"
+msgstr "Address"
+
+#: auth_marchand.php:406 permission.php:165 permission.php:278 profil.php:353
+msgid "Modifier"
+msgstr "Edit"
+
+#: balance.php:62
+msgid "Historiques des recharges"
+msgstr "Historical refills"
+
+#: balance.php:81
+msgid "Solde issu du commerce"
+msgstr "Trade balance"
+
+#: balance.php:81
+msgid "Il s'agit du solde issu des ventes provenant de votre site e-commerce"
+msgstr "This is the balance from sales from your e-commerce site"
+
+#: balance.php:85
+msgid "Virer votre fond issu de l'e-commerce vers votre solde total"
+msgstr "Shift your e-commerce bottom to your total balance"
+
+#: balance.php:85 balance.php:95
+msgid "Virer les fonds"
+msgstr "Transfer of funds"
+
+#: balance.php:91
+msgid "Commission actuelle"
+msgstr "Current Commission"
+
+#: balance.php:91
+msgid "Il s'agit du solde issu des recharges vendues"
+msgstr "This is the balance from refills sold"
+
+#: balance.php:95
+msgid ""
+"Virer votre fond issu de vos commissions sur recharge vers votre solde total"
+msgstr ""
+"Transfer your funds from your commissions on top up to your total balance"
+
+#: balance.php:102
+msgid "Solde Total"
+msgstr "Balance of accounts"
+
+#: continious.php:36
+msgid "Continuez en tant que"
+msgstr "Continue as"
+
+#: continious.php:47
+msgid "Déconnecter"
+msgstr "Disconnect"
+
+#: continious.php:135 forgot-password.php:137 login.php:167 register.php:240
+msgid "Tarifs"
+msgstr "Prices"
+
+#: continious.php:136 forgot-password.php:138 login.php:168
+#: pages/menus/side_menu.php:101 pages/menus/side_mobile_menu.php:180
+#: register.php:241
+msgid "Développeurs"
+msgstr "Developers"
+
+#: continious.php:137 forgot-password.php:139 login.php:169 register.php:242
+msgid "Nous contactez"
+msgstr "Contact us"
+
+#: detail_transaction.php:23
+msgid "Détail"
+msgstr "Details"
+
+#: detail_transaction.php:32 transaction.php:91
+msgid "Exporter"
+msgstr "Export"
+
+#: detail_transaction.php:39 transaction_pdf.php:108
+msgid "Envoyeur"
+msgstr "Sender"
+
+#: detail_transaction.php:43 detail_transaction.php:78
+msgid "Nom et Prénom(s)"
+msgstr "Name and Surname"
+
+#: detail_transaction.php:46 detail_transaction.php:81
+msgid "Photo"
+msgstr "Pïcture"
+
+#: detail_transaction.php:74 transaction_pdf.php:127
+msgid "Reçeveur"
+msgstr "Recipient"
+
+#: detail_transaction.php:109 invoice.php:66 invoice_detail.php:65
+#: invoice_pdf.php:134 payment.php:222 payment.php:291 recharge.php:225
+#: recharge.php:273 shop.php:47 shop_detail.php:54 transaction_pdf.php:159
+msgid "Montant"
+msgstr "Amount"
+
+#: detail_transaction.php:110
+msgid "Date de l'opération"
+msgstr "Date of the operation"
+
+#: forgot-password.php:23 login.php:32 register.php:23
+msgid "Retour à la page d'accueil"
+msgstr "Back to the homepage"
+
+#: forgot-password.php:49 profil.php:287
+msgid "Valider"
+msgstr "Validate"
+
+#: history.php:32
+msgid "Mes commissions"
+msgstr "My commissions"
+
+#: history.php:64
+msgid "Nom & Prénom"
+msgstr "Name and Surname"
+
+#: history.php:65 myrecharge.php:42
+msgid "Dépôt réel"
+msgstr "Real deposit"
+
+#: history.php:66
+msgid "Commission"
+msgstr "Commission"
+
+#: history.php:67 myrecharge.php:44
+msgid "Montant rechargé"
+msgstr "Reloaded amount"
+
+#: history.php:100
+msgid "Aucune commissions pour le moment"
+msgstr "No commissions for the moment"
+
+#: index.php:72
+msgid "Solde courant"
+msgstr "Balance of accounts"
+
+#: index.php:92 shop.php:28
+msgid "Achats en ligne"
+msgstr "Online purchase"
+
+#: index.php:112
+msgid "Virements effectués"
+msgstr "Transfers"
+
+#: index.php:133
+msgid "Applications"
+msgstr "Permissions"
+
+#: invoice.php:31 invoice_detail.php:33 pages/menus/side_menu.php:81
+#: pages/menus/side_mobile_menu.php:162
+msgid "Facturation"
+msgstr "Belling"
+
+#: invoice.php:63 shop.php:42
+msgid "Référence"
+msgstr "Reference"
+
+#: invoice.php:64 invoice_detail.php:42
+msgid "Client"
+msgstr "Customer"
+
+#: invoice.php:67 shop.php:48 transaction.php:48
+msgid "Actions"
+msgstr "Action"
+
+#: invoice.php:86 invoice_pdf.php:120
+msgid "Facture"
+msgstr "Belling"
+
+#: invoice.php:100
+msgid "Vous n'avez aucune ligne de commande"
+msgstr "You have no command line"
+
+#: invoice_detail.php:50
+msgid "Générer la facture"
+msgstr "Generate invoice"
+
+#: invoice_detail.php:62 invoice_pdf.php:131 shop_detail.php:51
+msgid "Libellé"
+msgstr "Designation"
+
+#: invoice_detail.php:63 invoice_pdf.php:132 shop_detail.php:52
+msgid "Quantité"
+msgstr "Quantity"
+
+#: invoice_detail.php:64 invoice_pdf.php:133 shop_detail.php:53
+msgid "Prix Unitaire"
+msgstr "Unit price"
+
+#: invoice_detail.php:88 shop_detail.php:77
+msgid "Autres Frais"
+msgstr "Other expenses"
+
+#: invoice_detail.php:89 invoice_pdf.php:165 shop.php:46 shop_detail.php:78
+msgid "Taxe"
+msgstr "Tax"
+
+#: invoice_detail.php:90 shop_detail.php:79
+msgid "Montant total"
+msgstr "Total amount"
+
+#: invoice_pdf.php:99
+msgid "Fait à Cotonou, le"
+msgstr "Done at Cotonou on the"
+
+#: invoice_pdf.php:121
+msgid "Emis le"
+msgstr "Send the"
+
+#: invoice_pdf.php:159
+msgid "Autres frais"
+msgstr "Other expenses"
+
+#: invoice_pdf.php:171
+msgid "Total"
+msgstr "Total"
+
+#: login.php:60 register.php:96
+msgid "Mot de passe"
+msgstr "Password"
+
+#: login.php:72
+msgid "Se connecter"
+msgstr "Sign In"
+
+#: login.php:77
+msgid "Créez un compte"
+msgstr "Sign Up"
+
+#: login.php:81
+msgid "Mot de passe oublié ?"
+msgstr "Forgot your password ?"
+
+#: myrecharge.php:28
+msgid "Historiques de recharges de compte"
+msgstr "Historical account refills"
+
+#: myrecharge.php:41 pages/menus/side_menu.php:49
+#: pages/menus/side_mobile_menu.php:130
+msgid "Distributeur"
+msgstr "Distributor"
+
+#: myrecharge.php:43
+msgid "Prélèvement"
+msgstr "Sample"
+
+#: myrecharge.php:82
+msgid "Aucune recharge effectuée!"
+msgstr "No recharge done!"
+
+#: pages/footer.php:102
+msgid "Vous n\\'avez aucune notification"
+msgstr "You have no notification"
+
+#: pages/footer.php:104
+msgid "Vous avez"
+msgstr "You can"
+
+#: pages/footer.php:104
+msgid "nouvelle(s) notification(s)"
+msgstr "new notification"
+
+#: pages/menus/head_menu.php:13
+msgid "Recherche..."
+msgstr "Research..."
+
+#: pages/menus/head_menu.php:25
+msgid "Accedez à la documentation"
+msgstr "See the documentation"
+
+#: pages/menus/head_menu.php:28
+msgid "Support"
+msgstr "Support"
+
+#: pages/menus/head_menu.php:69
+msgid "Toutes les notifications"
+msgstr "All notifications"
+
+#: pages/menus/head_menu.php:100 permission.php:104
+msgid "Administrateur"
+msgstr "Administrator"
+
+#: pages/menus/head_menu.php:107 profil.php:71 profil.php:304
+msgid "Profil"
+msgstr "Profile"
+
+#: pages/menus/side_menu.php:26 pages/menus/side_mobile_menu.php:107
+#: transaction.php:120
+msgid "Transactions"
+msgstr "Transactions"
+
+#: pages/menus/side_menu.php:30 pages/menus/side_mobile_menu.php:111
+msgid "Solde de comptes"
+msgstr "Balance of accounts"
+
+#: pages/menus/side_menu.php:34 pages/menus/side_mobile_menu.php:115
+msgid "Virements"
+msgstr "Transfers"
+
+#: pages/menus/side_menu.php:38 pages/menus/side_mobile_menu.php:120
+#: transaction.php:70
+msgid "Achat en ligne"
+msgstr "Online purchase"
+
+#: pages/menus/side_menu.php:53 pages/menus/side_mobile_menu.php:134
+#: recharge.php:39
+msgid "Recharge de compte"
+msgstr "Account Recharge"
+
+#: pages/menus/side_menu.php:57 pages/menus/side_mobile_menu.php:138
+msgid "Mes Historiques"
+msgstr "My History"
+
+#: pages/menus/side_menu.php:73 pages/menus/side_mobile_menu.php:155
+msgid "Marchand"
+msgstr "Trader"
+
+#: pages/menus/side_menu.php:76 pages/menus/side_mobile_menu.php:158
+msgid "Compte marchand"
+msgstr "Merchant Account"
+
+#: pages/menus/side_menu.php:91 pages/menus/side_mobile_menu.php:170
+#: role.php:31
+msgid "Rôles"
+msgstr "Roles"
+
+#: pages/menus/side_menu.php:105 pages/menus/side_mobile_menu.php:184
+msgid "Api Keys"
+msgstr "Api Keys"
+
+#: pages/menus/side_menu.php:116 pages/menus/side_mobile_menu.php:195
+msgid "Paramètres"
+msgstr "Settings"
+
+#: pages/menus/side_menu.php:120 pages/menus/side_mobile_menu.php:199
+#: settings.php:28
+msgid "Autorisations"
+msgstr "Permissions"
+
+#: payment.php:34 settings.php:46
+msgid "Virement d'argent"
+msgstr "Transfer of funds"
+
+#: payment.php:70 payment.php:81
+msgid "Transfert manuel"
+msgstr "Manual transfer"
+
+#: payment.php:74 payment.php:85
+msgid "Utiliser un QRcode"
+msgstr "Use a QRcode"
+
+#: payment.php:100 permission.php:84 recharge.php:78
+msgid "Nom & Prénoms"
+msgstr "Name and Surname"
+
+#: payment.php:101 recharge.php:77
+msgid "Identifiant"
+msgstr "Login"
+
+#: payment.php:103 recharge.php:80
+msgid "Montant envoyé"
+msgstr "Amount sent"
+
+#: payment.php:148 payment.php:154
+msgid "Faite votre premier virement d'argent"
+msgstr "Make your first money transfer"
+
+#: payment.php:185
+msgid "Service de virement d'argent"
+msgstr "Money transfer service"
+
+#: payment.php:194
+msgid ""
+"Désolé, Le service de virement n'est pas activé sur votre compte. Veuillez "
+"l'activer dans"
+msgstr ""
+"Sorry, the transfer service is not activated on your account. Please "
+"activate it in"
+
+#: payment.php:194
+msgid "Paramétrage de compte"
+msgstr "Account setup"
+
+#: payment.php:210 payment.php:279 recharge.php:261
+msgid "Nouveau paiement"
+msgstr "New payment"
+
+#: payment.php:228 payment.php:443 recharge.php:231 recharge.php:609
+msgid "Login du destinataire"
+msgstr "Recipient Login"
+
+#: payment.php:238 payment.php:306
+msgid "Ajouter"
+msgstr "Add"
+
+#: payment.php:248 payment.php:317 profil.php:277
+msgid "Entrer votre mot de passe"
+msgstr "Enter your password"
+
+#: payment.php:257 payment.php:326 recharge.php:289
+msgid "Tranférer"
+msgstr "To transfer"
+
+#: payment.php:258 payment.php:327
+msgid "Tranfère…"
+msgstr "Transfered…"
+
+#: payment.php:296 payment.php:462 payment.php:485 recharge.php:279
+msgid "Charger le QRcode"
+msgstr "Load the QRcode"
+
+#: payment.php:415
+msgid "Aucun QRcode trouvé."
+msgstr "No QRcode found."
+
+#: payment.php:443 recharge.php:609
+msgid "Enlever"
+msgstr "Delete"
+
+#: permission.php:30
+msgid "Mes autorisations"
+msgstr "My permissions"
+
+#: permission.php:45
+msgid "Créer un utilisateur"
+msgstr "Create a user"
+
+#: permission.php:85
+msgid "Role"
+msgstr "Role"
+
+#: permission.php:86
+msgid "Description"
+msgstr "Description"
+
+#: permission.php:108
+msgid "Accès complet du système, les autorisations et la facturation"
+msgstr "Full system access, authorizations and billing"
+
+#: permission.php:197
+msgid "Invité un membre"
+msgstr "Guest member"
+
+#: permission.php:206 permission.php:255
+msgid "Email de la personne"
+msgstr "Email of the person"
+
+#: permission.php:212 permission.php:261
+msgid "Groupe"
+msgstr "Group"
+
+#: profil.php:104
+msgid "Modifier la photo"
+msgstr "Edit the photo"
+
+#: profil.php:122 profil.php:316 register.php:54
+msgid "Nom"
+msgstr "Name"
+
+#: profil.php:127 profil.php:321
+msgid "Prénom(s)"
+msgstr "Surname"
+
+#: profil.php:132 profil.php:340
+msgid "Pays de résidence"
+msgstr "Country of residence"
+
+#: profil.php:137 profil.php:326
+msgid "Sexe"
+msgstr "Gender"
+
+#: profil.php:154
+msgid "Login de réception d'argent"
+msgstr "Recipient Login"
+
+#: profil.php:157
+msgid "Cliquer pour consulter"
+msgstr "Click to consult"
+
+#: profil.php:167
+msgid "Modifier les informations du profil"
+msgstr "Edit profile information"
+
+#: profil.php:174
+msgid "Modifier mot de passe"
+msgstr "Change password"
+
+#: profil.php:186
+msgid "QrCode du login de reception d'argent"
+msgstr "QrCode of the money receipt login"
+
+#: profil.php:194
+msgid "Télécharger le QrCode"
+msgstr "Download QrCode"
+
+#: profil.php:215
+msgid "Modification de mot de passe"
+msgstr "Change password"
+
+#: profil.php:224
+msgid "Ancien mot de passe"
+msgstr "Old password"
+
+#: profil.php:229
+msgid "Nouveau mot de passe"
+msgstr "New Password"
+
+#: profil.php:235
+msgid "Confirmer votre mot de passe"
+msgstr "Confirm your password"
+
+#: profil.php:241
+msgid "Changer le mot de passe"
+msgstr "To change the password"
+
+#: profil.php:262
+msgid "Authentification"
+msgstr "Authentication"
+
+#: profil.php:271
+msgid "Votre Login"
+msgstr "Your Login"
+
+#: profil.php:288
+msgid "Connexion…"
+msgstr "Connection ..."
+
+#: profil.php:367
+msgid "Identifiant de virement/reception d'argent"
+msgstr "Money transfer / receipt ID"
+
+#: profil.php:375
+msgid "Votre identifiant"
+msgstr "Login"
+
+#: profil.php:384
+msgid "Fermer"
+msgstr "Close"
+
+#: profil.php:467
+msgid "Votre photo de profil"
+msgstr "Your profile picture"
+
+#: recharge.php:55 recharge.php:113
+msgid "Votre solde de recharge"
+msgstr "Your recharge balance"
+
+#: recharge.php:56 recharge.php:114
+msgid "Crédits"
+msgstr "Credits"
+
+#: recharge.php:57 recharge.php:115
+msgid ""
+"Il s'agit du solde de compte de recharge.Vous pouvez nous contactez pour en "
+"acheter"
+msgstr "This is the recharge account balance. You can contact us to buy one"
+
+#: recharge.php:63 recharge.php:121 recharge.php:213
+msgid "Nouvelle recharge"
+msgstr "New recharge"
+
+#: recharge.php:67 recharge.php:124
+msgid "Utiliser un QRCode"
+msgstr "Use a QRCode"
+
+#: recharge.php:155 recharge.php:184
+msgid "Confirmation"
+msgstr "Confirmation"
+
+#: recharge.php:165 recharge.php:194
+msgid "Entrer votre mot de passe pour confirmer"
+msgstr "Enter your password to confirm"
+
+#: recharge.php:172 recharge.php:201
+msgid "annuler"
+msgstr "cancel"
+
+#: recharge.php:173 recharge.php:202
+msgid "Confirmer"
+msgstr "To confirm"
+
+#: recharge.php:241
+msgid "Recharger"
+msgstr "Recharge"
+
+#: recharge.php:441 recharge.php:513
+msgid "Désolé, votre code de sécurité est incorrect !"
+msgstr "Sorry, your security code is incorrect!"
+
+#: recharge.php:452
+msgid "Vous voulez effectuer une recharge de"
+msgstr "You want to recharge"
+
+#: recharge.php:452
+msgid "à"
+msgstr "at"
+
+#: recharge.php:490
+msgid "Vous voulez effectuer une recharge à"
+msgstr "You want to recharge at"
+
+#: register.php:64
+msgid "Prénoms"
+msgstr "Surname"
+
+#: register.php:122
+msgid "Confirmation du mot de passe"
+msgstr "Password Confirmation"
+
+#: register.php:151
+msgid "Connecter"
+msgstr "Sign In"
+
+#: role.php:33
+msgid ""
+"Les rôles définissent les autorisations accordées aux membres de l'équipe "
+"dans votre compte GANDOKINTCHE."
+msgstr ""
+"Roles define the permissions granted to team members in your GANDOKINTCHE "
+"account."
+
+#: settings.php:38
+msgid "Services"
+msgstr "Services"
+
+#: settings.php:49
+msgid ""
+"Ce service permet à l'utilisateur de faire des virements vers un autre compte"
+msgstr "This service allows the user to transfer to another account"
+
+#: settings.php:69
+msgid "Langue"
+msgstr "Language"
+
+#: settings.php:73
+msgid "Français"
+msgstr "French"
+
+#: settings.php:74
+msgid "Anglais"
+msgstr "English"
+
+#: shop.php:43
+msgid "Site marchand"
+msgstr "Commercial website"
+
+#: shop.php:44
+msgid "Date"
+msgstr "Date"
+
+#: shop.php:45
+msgid "Frais"
+msgstr "Other expenses"
+
+#: shop.php:92
+msgid "Aucun achat en ligne !"
+msgstr "No purchase online !"
+
+#: transaction.php:25
+msgid "Transations"
+msgstr "Transactions"
+
+#: transaction.php:46
+msgid "description"
+msgstr "description"
+
+#: transaction.php:47
+msgid "montant"
+msgstr "amount"
+
+#: transaction.php:75
+msgid "Virement de fond"
+msgstr "Transfer of funds"
+
+#: transaction.php:79
+msgid "Reception de fond"
+msgstr "Money reception"
+
+#: transaction.php:125
+msgid "Vous n'avez aucune transaction !"
+msgstr "You have no transactions!"
+
+#: transaction_pdf.php:85
+msgid "Générer le"
+msgstr "Generate invoices"
+
+#: transaction_pdf.php:153
+msgid "Date d'opération : Le"
+msgstr "Date of the operation"
+
+#~ msgid "Partenaires/Développeurs"
+#~ msgstr "API / Developers"
+
+#~ msgid "Intégrer facilement"
+#~ msgstr "Integrate easily"
+
+#~ msgid "l'API sur votre platforme"
+#~ msgstr "the API on your platform"
+
+#~ msgid "Documentation"
+#~ msgstr "Documentation"
+
+#~ msgid ""
+#~ "Nous mettons à votre disposition les services REST que vous pouvez "
+#~ "invoquer dans vos plateformes e-commerce, transport,..etc."
+#~ msgstr ""
+#~ "We put at your disposal the REST services that you can invoke in your e-"
+#~ "commerce, transport, etc..."
+
+#~ msgid "Lire la suite..."
+#~ msgstr "Read more..."
+
+#~ msgid "Documentation complète"
+#~ msgstr "Full documentation"
+
+#~ msgid ""
+#~ "Nous mettons à votre disposition la documentation complète d'intégration "
+#~ "du service."
+#~ msgstr ""
+#~ "We put at your disposal the complete documentation of integration of the "
+#~ "service."
+
+#~ msgid "Simple"
+#~ msgstr "Simple"
+
+#~ msgid "Rapide"
+#~ msgstr "Quick"
+
+#~ msgid "Sécurisé"
+#~ msgstr "Secured"
+
+#~ msgid "Consulter..."
+#~ msgstr "To consult..."
+
+#~ msgid ""
+#~ "chez nous et utiliser nos différents services (Virements, "
+#~ "Facturatcions,...etc) juste en quelques clics."
+#~ msgstr ""
+#~ "with us and use our various services (Transfers, Invoices, ... etc) just "
+#~ "in a few clicks."
+
+#~ msgid "Fiable"
+#~ msgstr "Reliable"
+
+#~ msgid "Profitez des avantages du partenariat"
+#~ msgstr "Enjoy the benefits of partnership"
+
+#~ msgid ""
+#~ "Notre Programme Partenaires vous donne toutes les clés pour proposer à "
+#~ "vos marchands des expériences de paiement innovantes."
+#~ msgstr ""
+#~ "Our Partner Program gives you all the keys to offer your merchants "
+#~ "innovative payment experiences."
+
+#~ msgid ""
+#~ "Des informations actualisées sur les dernières initiatives et "
+#~ "améliorations des produits GandokinTché"
+#~ msgstr ""
+#~ "Up-to-date information on the latest initiatives and improvements to "
+#~ "GandokinTché products"
+
+#~ msgid "Un accès interne à l'assistance technique et aux experts commerciaux"
+#~ msgstr "Internal access to technical assistance and commercial experts"
+
+#~ msgid ""
+#~ "Une meilleure visibilité de votre entreprise dans notre Annuaire des "
+#~ "partenaires"
+#~ msgstr "Better visibility of your company in our Partner Directory"
+
+#~ msgid ""
+#~ "L'API de GandokinTché fournir un certain niveau d'abstration au "
+#~ "développeur, c'est-à-dire qu'elle lui masque la complexité de l'accès à "
+#~ "notre système en proposant un jeu de fonctions standard dont seuls les "
+#~ "paramètres et les valeurs retournées sont connus"
+#~ msgstr ""
+#~ "The GandokinTché API provides a certain level of abstraction to the "
+#~ "developer, ie it masks the complexity of the access to our system by "
+#~ "proposing a set of standard functions whose only parameters and values "
+#~ "returned are known"
+
+#~ msgid "1.Intégration sur Application Android"
+#~ msgstr "1.Integration on Android Application"
+
+#~ msgid "Lancer le téléchargement"
+#~ msgstr "Launch the download"
+
+#~ msgid "3. Intégration sur Application web (PHP)"
+#~ msgstr "3. Integration on Web Application (PHP)"
+
+#~ msgid "4.Intégration sur Application web (Javascript)"
+#~ msgstr "4.Integration on Web Application (Javascript)"
+
+#~ msgid "Accueil"
+#~ msgstr "Home"
+
+#~ msgid "Le système de paiement,"
+#~ msgstr "The payment system,"
+
+#~ msgid "en ligne sécurisé au Bénin"
+#~ msgstr "secure online in Benin"
+
+#~ msgid "Ouvrir un compte gratuitement"
+#~ msgstr "Open an account for free"
+
+#~ msgid ""
+#~ "Une solution simple et sûr pour être payé et se faire payer partout au "
+#~ "Bénin"
+#~ msgstr ""
+#~ "A simple and secure solution to get paid and get paid everywhere in Benin"
+
+#~ msgid ""
+#~ "Grâce à GandokinTché, nous construisons une économie rapide basée sur un "
+#~ "système complet et surtout adaptés aux réalités de son environnement.Nous "
+#~ "mettons à disposition des Entrepreneurs du Bénin et du continents où "
+#~ "qu'ils soient des outils flexibles pour le commerce en ligne.Que vous "
+#~ "lanciez un business SaaS,une place de marché sur demande, un site e-"
+#~ "commerce ou une plateforme de crowdfunding, l'API GandokinTché vous offre "
+#~ "une facilité d’intégration et des nouvelles fonctionnalités sans "
+#~ "équivalent ceci pour vous permettre de créer les meilleurs produits pour "
+#~ "vos clients."
+#~ msgstr ""
+#~ "Thanks to GandokinTché, we build a fast economy based on a complete "
+#~ "system and especially adapted to the realities of its environment. We "
+#~ "provide entrepreneurs from Benin and continents wherever they are "
+#~ "flexible tools for e-commerce. Whether you start a SaaS business, a "
+#~ "marketplace on demand, an e-commerce site or a platform for crowdfunding, "
+#~ "the GandokinTché API offers you easy integration and new unparalleled "
+#~ "features to help you create the best products for your customers."
+
+#~ msgid "PAIEMENTS"
+#~ msgstr "PAYMENTS"
+
+#~ msgid ""
+#~ "Payé désormais vos achats en ligne et depuis chez vous en seulement "
+#~ "quelques clics et faites-vous livrés vos achats à un point relais proche "
+#~ "de chez vous pour encore plus de faciliter au quotidien."
+#~ msgstr ""
+#~ "Paid now your purchases online and from home just a few clicks and get "
+#~ "your purchases to a point relay near you for even more ease everyday."
+
+#~ msgid "FACTURATIONS"
+#~ msgstr "BILLINGS"
+
+#~ msgid ""
+#~ "Une facturation automatisée pour une comptabilité propre garantissant une "
+#~ "progression claire de votre chiffre d’affaire. Nous vous accompagnons "
+#~ "dans toutes les étapes de votre activité avec un seul but :"
+#~ msgstr ""
+#~ "Automated billing for proper accounting guaranteeing a clear progression "
+#~ "of your turnover. We support you in all stages of your activity with one "
+#~ "goal:"
+
+#~ msgid "la croissance de votre business."
+#~ msgstr "the growth of your business."
+
+#~ msgid "TARIFS"
+#~ msgstr "PRICES"
+
+#~ msgid ""
+#~ "Une commission simple et fixe sans aucun risque de variation donc sans "
+#~ "surprise pour les utilisateurs."
+#~ msgstr ""
+#~ "A simple and fixed commission without any risk of variation so "
+#~ "unsurprising for users."
+
+#~ msgid "API/Développeurs"
+#~ msgstr "API / Developers"
+
+#~ msgid ""
+#~ "Nous travaillons sans relâche pour vous proposer des solutions simples, "
+#~ "flexibles et élégantes autour du paiement en ligne et mobile."
+#~ msgstr ""
+#~ "We work tirelessly to offer you simple, flexible and elegant solutions "
+#~ "around online and mobile payment."
+
+#~ msgid "FONCTIONNALITES"
+#~ msgstr "FEATURES"
+
+#~ msgid ""
+#~ "Faites des virements, des paiements et des transferts simples ou groupés, "
+#~ "sans erreurs, rapidement avec le sourire aux lèvres."
+#~ msgstr ""
+#~ "Make transfers, payments and transfers simple or grouped, without errors, "
+#~ "quickly with a smile on the lips."
+
+#~ msgid "PRIORITÉ AUX UTILISATEURS"
+#~ msgstr "PRIORITY TO USERS"
+
+#~ msgid "Une solution simple et facile à utiliser"
+#~ msgstr "A simple and easy to use solution"
+
+#~ msgid ""
+#~ "Utiliser le QRcode de vos proches pour leurs faire des transferts "
+#~ "sécurités et rapide à travers tout le Bénin."
+#~ msgstr ""
+#~ "Use the QRcode of your loved ones for their to make safe and fast "
+#~ "transfers throughout Benin."
+
+#~ msgid "faire un transfère"
+#~ msgstr "make a transfer"
+
+#~ msgid ""
+#~ "Disposé d’un outil de facturation au formats PDF lié à chaque transaction "
+#~ "réalisée sur votre site d’e-commerce afin d’assurer la traçabilité de "
+#~ "toutes vos interactions avec vos clients."
+#~ msgstr ""
+#~ "With a billing tool in PDF format linked to every transaction made on "
+#~ "your e-commerce site to ensure the traceability of all your interactions "
+#~ "with your customers."
+
+#~ msgid "INTEGRATION API"
+#~ msgstr "INTEGRATION API"
+
+#~ msgid ""
+#~ "Nous sommes convaincus que les paiements en ligne constitueront le socle "
+#~ "du commerce national et régionale  en Afrique et nous travaillons alors à "
+#~ "sa démocratisation à travers des solutions évolutives et flexibles. En "
+#~ "éliminant les complexités inutiles et chronophages, nous vous permettons "
+#~ "de vous lancer grâce GandokinTche en quelques minutes seulement avec une "
+#~ "API codé avec les langages de base à savoir PHP, Java et Javascript."
+#~ msgstr ""
+#~ "We are convinced that online payments will form the bedrock of national "
+#~ "and regional trade in Africa and we are working on its "
+#~ "democratization through scalable and flexible solutions. Eliminating "
+#~ "unnecessary and time-consuming complexities, we allow you to get started "
+#~ "with GandokinTche in just a few minutes with an API coded with the basic "
+#~ "languages ​​namely PHP, Java and Javascript."
+
+#~ msgid "Voir Plus..."
+#~ msgstr "View more..."
+
+#~ msgid "Facile à mettre en place"
+#~ msgstr "Easy to put in place"
+
+#~ msgid ""
+#~ "Nous travaillons sans relâche pour mettre au profit des utilisateurs, un "
+#~ "outils simple à intégrer"
+#~ msgstr "We work tirelessly to benefit the users, a simple tool to integrate"
+
+#~ msgid "24/7 Support"
+#~ msgstr "24/7 Support"
+
+#~ msgid ""
+#~ "Vous pouvez contacter notre service support pour une assistance ou pour "
+#~ "avoir des informations particulière sur l'outil"
+#~ msgstr ""
+#~ "You can contact our support service for assistance or to have specific "
+#~ "information about the tool"
+
+#~ msgid "Vous pouvez aussi consulter la documentation de l'API "
+#~ msgstr "You can also consult the documentation of the API "
+
+#~ msgid "Inscrivez-vous et recevez par email nos nouveauté"
+#~ msgstr "Sign up and receive by email our novelty"
+
+#~ msgid "Solutions"
+#~ msgstr "Solutions"
+
+#~ msgid "FAQ"
+#~ msgstr "FAQ"
+
+#~ msgid "Offres"
+#~ msgstr "Offers"
+
+#~ msgid "E-Mail"
+#~ msgstr "E-Mail"
+
+#~ msgid "Sujet"
+#~ msgstr "Topic"
+
+#~ msgid "Votre Méssage......."
+#~ msgstr "Your message......."
+
+#~ msgid "Envoyé"
+#~ msgstr "Sent"
+
+#~ msgid "Besoin d'aide ?"
+#~ msgstr "Need help ?"
+
+#~ msgid "Paiement sécrurisé au Bénin"
+#~ msgstr "Secured payment in Benin"
+
+#~ msgid "SOLUTIONS"
+#~ msgstr "SOLUTIONS"
+
+#~ msgid "Un outil complet pour les développeurs, facile à intégrer"
+#~ msgstr "A complete tool for developers, easy to integrate"
+
+#~ msgid "FACTURATION"
+#~ msgstr "BILLING"
+
+#~ msgid "Un outil qui permet d'établir une facture à vos clients en un clic"
+#~ msgstr "A tool that allows you to invoice your customers in one click"
+
+#~ msgid "E-COMMERCE"
+#~ msgstr "E-COMMERCE"
+
+#~ msgid "PARTENAIRES & API"
+#~ msgstr "PARTNERS & API"
+
+#~ msgid "FAQ & SUPPORTS"
+#~ msgstr "FAQ & SUPPORTS"
+
+#~ msgid "Accédez à votre compte"
+#~ msgstr "Access your account"
+
+#~ msgid "Besoins d'aide ?"
+#~ msgstr "Need help ?"
+
+#~ msgid "Poser votre question"
+#~ msgstr "Ask your question"
+
+#~ msgid "FOIRES AUX QUESTIONS"
+#~ msgstr "FREQUENTLY ASKED QUESTIONS"
+
+#~ msgid "Autres manières d'obtenir d'aide"
+#~ msgstr "Other ways to get help"
+
+#~ msgid "Forum d'aide"
+#~ msgstr "Help Forum"
+
+#~ msgid "Trouvez des réponses et participez à la discussion"
+#~ msgstr "Find answers and join the discussion"
+
+#~ msgid "Gestionnaire de litige"
+#~ msgstr "Litigation Manager"
+
+#~ msgid "Résolver les problème de transaction"
+#~ msgstr "Solve transaction problems"
+
+#~ msgid "Contactez-nous"
+#~ msgstr "Contact Us"
+
+#~ msgid "Contactez le service clientèle"
+#~ msgstr "Contact customer service"
+
+#~ msgid "Découvrez tous nos tarifs :"
+#~ msgstr "Discover all our prices:"
+
+#~ msgid "clairs, flexibles et sans suprises."
+#~ msgstr "clear, flexible and without surprises."
+
+#~ msgid "Acheteurs"
+#~ msgstr "Buyers"
+
+#~ msgid ""
+#~ "Utilisez GandokinTché gratuitement pour payer vos achats. Des frais "
+#~ "peuvent s'appliquer en cas de"
+#~ msgstr ""
+#~ "Use GandokinTché for free to pay for your purchases. Fees may apply in "
+#~ "case of"
+
+#~ msgid "conversion de devise."
+#~ msgstr "currency conversion."
+
+#~ msgid "Vendeurs"
+#~ msgstr "Sellers"
+
+#~ msgid ""
+#~ "Nos frais de vente sont simples et transparents. Vous payez uniquement "
+#~ "pour les paiements que vous recevez, il n'y a pas de frais mensuels. Et "
+#~ "plus vous vendez, plus la commission diminue."
+#~ msgstr ""
+#~ "Our selling costs are simple and transparent. You only pay for the "
+#~ "payments you receive, there is no monthly fee. And the more you sell, the "
+#~ "lower the commission."
+
+#~ msgid "Contactez nous pour plus d'information."
+#~ msgstr "Contact us for more information."
+
+#~ msgid "Envoyer de l'argent"
+#~ msgstr "Send money"
+
+#~ msgid ""
+#~ "Depuis votre compte GandokinTché, envoyez sans frais de l'argent en FCFA "
+#~ "à vos proches au Bénin. Pour les transactions effectuées dans un autre "
+#~ "devise, des frais de conversion peuvent s'appliquer."
+#~ msgstr ""
+#~ "From your GandokinTché account, send free money in CFA francs to your "
+#~ "relatives in Benin. For transactions made in another currency, a "
+#~ "conversion fee may apply."
+
+#~ msgid "Ouvrir ou Fermer un compte"
+#~ msgstr "Open or Close an account"
+
+#~ msgid ""
+#~ "L'ouverture et la fermeture d'un compte chez GandokinTché, ainsi que "
+#~ "l'intégration de notre solution de paiement, sont entièrement gratuites."
+#~ msgstr ""
+#~ "The opening and closing of an account at GandokinTché, as well as the "
+#~ "integration of our payment solution, are completely free."
+
+#~ msgid "Frais de Commission"
+#~ msgstr "Commission fees"
+
+#~ msgid "/dépôt de cash sur son compte"
+#~ msgstr "/ cash deposit on his account"
+
+#~ msgid ""
+#~ "Une commission unique de 10% qui ne s’applique qu’au dépôt de cash sur "
+#~ "son compte et qui facilite le quotidien de tous en donnant accès aux "
+#~ "services sécurisés à distance comme réservé un trajet en ligne ou encore "
+#~ "effectuer des achats en ligne."
+#~ msgstr ""
+#~ "A single 10% commission that only applies to the deposit of cash on his "
+#~ "account and which facilitates the daily life of all by giving access to "
+#~ "secure remote services such as online travel or online shopping."

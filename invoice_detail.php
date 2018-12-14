@@ -30,7 +30,7 @@ include 'pages/header.php';
                             <div class="card">
                                 <div class="card-header">
                                     <i class="mr-2 fa fa-align-justify"></i>
-                                    <strong class="card-title" v-if="headerText">Facturation</strong>
+                                    <strong class="card-title" v-if="headerText"><?php echo ma_tra("Facturation")?></strong>
                                 </div>
                                 <?php
                                 require 'pages/control/invoice_function.php';
@@ -39,7 +39,7 @@ include 'pages/header.php';
                                     <div class="table-data__tool-left">
                                         <div class="filters m-b-45">
                                              <div style="margin-left: 20px;margin-top: 10px;">
-                                                 <strong>Client : <?php echo infos_user(get_facturation_id($_GET["product"])->client_id)->nom." ".infos_user(get_facturation_id($_GET["product"])->client_id)->prenom; ?> </strong><br>
+                                                 <strong><?php echo ma_tra("Client")?> : <?php echo infos_user(get_facturation_id($_GET["product"])->client_id)->nom." ".infos_user(get_facturation_id($_GET["product"])->client_id)->prenom; ?> </strong><br>
                                                  <small>Email : <?php echo infos_user(get_facturation_id($_GET["product"])->client_id)->adresse; ?></small>
                                              </div>
                                         </div>
@@ -47,7 +47,7 @@ include 'pages/header.php';
 
                                     <div style="margin-right: 20px;margin-top: 10px;" class="table-data__tool-right">
                                         <a target="_blank" style="color: white" href="invoice_pdf?pdf=<?php echo $_GET["product"]; ?>&token_ID=<?php echo sha1($_GET["product"]); ?>" class="au-btn au-btn-icon au-btn--green au-btn--small">
-                                            <i class="zmdi zmdi-collection-pdf"></i>Générer la facture
+                                            <i class="zmdi zmdi-collection-pdf"></i><?php echo ma_tra("Générer la facture")?>
                                         </a>
                                     </div>
 
@@ -58,11 +58,11 @@ include 'pages/header.php';
 
                                     <table  class="table table-striped table-bordered" style="width:100%">
                                         <thead>
-                                        <tr>
-                                            <th>Libellé</th>
-                                            <th>Quantité</th>
-                                            <th>Prix Unitaire</th>
-                                            <th>Montant</th>
+                                         <tr>
+                                            <th>   <?php echo ma_tra("Libellé")?></th>
+                                            <th>   <?php echo ma_tra("Quantité")?></th>
+                                            <th>   <?php echo ma_tra("Prix Unitaire")?></th>
+                                            <th>   <?php echo ma_tra("Montant")?></th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -85,9 +85,9 @@ include 'pages/header.php';
                                         </tbody>
                                     </table>
                                     <div class=" pull-right">
-                                        <strong class="">Autres Frais : <?php  echo infoVente($_GET["product"])->frais ?> FCFA</strong><br>
-                                        <strong class="">Taxe : <?php  echo infoVente($_GET["product"])->tax*100 ?> %</strong><br>
-                                        <strong class="text-success">Montant total : <?php  echo (infoVente($_GET["product"])->frais+getMontantTotal($_GET["product"]))*(1+infoVente($_GET["product"])->tax) ?> FCFA</strong>
+                                        <strong class=""><?php echo ma_tra("Autres Frais")?> : <?php  echo infoVente($_GET["product"])->frais ?> FCFA</strong><br>
+                                        <strong class=""><?php echo ma_tra("Taxe")?> : <?php  echo infoVente($_GET["product"])->tax*100 ?> %</strong><br>
+                                        <strong class="text-success"><?php echo ma_tra("Montant total")?> : <?php  echo (infoVente($_GET["product"])->frais+getMontantTotal($_GET["product"]))*(1+infoVente($_GET["product"])->tax) ?> FCFA</strong>
                                     </div>
 
 

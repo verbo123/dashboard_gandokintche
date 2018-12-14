@@ -1,4 +1,5 @@
 <?php
+require 'Tools/localization.php';
 if(!isset($_COOKIE["account_code"]))
 {
     header("location: login");

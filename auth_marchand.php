@@ -32,11 +32,11 @@ include 'pages/header.php';?>
                             <div style="" id="upd" class="card">
                                 <div class="card-header">
                                     <i class="mr-2 fa fa-align-justify"></i>
-                                    <strong class="card-title" v-if="headerText">Informations de votre compte marchand</strong><br>
+                                    <strong class="card-title" v-if="headerText">
+                                        <?php echo ma_tra("Informations de votre compte marchand")?>
+                                    </strong><br>
                                     <small>
-                                        Les informations fournies ci-dessous seront
-                                        visibles par vos clients. Utiliez-le pour
-                                        fournir des informations de contact spécifiques à l'assistance.
+                                        <?php echo ma_tra("Les informations fournies ci-dessous seront visibles par vos clients. Utiliez-le pour fournir des informations de contact spécifiques à l'assistance.")?>
                                     </small>
                                 </div>
 
@@ -67,9 +67,18 @@ include 'pages/header.php';?>
                                                 $auto=array($code_marchand,getUserLogin(),1); //le 1 pour groupe propriétaire
                                                 save_autorisation_user($auto);
                                             }else{
-                                                echo '<div id="msg" class="alert alert-danger"> <button type="button" class="close" data-dismiss="alert">&times;</button>'.
-                                                    'Adresse email invalide !'.
-                                                    '</div>';
+                                                if(isset($_COOKIE['lang']) && $_COOKIE['lang'] == "en_US")
+                                                {
+                                                    echo '<div id="msg" class="alert alert-danger"> <button type="button" class="close" data-dismiss="alert">&times;</button>'.
+                                                        'Invalid email address !'.
+                                                        '</div>';
+
+                                                }else{
+                                                    echo '<div id="msg" class="alert alert-danger"> <button type="button" class="close" data-dismiss="alert">&times;</button>'.
+                                                        'Adresse email invalide !'.
+                                                        '</div>';
+
+                                                }
 
                                             }
 
@@ -80,18 +89,18 @@ include 'pages/header.php';?>
                                     ?>
                                     <form data-parsley-validate  method="post" class="center-block col-form-label-sm">
                                         <div class="form-group">
-                                            <label for="company" class=" form-control-label">Nom de l'entreprise</label>
+                                            <label for="company" class=" form-control-label"><?php echo ma_tra("Nom de l'entreprise")?></label>
                                             <input value="<?php if(getcompte_marchand() != null)  echo getcompte_marchand()->nom_entreprise ?>" name="entreprise" required="required" type="text" id="company" placeholder="" class="form-control">
                                         </div>
 
 
                                         <div class="form-group">
-                                            <label for="street" class=" form-control-label">Site web</label>
+                                            <label for="street" class=" form-control-label"><?php echo ma_tra("Site web")?></label>
                                             <input  value="<?php if(getcompte_marchand() != null)  if(getcompte_marchand() != null)  echo getcompte_marchand()->site_web ?>" name="site"  type="url" required="required" id="site" placeholder="http://www.monsite.com" class="form-control">
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="street" class="form-control-label">Téléphone</label>
+                                            <label for="street" class="form-control-label"><?php echo ma_tra("Téléphone")?></label>
                                             <input   value="<?php if(getcompte_marchand() != null)  echo getcompte_marchand()->numero ?>" name="tel" required="required" type="tel"  placeholder="Ex : 22999999999" class="form-control">
                                         </div>
 
@@ -102,13 +111,13 @@ include 'pages/header.php';?>
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="street" class=" form-control-label">Pays</label>
+                                            <label for="street" class=" form-control-label"><?php echo ma_tra("Pays")?></label>
                                             <input value="<?php if(getcompte_marchand() != null)  if(!empty(getcompte_marchand())){echo getcompte_marchand()->pays;}else{echo infos_user(getUserLogin())->pays;}  ?>" name="pays" id="pays"  required="required" type="text"  placeholder="" class="form-control">
                                         </div>
 
 
                                         <div style="display:none" class="form-group">
-                                            <label for="selectSm" class=" form-control-label">Pays</label>
+                                            <label for="selectSm" class=" form-control-label"><?php echo ma_tra("Pays")?></label>
                                             <select   class=" form-control">
                                                 <option value=""> </option>
                                                 <option value="France">France </option>
@@ -370,12 +379,12 @@ include 'pages/header.php';?>
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="street" class=" form-control-label">Ville</label>
+                                            <label for="street" class=" form-control-label"><?php echo ma_tra("Ville")?></label>
                                             <input value="<?php if(getcompte_marchand() != null)  echo getcompte_marchand()->ville ?>"   name="ville" required="required" type="text" id="street" placeholder="" class="form-control">
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="country" class="form-control-label">Adresse</label>
+                                            <label for="country" class="form-control-label"><?php echo ma_tra("Adresse")?></label>
                                             <input value="<?php if(getcompte_marchand() != null)  echo getcompte_marchand()->adresse ?>"   required="required" name="adresse" type="text" id="country" placeholder="" class="form-control">
                                         </div>
                                         <div class=" pull-right">
@@ -383,28 +392,28 @@ include 'pages/header.php';?>
                                             if(getcompte_marchand() == null || isset($_POST["valider"])){
                                                 ?>
                                                 <button type="reset" class="btn btn-danger btn-sm">
-                                                    <i class="fa fa-ban"></i> Annuler
+                                                    <i class="fa fa-ban"></i> <?php echo ma_tra("Annuler")?>
                                                 </button>
                                                 <button name="valider" type="submit" class="btn btn-primary btn-sm">
                                                     <i class="fa fa-dot-circle-o"></i>
-                                                    Enregistrer
-                                                </button>
-                                                <?php
-                                            }else{
-                                                ?>
-                                                <button name="modifier" type="submit" class="btn btn-primary btn-sm">
-                                                    <i class="fa fa-dot-circle-o"></i>
-                                                    Modifier
-                                                </button>
-                                                <?php
-                                            }
-                                            ?>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
+                                                    <?php echo ma_tra("Enregistrer")?>
+                                                 </button>
+                                                 <?php
+                                             }else{
+                                                 ?>
+                                                 <button name="modifier" type="submit" class="btn btn-primary btn-sm">
+                                                     <i class="fa fa-dot-circle-o"></i>
+                                                     <?php echo ma_tra("Modifier")?>
+                                                 </button>
+                                                 <?php
+                                             }
+                                             ?>
+                                         </div>
+                                     </form>
+                                 </div>
+                             </div>
 
-<!--                            <div style="--><?php //if(getcompte_marchand() == null){ echo "display:block"; }else{echo "display:none"; } ?><!--" id="sav" class="card">-->
+ <!--                            <div style="--><?php //if(getcompte_marchand() == null){ echo "display:block"; }else{echo "display:none"; } ?><!--" id="sav" class="card">-->
 <!--                                <div class="card-header">-->
 <!--                                    <i class="mr-2 fa fa-align-justify"></i>-->
 <!--                                    <strong class="card-title" v-if="headerText">Informations de votre compte marchand</strong><br>-->

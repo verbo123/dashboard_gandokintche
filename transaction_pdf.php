@@ -1,4 +1,5 @@
 <?php
+require 'Tools/localization.php';
 require_once "lib/html2pdf.php";
 include 'pages/control/database.php';
 include 'pages/control/fonction.php';
@@ -81,7 +82,7 @@ ob_start();
         <table>
             <tr>
                 <td class="50p">
-                    <p style="font-size: 3mm">Générer le <?php echo date("d/m/y à H:m"); ?></p>
+                    <p style="font-size: 3mm"><?php echo ma_tra("Générer le")?> <?php echo date("d/m/y à H:m"); ?></p>
                 </td>
 
                 <td class="50p">
@@ -104,14 +105,14 @@ ob_start();
     <table style="margin-top: 20px">
         <tr>
             <td>
-                <strong style="text-decoration: underline">Envoyeur</strong><br />
+                <strong style="text-decoration: underline"><?php echo ma_tra("Envoyeur")?></strong><br />
                 <strong><?php echo $user_envoyeur['firstname']; ?></strong><br />
                 <strong>Adresse : </strong><?php echo nl2br($user_envoyeur['address']); ?><br />
                 <?php
                 if($user_envoyeur['portable'] != null)
                 {
                     ?>
-                    <strong>Téléphone : </strong> <?php echo $user_envoyeur['portable']; ?><br />
+                    <strong><?php echo ma_tra("Téléphone")?> : </strong> <?php echo $user_envoyeur['portable']; ?><br />
                     <?php
 
                 }
@@ -123,14 +124,14 @@ ob_start();
     <table>
         <tr>
             <td>
-                <strong style="text-decoration: underline">Reçeveur</strong><br />
+                <strong style="text-decoration: underline"><?php echo ma_tra("Reçeveur")?></strong><br />
                 <strong><?php echo $user_receveur['firstname']; ?></strong><br />
-                <strong>Adresse : </strong><?php echo nl2br($user_receveur['address']); ?><br />
+                <strong><?php echo ma_tra("Adresse")?> : </strong><?php echo nl2br($user_receveur['address']); ?><br />
                 <?php
                 if($user_receveur['portable'] != null)
                 {
                     ?>
-                    <strong>Téléphone : </strong> <?php echo $user_receveur['portable']; ?><br />
+                    <strong><?php echo ma_tra("Téléphone")?> : </strong> <?php echo $user_receveur['portable']; ?><br />
                     <?php
 
                 }
@@ -149,13 +150,13 @@ ob_start();
 
         <tr>
             <td>
-                Date d'opération : Le <?php echo date_conversion($data->date); ?>
+            <?php echo ma_tra("Date d'opération : Le")?> <?php echo date_conversion($data->date); ?>
             </td>
         </tr>
 
         <tr>
             <td>
-                Montant :  <?php echo $data->montant; ?> CFA
+            <?php echo ma_tra("Montant")?> :  <?php echo $data->montant; ?> CFA
             </td>
         </tr>
 

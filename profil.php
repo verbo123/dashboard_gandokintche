@@ -68,7 +68,7 @@ require 'pages/header.php';?>
                 <div class="card">
                     <div class="card-header">
                         <i class="mr-2 fa fa-align-justify"></i>
-                        <strong class="card-title" v-if="headerText">Profil</strong>
+                        <strong class="card-title" v-if="headerText"><?php echo ma_tra("Profil")?></strong>
                     </div>
                    <!--
                          <h3 class="title-5 m-b-35">Transations</h3>-->
@@ -101,7 +101,7 @@ require 'pages/header.php';?>
                                    </div>
 
                                    <button name="profil" style="margin-top: 10px" type="submit">
-                                       <span class="role user">Modifier la photo</span>
+                                       <span class="role user"><?php echo ma_tra("Modifier la photo")?></span>
                                    </button>
                                </div>
 
@@ -119,22 +119,22 @@ require 'pages/header.php';?>
                            <div class="col-md-9">
                                <table style="margin-left: 30px" class="table table-responsive">
                                    <tr>
-                                       <td>Nom</td>
+                                       <td><?php echo ma_tra("Nom")?></td>
                                        <td><?php echo infos_user(getUserLogin())->nom ?></td>
                                    </tr>
 
                                    <tr>
-                                       <td>Prénom(s)</td>
+                                       <td><?php echo ma_tra("Prénom(s)")?></td>
                                        <td><?php echo infos_user(getUserLogin())->prenom ?></td>
                                    </tr>
 
                                    <tr>
-                                       <td>Pays de résidence</td>
+                                       <td><?php echo ma_tra("Pays de résidence")?></td>
                                        <td><?php echo infos_user(getUserLogin())->pays_residence ?></td>
                                    </tr>
 
                                    <tr>
-                                       <td>Sexe</td>
+                                       <td><?php echo ma_tra("Sexe")?></td>
                                        <td><?php echo infos_user(getUserLogin())->sexe ?></td>
                                    </tr>
 
@@ -146,15 +146,15 @@ require 'pages/header.php';?>
                                    </tr>
 
                                    <tr>
-                                       <td>Téléphone</td>
+                                       <td><?php echo ma_tra("Téléphone")?></td>
                                        <td><?php echo infos_user(getUserLogin())->tel ?></td>
                                    </tr>
 
                                    <tr>
-                                       <td class="text-danger">Login de réception d'argent</td>
+                                       <td class="text-danger"><?php echo ma_tra("Login de réception d'argent")?></td>
                                        <td>
                                            <a href="#" data-toggle="modal" data-target="#staticModal">
-                                               <span class="role user">Cliquer pour consulter</span>
+                                               <span class="role user"><?php echo ma_tra("Cliquer pour consulter")?></span>
                                            </a>
                                        </td>
                                    </tr>
@@ -164,14 +164,14 @@ require 'pages/header.php';?>
                                        <td>
                                            <button data-toggle="modal" data-target="#scrollmodal"    class="btn btn-success">
                                                <i style="margin-right: 10px" class="zmdi zmdi-edit"></i>
-                                               Modifier les informations du profil
+                                               <?php echo ma_tra("Modifier les informations du profil")?>
                                            </button>
                                        </td>
 
                                        <td>
                                            <button data-toggle="modal" data-target="#modification"   class="btn btn-warning">
                                                <i style="margin-right: 10px" class="zmdi zmdi-lock"></i>
-                                               Modifier mot de passe
+                                               <?php echo ma_tra("Modifier mot de passe")?>
                                            </button>
                                        </td>
                                    </tr>
@@ -183,7 +183,7 @@ require 'pages/header.php';?>
                        </div>
 
                        <div  class="row">
-                           <p style="margin: 0 auto; width: auto;font-size: 15px;font-weight: 900">QrCode du login de reception d'argent</p>
+                           <p style="margin: 0 auto; width: auto;font-size: 15px;font-weight: 900"><?php echo ma_tra("QrCode du login de reception d'argent")?></p>
                        </div>
                        <div class="row">
                            <div style="margin: 0 auto; width: auto" class="file-preview">
@@ -191,7 +191,7 @@ require 'pages/header.php';?>
                            </div>
                        </div>
                        <div class="row">
-                       <a target="_blank" id="lien" style="margin: 0 auto; width: auto" href="profil?name=<?php echo  $target_d.'/'.infos_user(getUserLogin())->adresse.'.png' ?>" class="btn btn-primary">Télécharger le QrCode</a>
+                       <a target="_blank" id="lien" style="margin: 0 auto; width: auto" href="profil?name=<?php echo  $target_d.'/'.infos_user(getUserLogin())->adresse.'.png' ?>" class="btn btn-primary"><?php echo ma_tra("Télécharger le QrCode")?></a>
                        </div>
                    </div>
 
@@ -212,7 +212,7 @@ require 'pages/header.php';?>
             <div class="modal-dialog modal-sm" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="staticModalLabel">Modification de mot de passe</h5>
+                        <h5 class="modal-title" id="staticModalLabel"><?php echo ma_tra("Modification de mot de passe")?></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -221,24 +221,24 @@ require 'pages/header.php';?>
                         <form  data-parsley-validate method="post" autocomplete="off">
 
                             <div class="form-group">
-                                <label for="cc-payment" class="control-label mb-1">Ancien mot de passe</label>
+                                <label for="cc-payment" class="control-label mb-1"><?php echo ma_tra("Ancien mot de passe")?></label>
                                 <input required="required" name="ancien" type="password" class="form-control">
                             </div>
 
                             <div class="form-group">
-                                <label for="cc-payment" class="control-label mb-1">Nouveau mot de passe</label>
+                                <label for="cc-payment" class="control-label mb-1"><?php echo ma_tra("Nouveau mot de passe")?></label>
                                 <input  data-parsley-minlength="8" id="pax" required="required" name="pax1" type="password" class="form-control">
                             </div>
 
 
                             <div class="form-group">
-                                <label for="cc-number" class="control-label mb-1">Confirmer votre mot de passe</label>
+                                <label for="cc-number" class="control-label mb-1"><?php echo ma_tra("Confirmer votre mot de passe")?></label>
                                 <input data-parsley-equalto="#pax" required="required" name="pax2" type="password" class="form-control" >
                             </div>
 
                             <div class="modal-footer">
                                 <button type="submit"  name="modif" class="btn btn-lg btn-info btn-block">
-                                    <span id="payment-button-amount">Changer le mot de passe</span>
+                                    <span id="payment-button-amount"><?php echo ma_tra("Changer le mot de passe")?></span>
                                 </button>
                             </div>
 
@@ -259,7 +259,7 @@ require 'pages/header.php';?>
             <div class="modal-dialog modal-sm" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="staticModalLabel">Authentification</h5>
+                        <h5 class="modal-title" id="staticModalLabel"><?php echo ma_tra("Authentification")?></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -268,13 +268,13 @@ require 'pages/header.php';?>
                         <form data-parsley-validate method="post" autocomplete="off">
 
                             <div class="form-group">
-                                <label for="cc-payment" class="control-label mb-1">Votre Login</label>
+                                <label for="cc-payment" class="control-label mb-1"><?php echo ma_tra("Votre Login")?></label>
                                 <input data-parsley-trigger="keypress"  required="required" id="email" value="" name="mail" type="email" class="form-control" aria-required="true" aria-invalid="false">
                             </div>
 
 
                             <div class="form-group">
-                                <label for="cc-number" class="control-label mb-1">Entrer votre mot de passe</label>
+                                <label for="cc-number" class="control-label mb-1"><?php echo ma_tra("Entrer votre mot de passe")?></label>
                                 <input required="required" id="passe" name="password" type="password" class="form-control" >
                                 <span class="help-block" data-valmsg-for="cc-number" data-valmsg-replace="true"></span>
                             </div>
@@ -284,8 +284,8 @@ require 'pages/header.php';?>
                         <div class="modal-footer">
                             <button onclick="regist()"  id="valider" class="btn btn-lg btn-info btn-block">
                                 <i class="fa fa-lock fa-lg"></i>&nbsp;
-                                <span id="payment-button-amount">Valider</span>
-                                <span id="payment-button-sending" style="display:none;">Connexion…</span>
+                                <span id="payment-button-amount"><?php echo ma_tra("Valider")?></span>
+                                <span id="payment-button-sending" style="display:none;"><?php echo ma_tra("Connexion…")?></span>
                             </button>
                         </div>
 
@@ -301,7 +301,7 @@ require 'pages/header.php';?>
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="scrollmodalLabel">Profil </h5>
+                    <h5 class="modal-title" id="scrollmodalLabel"><?php echo ma_tra("Profil")?> </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -313,17 +313,17 @@ require 'pages/header.php';?>
 
 
                                 <div class="form-group">
-                                    <label for="cc-payment" class="control-label mb-1">Nom </label>
+                                    <label for="cc-payment" class="control-label mb-1"><?php echo ma_tra("Nom")?> </label>
                                     <input value="<?php echo infos_user(getUserLogin())->nom ?>" required="required"  name="nom" type="text" class="form-control" aria-required="true" aria-invalid="false">
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="cc-payment" class="control-label mb-1">Prénom(s) </label>
+                                    <label for="cc-payment" class="control-label mb-1"><?php echo ma_tra("Prénom(s)")?> </label>
                                     <input value="<?php echo infos_user(getUserLogin())->prenom ?>" required="required"  name="prenom" type="text" class="form-control" aria-required="true" aria-invalid="false">
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="cc-payment" class="control-label mb-1">Sexe </label>
+                                    <label for="cc-payment" class="control-label mb-1"><?php echo ma_tra("Sexe")?> </label>
                                   <select name="sexe" class="form-control">
                                       <option></option>
                                       <option  value="Masculin" <?php if (infos_user(getUserLogin())->sexe == "Masculin"){echo 'selected="selected"'; } ?> >Masculin</option>
@@ -337,20 +337,20 @@ require 'pages/header.php';?>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="cc-payment" class="control-label mb-1">Pays de résidence </label>
+                                    <label for="cc-payment" class="control-label mb-1"><?php echo ma_tra("Pays de résidence")?> </label>
                                     <input value="<?php echo infos_user(getUserLogin())->pays_residence ?>"  name="pays" type="text" class="form-control" aria-required="true" aria-invalid="false">
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="cc-payment" class="control-label mb-1">Téléphone </label>
+                                    <label for="cc-payment" class="control-label mb-1"><?php echo ma_tra("Téléphone")?> </label>
                                     <input value="<?php echo infos_user(getUserLogin())->tel ?>"  name="tel" type="tel" class="form-control" aria-required="true" aria-invalid="false">
                                 </div>
 
 
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-                        <button name="save" type="submit" class="btn btn-primary">Modifier</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><?php echo ma_tra("Annuler")?></button>
+                        <button name="save" type="submit" class="btn btn-primary"><?php echo ma_tra("Modifier")?></button>
                     </div>
 
                 </form>
@@ -364,7 +364,7 @@ require 'pages/header.php';?>
             <div class="modal-dialog modal-sm" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="staticModalLabel">Identifiant de virement/reception d'argent</h5>
+                        <h5 class="modal-title" id="staticModalLabel"><?php echo ma_tra("Identifiant de virement/reception d'argent")?></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -372,7 +372,7 @@ require 'pages/header.php';?>
                     <div class="modal-body">
 
                         <div class="form-group">
-                            <label for="cc-payment" class="control-label mb-1">Votre identifiant  </label>
+                            <label for="cc-payment" class="control-label mb-1"><?php echo ma_tra("Votre identifiant")?>  </label>
                             <input disabled="disabled" value="<?php echo infos_user(getUserLogin())->op_code ?>" required="required"  name="nom" type="text" class="form-control" aria-required="true" aria-invalid="false">
                         </div>
 
@@ -381,7 +381,7 @@ require 'pages/header.php';?>
                     <div class="modal-footer">
                         <button data-dismiss="modal" class="btn btn-lg btn-info btn-block">
                             <i class="fa fa-close"></i>&nbsp;
-                            <span id="payment-button-amount">Fermer</span>
+                            <span id="payment-button-amount"><?php echo ma_tra("Fermer")?></span>
                         </button>
                     </div>
 
@@ -464,7 +464,7 @@ require 'pages/footer.php';
                 removeTitle: 'Actualiser',
                 elErrorContainer: '#kv-avatar-errors-1',
                 msgErrorClass: 'alert alert-block alert-danger',
-                defaultPreviewContent: '<img style="max-width:200px" id="ava" src="<?php if(infos_user(getUserLogin())->photo != ""){echo getUrl().infos_user(getUserLogin())->photo;}else{ echo "images/icon/avatar.png"; } ?>" alt="Votre photo de profil">',
+                defaultPreviewContent: '<img style="max-width:200px" id="ava" src="<?php if(infos_user(getUserLogin())->photo != ""){echo getUrl().infos_user(getUserLogin())->photo;}else{ echo "images/icon/avatar.png"; } ?>" alt="<?php echo ma_tra('Votre photo de profil')?>">',
                 layoutTemplates: {main2: '{preview} ' +  btnCust + ' {remove} {browse}'},
                 allowedFileExtensions: ["jpg", "png", "gif"]
             });

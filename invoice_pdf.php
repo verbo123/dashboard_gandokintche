@@ -1,4 +1,5 @@
 <?php
+require 'Tools/localization.php';
 require_once "lib/html2pdf.php";
 include 'pages/control/database.php';
 include 'pages/control/fonction.php';
@@ -95,7 +96,7 @@ $total_tva = 0;
 
     <page_footer>
         <hr />
-        <p>Fait à Cotonou, le <?php echo date("d/m/y"); ?></p>
+        <p><?php echo ma_tra("Fait à Cotonou, le")?> <?php echo date("d/m/y"); ?></p>
         <p>&nbsp;</p>
     </page_footer>
 
@@ -103,8 +104,8 @@ $total_tva = 0;
         <tr>
             <td class="75p">
                 <strong><?php echo $user['firstname']; ?></strong><br />
-                <strong>Adresse : </strong><?php echo nl2br($user['address']); ?><br />
-                <strong>Téléphone : </strong> <?php echo $user['portable']; ?><br />
+                <strong><?php echo ma_tra("Adresse")?> : </strong><?php echo nl2br($user['address']); ?><br />
+                <strong><?php echo ma_tra("Téléphone")?> : </strong> <?php echo $user['portable']; ?><br />
                 <?php echo $user['email']; ?>
             </td>
             <td class="25p">
@@ -116,8 +117,8 @@ $total_tva = 0;
 
     <table style="margin-top: 50px;">
         <tr>
-            <td class="50p"><h2>Facture n°<?php echo get_nbre_facture(); ?></h2></td>
-            <td class="50p" style="text-align: right;">Emis le <?php echo date("d/m/y H:m"); ?></td>
+            <td class="50p"><h2><?php echo ma_tra("Facture")?> n°<?php echo get_nbre_facture(); ?></h2></td>
+            <td class="50p" style="text-align: right;"><?php echo ma_tra("Emis le")?> <?php echo date("d/m/y H:m"); ?></td>
         </tr>
         <tr>
 <!--            <td style="padding-top: 15px;" colspan="2"><strong>Objectif:</strong> --><?php //echo $project['name']; ?><!--</td>-->
@@ -127,10 +128,10 @@ $total_tva = 0;
     <table style="margin-top: 30px;" class="border">
         <thead>
         <tr>
-            <th class="60p">Libellé</th>
-            <th class="10p">Quantité</th>
-            <th class="15p">Prix Unitaire</th>
-            <th class="15p">Montant</th>
+            <th class="60p"><?php echo ma_tra("Libellé")?></th>
+            <th class="10p"><?php echo ma_tra("Quantité")?></th>
+            <th class="15p"><?php echo ma_tra("Prix Unitaire")?></th>
+            <th class="15p"><?php echo ma_tra("Montant")?></th>
         </tr>
         </thead>
         <tbody>
@@ -155,19 +156,19 @@ $total_tva = 0;
 
         <tr>
             <td class="no-border" colspan="2"></td>
-            <td style="text-align: center;"> <strong>Autres frais :</strong> </td>
+            <td style="text-align: center;"> <strong><?php echo ma_tra("Autres frais")?> :</strong> </td>
             <td>  <?php echo infoVente($_GET["pdf"])->frais; ?> FCFA</td>
         </tr>
 
          <tr>
             <td class="no-border" colspan="2"></td>
-            <td style="text-align: center;"><strong>Taxe :</strong></td>
+            <td style="text-align: center;"><strong><?php echo ma_tra("Taxe")?> :</strong></td>
             <td> <?php echo infoVente($_GET["pdf"])->tax*100; ?> %</td>
         </tr>
 
         <tr>
             <td class="no-border" colspan="2"></td>
-            <td style="text-align: center;"><strong>Total :</strong></td>
+            <td style="text-align: center;"><strong><?php echo ma_tra("Total")?> :</strong></td>
             <td> <?php echo ($total+infoVente($_GET["pdf"])->frais)*(1+infoVente($_GET["pdf"])->tax); ?> FCFA</td>
         </tr>
 <!--        <tr>-->
