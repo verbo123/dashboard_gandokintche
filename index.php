@@ -145,6 +145,28 @@ include 'pages/control/trans.php';
                                 </div>
                             </div>
 
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="au-card m-b-30">
+                                    <div class="au-card-inner">
+                                        <h3 style="text-transform: inherit" class="title-2 m-b-40"><?php echo ma_tra("Nombre d'opération de transfert/réçeption d'argent") ?></h3>
+                                        <canvas id="sales-chart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="au-card m-b-30">
+                                    <div class="au-card-inner">
+                                        <h3 style="text-transform: inherit" class="title-2 m-b-40"><?php echo ma_tra("Achat en ligne") ?></h3>
+                                        <canvas id="team-chart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
 <!--    <div class="row">-->
 <!--        <div class="col-md-12">-->
 <!--

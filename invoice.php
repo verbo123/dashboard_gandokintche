@@ -4,7 +4,11 @@ $devop="facture";
 include 'pages/header.php';?>
 <div class="page-wrapper">
     <!-- HEADER MOBILE-->
-
+<style>
+    .table-data__tool{
+        margin-top: -50px;
+    }
+</style>
 
     <?php include 'pages/menus/side_mobile_menu.php';?>
     <!-- END HEADER MOBILE-->
@@ -57,7 +61,7 @@ include 'pages/header.php';?>
                                     if(count(getFacturation())>0)
                                     {
                                     ?>
-                                        <table class="example table table-responsive-lg table-striped table-bordered" style="width:100%">
+                                        <table class="example table table-striped table-bordered" style="width:100%">
                                             <thead>
                                             <tr>
                                                 <th><?php echo ma_tra("Référence")?></th>
@@ -94,7 +98,7 @@ include 'pages/header.php';?>
                                                 }else{
                                                     ?>
 
-                                                <div style="text-align: -webkit-center;text-align: -moz-center;margin-top: -52px;">
+                                                <div style="text-align:center;text-align: -webkit-center;text-align: -moz-center;margin-top: -52px;">
 
                                                     <h3  class="">
                                                         <?php echo ma_tra("Vous n'avez aucune ligne de commande")?>
@@ -119,13 +123,23 @@ include 'pages/header.php';?>
             </div>
         </div>
 
-
-
-
+        <?php
+        require 'pages/htmfooter.php';
+        ?>
     </div>
     <!-- END PAGE CONTAINER-->
 
     <style type="text/css">
+        @media (max-width: 400px) {
+            div.dataTables_wrapper div.dataTables_filter input{
+                display: block;
+            }
+        }
+
+
+        div.dataTables_wrapper div.dataTables_info{
+            white-space:normal;
+        }
         .table-data-feature
         {
             -webkit-justify-content: inherit;
@@ -133,7 +147,6 @@ include 'pages/header.php';?>
         }
     </style>
 </div>
-
 
 <?php require 'pages/footer.php';?>
 
@@ -172,4 +185,13 @@ include 'pages/header.php';?>
         }
     });
 
+</script>
+<script type="text/javascript">
+    if(screen.width <= 500 ){
+        $('.example').addClass(' table-responsive');
+        $(".au-btn--small").css("width","100%");
+    }else {
+        $('.example').removeClass(' table-responsive');
+        $(".au-btn--small").removeStyle("width","100%");
+    }
 </script>

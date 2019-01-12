@@ -685,20 +685,65 @@
     console.log(error);
   }
 
-  try {
+
+  //reception d'argent
+    var annee_c=[];
+    var datavalue_c=[];
+    $.ajax({
+        url:'pages/control/stat_op.php',
+        type:'GET',
+        async: false,
+        success : function (data) {
+            data=JSON.parse(data);
+            var len = data.length;
+            if(len > 0)
+            {
+                for (var i = 0; i < len; i++)
+                {
+                    datavalue_c.push(parseInt(data[i].nbre));
+                    annee_c.push(data[i].annee);
+                }
+            }
+
+        }
+    });
+
+    //transfert d'argent
+    var annee=[];
+    var datavalue=[];
+    $.ajax({
+        url:'pages/control/stat_transfert.php',
+        type:'GET',
+        async: false,
+        success : function (data) {
+            data=JSON.parse(data);
+            var len = data.length;
+            if(len > 0)
+            {
+                for (var i = 0; i < len; i++)
+                {
+                    datavalue.push(parseInt(data[i].nbre));
+                    annee.push(data[i].annee);
+                }
+            }
+
+        }
+    });
+
+    try {
     //Sales chart
     var ctx = document.getElementById("sales-chart");
     if (ctx) {
-      ctx.height = 150;
+      ctx.height = 80;
       var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-          labels: ["2010", "2011", "2012", "2013", "2014", "2015", "2016"],
+          labels: annee,
           type: 'line',
           defaultFontFamily: 'Poppins',
           datasets: [{
-            label: "Foods",
-            data: [0, 30, 10, 120, 50, 63, 10],
+            label:"Transfert d'argent",
+            data: datavalue,
             backgroundColor: 'transparent',
             borderColor: 'rgba(220,53,69,0.75)',
             borderWidth: 3,
@@ -707,8 +752,8 @@
             pointBorderColor: 'transparent',
             pointBackgroundColor: 'rgba(220,53,69,0.75)',
           }, {
-            label: "Electronics",
-            data: [0, 50, 40, 80, 40, 79, 120],
+            label: "Réçeption d'argent",
+            data: datavalue_c,
             backgroundColor: 'transparent',
             borderColor: 'rgba(40,167,69,0.75)',
             borderWidth: 3,
@@ -729,10 +774,10 @@
             titleFontFamily: 'Poppins',
             bodyFontFamily: 'Poppins',
             cornerRadius: 3,
-            intersect: false,
+            intersect: true,
           },
           legend: {
-            display: false,
+            display: true,
             labels: {
               usePointStyle: true,
               fontFamily: 'Poppins',
@@ -743,7 +788,7 @@
               display: true,
               gridLines: {
                 display: false,
-                drawBorder: false
+                drawBorder: true
               },
               scaleLabel: {
                 display: false,
@@ -757,7 +802,7 @@
               display: true,
               gridLines: {
                 display: false,
-                drawBorder: false
+                drawBorder: true
               },
               scaleLabel: {
                 display: true,
@@ -783,21 +828,47 @@
     console.log(error);
   }
 
+
+
+
+//achat en ligne
+    var annee_a=[];
+    var datavalue_a=[];
+    $.ajax({
+        url:'pages/control/stat_achat.php',
+        type:'GET',
+        async: false,
+        success : function (data) {
+            data=JSON.parse(data);
+            var len = data.length;
+            if(len > 0)
+            {
+                for (var i = 0; i < len; i++)
+                {
+                    datavalue_a.push(parseInt(data[i].nbre));
+                    annee_a.push(data[i].annee);
+                }
+            }
+
+        }
+    });
+
+
   try {
 
     //Team chart
     var ctx = document.getElementById("team-chart");
     if (ctx) {
-      ctx.height = 150;
+      ctx.height = 80;
       var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-          labels: ["2010", "2011", "2012", "2013", "2014", "2015", "2016"],
+          labels: annee_a,
           type: 'line',
           defaultFontFamily: 'Poppins',
           datasets: [{
-            data: [0, 7, 3, 5, 2, 10, 7],
-            label: "Expense",
+            data: datavalue_a,
+            label: "Total",
             backgroundColor: 'rgba(0,103,255,.15)',
             borderColor: 'rgba(0,103,255,0.5)',
             borderWidth: 3.5,
@@ -834,12 +905,12 @@
             xAxes: [{
               display: true,
               gridLines: {
-                display: false,
-                drawBorder: false
+                display: true,
+                drawBorder: true
               },
               scaleLabel: {
                 display: false,
-                labelString: 'Month'
+                labelString: 'Année'
               },
               ticks: {
                 fontFamily: "Poppins"

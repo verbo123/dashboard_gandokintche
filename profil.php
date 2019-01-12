@@ -92,7 +92,7 @@ require 'pages/header.php';?>
                            ?>
                        </div>
 
-                       <div class="row">
+                       <div style="width: 100%" class="row">
                            <div class="col-sm-3 text-center">
                                <form data-parsley-validate class="form form-vertical" method="post" enctype="multipart/form-data">
                                <div class="kv-avatar">

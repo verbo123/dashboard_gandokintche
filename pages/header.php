@@ -49,3 +49,9 @@ if(!isset($_COOKIE["account_code"]))
 <!--    <link href="css/datable.css" rel="stylesheet" media="all">-->
     <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet" media="all">
 <body class="animsition">
+
+<style>
+    .table-data__tool{
+        margin-top: -30px;
+    }
+</style>

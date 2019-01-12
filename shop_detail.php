@@ -5,7 +5,11 @@ include 'pages/header.php';
 ?>
 <div class="page-wrapper">
     <!-- HEADER MOBILE-->
-
+<style>
+    .table-data__tool{
+        margin-top: 0;
+    }
+</style>
 
     <?php include 'pages/menus/side_mobile_menu.php';?>
     <!-- END HEADER MOBILE-->
@@ -45,7 +49,7 @@ include 'pages/header.php';
 
                                 <div class="card-body">
 
-                                    <table  class="table table-striped table-bordered" style="width:100%">
+                                    <table  class="example table table-striped table-bordered" style="width:100%">
                                         <thead>
                                         <tr>
                                             <th>   <?php echo ma_tra("Libellé")?></th>
@@ -91,7 +95,9 @@ include 'pages/header.php';
         </div>
 
 
-
+        <?php
+        require 'pages/htmfooter.php';
+        ?>
 
     </div>
     <!-- END PAGE CONTAINER-->
@@ -103,6 +109,22 @@ include 'pages/header.php';
             justify-content: inherit;
         }
     </style>
+
+    <style>
+
+        @media (max-width: 400px) {
+            div.dataTables_wrapper div.dataTables_filter input{
+                display: block;
+            }
+        }
+
+
+        div.dataTables_wrapper div.dataTables_info{
+            white-space:normal;
+        }
+    </style>
+
+
 </div>
 
 
@@ -119,7 +141,11 @@ include 'pages/header.php';
     }
 </style>
 <script type="text/javascript">
-
-
-
+    if(screen.width <= 500 ){
+        $('.example').addClass(' table-responsive');
+        $(".au-btn--small").css("width","100%");
+    }else {
+        $('.example').removeClass(' table-responsive');
+        $(".au-btn--small").removeStyle("width","100%");
+    }
 </script>

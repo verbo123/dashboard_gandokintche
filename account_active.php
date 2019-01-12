@@ -27,7 +27,7 @@
                         $header .= "Content-Transfer-Encoding: 8bit \r\n";
 //                $header .="Disposition-Notification-To: ".$adresse." r\n";
                         $header .= "Date: ".date("r (T)")." \r\n";
-                        $subject="IDENTIFIANT DE VIREMENT GANDOKINTCHE";
+                        $subject="IDENTIFIANT D'OPERATION GANDOKINTCHE";
 
                         ob_start();
 ?>

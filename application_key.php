@@ -33,8 +33,7 @@ require 'pages/header.php';?>
                                 <div class="card-header">
                                     <i class="mr-2 fa fa-align-justify"></i>
                                     <strong class="card-title" v-if="headerText"><?php echo ma_tra("Votre projet")?></strong>
-                                    <a href="#" class="pull-right"><?php echo ma_tra("Accedez à la doumentation")?> <span ><i  class="fa fa-arrow-right"></i> </span></a>
-                                </div>
+                                         </div>
                                 <div class="card-body">
 
 

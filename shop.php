@@ -108,8 +108,38 @@ require 'pages/header.php';?>
             </div>
 
 
+            <?php
+            require 'pages/htmfooter.php';
+            ?>
         </div>
-        <!-- END PAGE CONTAINER-->
 
     </div>
-<?php require 'pages/footer.php';?>
+
+<style>
+
+    @media (max-width: 400px) {
+        div.dataTables_wrapper div.dataTables_filter input{
+            display: block;
+        }
+    }
+
+
+    div.dataTables_wrapper div.dataTables_info{
+        white-space:normal;
+    }
+</style>
+
+
+<?php
+require 'pages/footer.php';
+?>
+<script type="text/javascript">
+    if(screen.width <= 500 ){
+        $('.example').addClass(' table-responsive');
+        $(".au-btn--small").css("width","100%");
+    }else {
+        $('.example').removeClass(' table-responsive');
+        $(".au-btn--small").removeStyle("width","100%");
+    }
+</script>
+

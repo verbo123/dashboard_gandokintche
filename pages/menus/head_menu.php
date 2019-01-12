@@ -8,24 +8,24 @@
     <div class="section__content section__content--p30">
         <div class="container-fluid">
             <div class="header-wrap">
-                <form class="form-header" action="" method="POST">
-                                       <div style="line-height: 5" class="au-form-icon--sm">
-                        <input id="recho" style="border-radius: 25px" class="valu au-input--w435 au-input--style2" type="text" placeholder="<?php echo ma_tra("Recherche..."); ?>">
-                        <a  style="top: 20px;" class="sea au-btn--submit2" href="">
+                <div class="form-header">
+                     <div style="line-height: 5" class="au-form-icon--sm">
+                        <input OnKeyPress="if (event.keyCode == 13)rech()" name="recherche" id="recho"  style="border-radius: 25px" class="valu au-input--w435 au-input--style2" type="text" placeholder="<?php echo ma_tra("Recherche..."); ?>">
+                        <a  style="top: 20px;" class="sea au-btn--submit2" onclick="rech()">
                             <i class="zmdi zmdi-search"></i>
                         </a>
                     </div>
-                </form>
+                </div>
                 <div class="header-button">
                     <div class="noti-wrap">
                         <div class="noti__item js-item-menu">
                             <img src="images/icon/livre.png">
                             <div class="mess-dropdown js-dropdown">
                                 <div class="mess__title">
-                                    <a href="#"><?php echo ma_tra("Accedez à la documentation")?></a>
+                                    <a href="https://docs.gandokintche.com"><?php echo ma_tra("Accedez à la documentation")?></a>
                                 </div>
                                 <div class="mess__item">
-                                    <a href="#"><?php echo ma_tra("Support")?></a>
+                                    <a href="https://www.gandokintche.com/support"><?php echo ma_tra("Support")?></a>
                                 </div>
 
                             </div>

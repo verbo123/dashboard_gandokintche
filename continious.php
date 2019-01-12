@@ -122,19 +122,21 @@ require 'Tools/localization.php';
     <div class="container">
         <div class="pull-left">
             <p class="copyright">
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-               <a href="http://www.gandokintche.com" >
-                    <span style="font-family: 'Pacifico';"><span style="color:#e0c3fc;">Gandokin</span><span style="color: #8ec5fc">Tche</span></span>
-                </a>  Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+                GandokinTché &copy; Copyright <script>document.write(new Date().getFullYear());</script>
+
+                <span>
+                        <img style="max-width: 20px;margin-left: 10px;" src="https://api.hostip.info/images/flags/<?php echo strtolower($dataip->geobytesinternet); ?>.gif">
+                    <?php echo $dataip->geobytescountry; ?>
+                    </span>
             </p>
         </div>
         <div class="pull-right">
             <ul>
-                <li><a href="#">Terme & Condition</a></li>
-                <li><a href="http://www.gandokintche.com/tarif"><?php echo ma_tra("Tarifs")?></a></li>
-                <li><a  href="http://www.gandokintche.com/developpeur"><?php echo ma_tra("Développeurs")?></a></li>
-                <li><a href="#"><?php echo ma_tra("Nous contactez")?></a></li>
+                <!--                <li><a href="#">Terme & Condition</a></li>-->
+                <li><a href="https://www.gandokintche.com/tarif"><?php echo ma_tra("Tarifs")?></a></li>
+                <li><a  href="https://www.gandokintche.com/developpeur"><?php echo ma_tra("Développeurs")?></a></li>
+                <li><a href="https://www.gandokintche.com/#contact"><?php echo ma_tra("Nous contactez")?></a></li>
             </ul>
         </div>
     </div>

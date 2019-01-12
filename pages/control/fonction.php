@@ -179,6 +179,7 @@ function permission_service(){
 }
 
 
+
 function infoVente($ref){
     global $bdd;
     $result=null;
@@ -613,7 +614,7 @@ function getUserLogin()
 
 
     function getUrl(){
-        return "http://dashboard.gandokintche.com/";
+        return "https://dashboard.gandokintche.com/";
     }
 
 

@@ -27,7 +27,7 @@ require 'pages/header.php';?>
                                         <i class="mr-2 fa fa-align-justify"></i>
                                         <strong class="card-title" v-if="headerText"><?php echo ma_tra("Autorisations")?></strong>
 
-                                        <a href="#" class="pull-right"><?php echo ma_tra("Accedez à la doumentation")?> <span><i class="fa fa-arrow-right"></i> </span></a>
+<!--                                        <a href="#" class="pull-right">--><?php //echo ma_tra("Accedez à la doumentation")?><!-- <span><i class="fa fa-arrow-right"></i> </span></a>-->
                                     </div>
                                     <div class="card-body">
 
@@ -91,7 +91,9 @@ require 'pages/header.php';?>
                 </div>
             </div>
 
-
+            <?php
+            require 'pages/htmfooter.php';
+            ?>
 
         </div>
         <!-- END PAGE CONTAINER-->
@@ -141,4 +143,12 @@ require 'pages/header.php';?>
     });
 
 
+</script>
+
+<script type="text/javascript">
+    if(screen.width <= 500 ){
+        $(".rs-select2--md").css("width","150px");
+    }else {
+        $(".rs-select2--md").removeStyle("width","150px");
+    }
 </script>

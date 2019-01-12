@@ -109,7 +109,7 @@ function invite_membre($membre_email,$groupe)
 
         }else{
             echo '<div id="msg" class="alert alert-danger"> <button type="button" class="close" data-dismiss="alert">&times;</button>';
-            echo 'Désolé, l\'adresse email n\'a pas un compte PAIME';
+            echo 'Désolé, l\'adresse email n\'a pas un compte GandokinTché';
             echo '</div>';
         }
     }else{
@@ -140,7 +140,7 @@ function modif_membre($membre_email,$groupe)
 
         }else{
             echo '<div id="msg" class="alert alert-danger"> <button type="button" class="close" data-dismiss="alert">&times;</button>';
-            echo 'Désolé, l\'adresse email n\'a pas un compte PAIME';
+            echo 'Désolé, l\'adresse email n\'a pas un compte GandokinTché';
             echo '</div>';
         }
     }else{

@@ -14,7 +14,7 @@ if(isset($_POST["valider"])){
                 $sql->execute(array($op_code,$heure,$email));
                 if($sql){
                     $to=$email;
-                    $header = "Content-type: text/html; charset= utf-8 \r\n";
+                    $header = "Content-type: text/html; charset=UTF-8 \r\n";
                     $header .= "FROM: "."GANDOKINTCHE"."<contact@gandokintche.com> \r\n";
                     $header .= "MIME-Version: 1.0 \r\n";
                     $header .= "Content-Transfer-Encoding: 8bit \r\n";

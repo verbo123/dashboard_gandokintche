@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: site\n"
-"POT-Creation-Date: 2018-12-14 15:32+0100\n"
-"PO-Revision-Date: 2018-12-14 15:33+0100\n"
+"POT-Creation-Date: 2019-01-10 11:16+0100\n"
+"PO-Revision-Date: 2019-01-10 11:20+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -15,53 +15,69 @@ msgstr ""
 "X-Poedit-KeywordsList: ma_tra\n"
 "X-Poedit-SearchPath-0: .\n"
 
+#: activable_compte.php:144 continious.php:137 forgot-password.php:141
+#: login.php:171 register.php:243
+msgid "Tarifs"
+msgstr "Prices"
+
+#: activable_compte.php:145 continious.php:138 forgot-password.php:142
+#: login.php:172 pages/menus/side_menu.php:100
+#: pages/menus/side_mobile_menu.php:180 register.php:244
+msgid "Développeurs"
+msgstr "Developers"
+
+#: activable_compte.php:146 continious.php:139 forgot-password.php:143
+#: login.php:173 register.php:245
+msgid "Nous contactez"
+msgstr "Contact us"
+
 #: apikeys.php:50
 msgid "Toutes les applications"
 msgstr "All applications"
 
-#: apikeys.php:69 apikeys.php:145
+#: apikeys.php:73 apikeys.php:149
 msgid "Créer une application"
 msgstr "Create an application"
 
-#: apikeys.php:77
+#: apikeys.php:81
 msgid "Projet"
 msgstr "Project"
 
-#: apikeys.php:78
+#: apikeys.php:82
 msgid "Date de création"
 msgstr "Creation date"
 
-#: apikeys.php:79
+#: apikeys.php:83
 msgid "Jeton"
 msgstr "Token"
 
-#: apikeys.php:117
+#: apikeys.php:121
 msgid "Supprimer"
 msgstr "Remove"
 
-#: apikeys.php:120 invoice.php:83 shop.php:65 shop_detail.php:32
+#: apikeys.php:124 invoice.php:87 shop.php:65 shop_detail.php:36
 #: transaction.php:94
 msgid "Détails"
 msgstr "Details"
 
-#: apikeys.php:142
+#: apikeys.php:146
 msgid "Aucune application pour le moment"
 msgstr "No apps yet"
 
-#: apikeys.php:171
+#: apikeys.php:175
 msgid "Création d'une application"
 msgstr "Creating an application"
 
-#: apikeys.php:180 application_key.php:126
+#: apikeys.php:184 application_key.php:125
 msgid "Nom de l'application"
 msgstr "Application name"
 
-#: apikeys.php:185 application_key.php:131 auth_marchand.php:395
+#: apikeys.php:189 application_key.php:130 auth_marchand.php:395
 #: permission.php:229 permission.php:277 profil.php:352
 msgid "Annuler"
 msgstr "Cancel"
 
-#: apikeys.php:186 application_key.php:132 auth_marchand.php:399
+#: apikeys.php:190 application_key.php:131 auth_marchand.php:399
 #: permission.php:230 register.php:146
 msgid "Enregistrer"
 msgstr "Save"
@@ -70,31 +86,27 @@ msgstr "Save"
 msgid "Votre projet"
 msgstr "Your project"
 
-#: application_key.php:36 permission.php:32 settings.php:30
-msgid "Accedez à la doumentation"
-msgstr "See the documentation"
-
-#: application_key.php:57
+#: application_key.php:56
 msgid "Nom du projet"
 msgstr "Name of the project"
 
-#: application_key.php:62
+#: application_key.php:61
 msgid "ID du projet"
 msgstr "Project ID"
 
-#: application_key.php:67
+#: application_key.php:66
 msgid "Clé API serveur (mode test)"
 msgstr "Server API key (test mode)"
 
-#: application_key.php:72
+#: application_key.php:71
 msgid "Clé API serveur (mode live)"
 msgstr "Server API key (live mode)"
 
-#: application_key.php:82
+#: application_key.php:81
 msgid "Connecter l'application à votre compte marchand"
 msgstr "Connect the app to your merchant account"
 
-#: application_key.php:117 permission.php:246
+#: application_key.php:116 permission.php:246
 msgid "Modification"
 msgstr "Edit"
 
@@ -119,9 +131,9 @@ msgstr "Company Name"
 msgid "Site web"
 msgstr "Website"
 
-#: auth_marchand.php:103 detail_transaction.php:45 detail_transaction.php:80
-#: invoice_pdf.php:108 profil.php:149 profil.php:345 transaction_pdf.php:115
-#: transaction_pdf.php:134
+#: auth_marchand.php:103 detail_transaction.php:51 detail_transaction.php:86
+#: invoice_pdf.php:113 profil.php:149 profil.php:345 transaction_pdf.php:120
+#: transaction_pdf.php:139
 msgid "Téléphone"
 msgstr "Phone"
 
@@ -133,7 +145,7 @@ msgstr "Country"
 msgid "Ville"
 msgstr "City"
 
-#: auth_marchand.php:387 invoice_pdf.php:107 transaction_pdf.php:129
+#: auth_marchand.php:387 invoice_pdf.php:112 transaction_pdf.php:134
 msgid "Adresse"
 msgstr "Address"
 
@@ -141,41 +153,41 @@ msgstr "Address"
 msgid "Modifier"
 msgstr "Edit"
 
-#: balance.php:62
+#: balance.php:65
 msgid "Historiques des recharges"
 msgstr "Historical refills"
 
-#: balance.php:81
+#: balance.php:84
 msgid "Solde issu du commerce"
 msgstr "Trade balance"
 
-#: balance.php:81
+#: balance.php:84
 msgid "Il s'agit du solde issu des ventes provenant de votre site e-commerce"
 msgstr "This is the balance from sales from your e-commerce site"
 
-#: balance.php:85
+#: balance.php:88
 msgid "Virer votre fond issu de l'e-commerce vers votre solde total"
 msgstr "Shift your e-commerce bottom to your total balance"
 
-#: balance.php:85 balance.php:95
+#: balance.php:88 balance.php:98
 msgid "Virer les fonds"
 msgstr "Transfer of funds"
 
-#: balance.php:91
+#: balance.php:94
 msgid "Commission actuelle"
 msgstr "Current Commission"
 
-#: balance.php:91
+#: balance.php:94
 msgid "Il s'agit du solde issu des recharges vendues"
 msgstr "This is the balance from refills sold"
 
-#: balance.php:95
+#: balance.php:98
 msgid ""
 "Virer votre fond issu de vos commissions sur recharge vers votre solde total"
 msgstr ""
 "Transfer your funds from your commissions on top up to your total balance"
 
-#: balance.php:102
+#: balance.php:105
 msgid "Solde Total"
 msgstr "Balance of accounts"
 
@@ -187,51 +199,37 @@ msgstr "Continue as"
 msgid "Déconnecter"
 msgstr "Disconnect"
 
-#: continious.php:135 forgot-password.php:137 login.php:167 register.php:240
-msgid "Tarifs"
-msgstr "Prices"
-
-#: continious.php:136 forgot-password.php:138 login.php:168
-#: pages/menus/side_menu.php:101 pages/menus/side_mobile_menu.php:180
-#: register.php:241
-msgid "Développeurs"
-msgstr "Developers"
-
-#: continious.php:137 forgot-password.php:139 login.php:169 register.php:242
-msgid "Nous contactez"
-msgstr "Contact us"
-
-#: detail_transaction.php:23
+#: detail_transaction.php:28
 msgid "Détail"
 msgstr "Details"
 
-#: detail_transaction.php:32 transaction.php:91
+#: detail_transaction.php:38 transaction.php:91
 msgid "Exporter"
 msgstr "Export"
 
-#: detail_transaction.php:39 transaction_pdf.php:108
+#: detail_transaction.php:45 transaction_pdf.php:113
 msgid "Envoyeur"
 msgstr "Sender"
 
-#: detail_transaction.php:43 detail_transaction.php:78
+#: detail_transaction.php:49 detail_transaction.php:84
 msgid "Nom et Prénom(s)"
 msgstr "Name and Surname"
 
-#: detail_transaction.php:46 detail_transaction.php:81
+#: detail_transaction.php:52 detail_transaction.php:87
 msgid "Photo"
 msgstr "Pïcture"
 
-#: detail_transaction.php:74 transaction_pdf.php:127
+#: detail_transaction.php:80 transaction_pdf.php:132
 msgid "Reçeveur"
 msgstr "Recipient"
 
-#: detail_transaction.php:109 invoice.php:66 invoice_detail.php:65
-#: invoice_pdf.php:134 payment.php:222 payment.php:291 recharge.php:225
-#: recharge.php:273 shop.php:47 shop_detail.php:54 transaction_pdf.php:159
+#: detail_transaction.php:115 invoice.php:70 invoice_detail.php:65
+#: invoice_pdf.php:139 payment.php:224 payment.php:293 recharge.php:225
+#: recharge.php:273 shop.php:47 shop_detail.php:58 transaction_pdf.php:164
 msgid "Montant"
 msgstr "Amount"
 
-#: detail_transaction.php:110
+#: detail_transaction.php:116
 msgid "Date de l'opération"
 msgstr "Date of the operation"
 
@@ -283,28 +281,37 @@ msgstr "Transfers"
 msgid "Applications"
 msgstr "Permissions"
 
-#: invoice.php:31 invoice_detail.php:33 pages/menus/side_menu.php:81
+#: index.php:152
+msgid "Nombre d'opération de transfert/réçeption d'argent"
+msgstr "Number of money transfer/receiving"
+
+#: index.php:163 pages/menus/side_menu.php:38
+#: pages/menus/side_mobile_menu.php:120 transaction.php:70
+msgid "Achat en ligne"
+msgstr "Online purchase"
+
+#: invoice.php:35 invoice_detail.php:33 pages/menus/side_menu.php:81
 #: pages/menus/side_mobile_menu.php:162
 msgid "Facturation"
 msgstr "Belling"
 
-#: invoice.php:63 shop.php:42
+#: invoice.php:67 shop.php:42
 msgid "Référence"
 msgstr "Reference"
 
-#: invoice.php:64 invoice_detail.php:42
+#: invoice.php:68 invoice_detail.php:42
 msgid "Client"
 msgstr "Customer"
 
-#: invoice.php:67 shop.php:48 transaction.php:48
+#: invoice.php:71 shop.php:48 transaction.php:48
 msgid "Actions"
 msgstr "Action"
 
-#: invoice.php:86 invoice_pdf.php:120
+#: invoice.php:90 invoice_pdf.php:125
 msgid "Facture"
 msgstr "Belling"
 
-#: invoice.php:100
+#: invoice.php:104
 msgid "Vous n'avez aucune ligne de commande"
 msgstr "You have no command line"
 
@@ -312,43 +319,43 @@ msgstr "You have no command line"
 msgid "Générer la facture"
 msgstr "Generate invoice"
 
-#: invoice_detail.php:62 invoice_pdf.php:131 shop_detail.php:51
+#: invoice_detail.php:62 invoice_pdf.php:136 shop_detail.php:55
 msgid "Libellé"
 msgstr "Designation"
 
-#: invoice_detail.php:63 invoice_pdf.php:132 shop_detail.php:52
+#: invoice_detail.php:63 invoice_pdf.php:137 shop_detail.php:56
 msgid "Quantité"
 msgstr "Quantity"
 
-#: invoice_detail.php:64 invoice_pdf.php:133 shop_detail.php:53
+#: invoice_detail.php:64 invoice_pdf.php:138 shop_detail.php:57
 msgid "Prix Unitaire"
 msgstr "Unit price"
 
-#: invoice_detail.php:88 shop_detail.php:77
+#: invoice_detail.php:88 shop_detail.php:81
 msgid "Autres Frais"
 msgstr "Other expenses"
 
-#: invoice_detail.php:89 invoice_pdf.php:165 shop.php:46 shop_detail.php:78
+#: invoice_detail.php:89 invoice_pdf.php:170 shop.php:46 shop_detail.php:82
 msgid "Taxe"
 msgstr "Tax"
 
-#: invoice_detail.php:90 shop_detail.php:79
+#: invoice_detail.php:90 shop_detail.php:83
 msgid "Montant total"
 msgstr "Total amount"
 
-#: invoice_pdf.php:99
+#: invoice_pdf.php:103
 msgid "Fait à Cotonou, le"
 msgstr "Done at Cotonou on the"
 
-#: invoice_pdf.php:121
+#: invoice_pdf.php:126
 msgid "Emis le"
 msgstr "Send the"
 
-#: invoice_pdf.php:159
+#: invoice_pdf.php:164
 msgid "Autres frais"
 msgstr "Other expenses"
 
-#: invoice_pdf.php:171
+#: invoice_pdf.php:176
 msgid "Total"
 msgstr "Total"
 
@@ -385,21 +392,21 @@ msgstr "Sample"
 msgid "Aucune recharge effectuée!"
 msgstr "No recharge done!"
 
-#: pages/footer.php:102
+#: pages/footer.php:107
 msgid "Vous n\\'avez aucune notification"
 msgstr "You have no notification"
 
-#: pages/footer.php:104
+#: pages/footer.php:109
 msgid "Vous avez"
 msgstr "You can"
 
-#: pages/footer.php:104
+#: pages/footer.php:109
 msgid "nouvelle(s) notification(s)"
 msgstr "new notification"
 
 #: pages/menus/head_menu.php:13
 msgid "Recherche..."
-msgstr "Research..."
+msgstr "Search..."
 
 #: pages/menus/head_menu.php:25
 msgid "Accedez à la documentation"
@@ -434,11 +441,6 @@ msgstr "Balance of accounts"
 msgid "Virements"
 msgstr "Transfers"
 
-#: pages/menus/side_menu.php:38 pages/menus/side_mobile_menu.php:120
-#: transaction.php:70
-msgid "Achat en ligne"
-msgstr "Online purchase"
-
 #: pages/menus/side_menu.php:53 pages/menus/side_mobile_menu.php:134
 #: recharge.php:39
 msgid "Recharge de compte"
@@ -452,61 +454,51 @@ msgstr "My History"
 msgid "Marchand"
 msgstr "Trader"
 
-#: pages/menus/side_menu.php:76 pages/menus/side_mobile_menu.php:158
+#: pages/menus/side_menu.php:77 pages/menus/side_mobile_menu.php:158
 msgid "Compte marchand"
 msgstr "Merchant Account"
 
-#: pages/menus/side_menu.php:91 pages/menus/side_mobile_menu.php:170
-#: role.php:31
-msgid "Rôles"
-msgstr "Roles"
-
-#: pages/menus/side_menu.php:105 pages/menus/side_mobile_menu.php:184
+#: pages/menus/side_menu.php:104 pages/menus/side_mobile_menu.php:184
 msgid "Api Keys"
 msgstr "Api Keys"
 
-#: pages/menus/side_menu.php:116 pages/menus/side_mobile_menu.php:195
+#: pages/menus/side_menu.php:115 pages/menus/side_mobile_menu.php:195
 msgid "Paramètres"
 msgstr "Settings"
 
-#: pages/menus/side_menu.php:120 pages/menus/side_mobile_menu.php:199
-#: settings.php:28
-msgid "Autorisations"
-msgstr "Permissions"
-
-#: payment.php:34 settings.php:46
+#: payment.php:35 settings.php:46
 msgid "Virement d'argent"
 msgstr "Transfer of funds"
 
-#: payment.php:70 payment.php:81
+#: payment.php:72 payment.php:83
 msgid "Transfert manuel"
 msgstr "Manual transfer"
 
-#: payment.php:74 payment.php:85
+#: payment.php:76 payment.php:87
 msgid "Utiliser un QRcode"
 msgstr "Use a QRcode"
 
-#: payment.php:100 permission.php:84 recharge.php:78
+#: payment.php:102 permission.php:84 recharge.php:78
 msgid "Nom & Prénoms"
 msgstr "Name and Surname"
 
-#: payment.php:101 recharge.php:77
+#: payment.php:103 recharge.php:77
 msgid "Identifiant"
 msgstr "Login"
 
-#: payment.php:103 recharge.php:80
+#: payment.php:105 recharge.php:80
 msgid "Montant envoyé"
 msgstr "Amount sent"
 
-#: payment.php:148 payment.php:154
+#: payment.php:150 payment.php:156
 msgid "Faite votre premier virement d'argent"
 msgstr "Make your first money transfer"
 
-#: payment.php:185
+#: payment.php:187
 msgid "Service de virement d'argent"
 msgstr "Money transfer service"
 
-#: payment.php:194
+#: payment.php:196
 msgid ""
 "Désolé, Le service de virement n'est pas activé sur votre compte. Veuillez "
 "l'activer dans"
@@ -514,43 +506,43 @@ msgstr ""
 "Sorry, the transfer service is not activated on your account. Please "
 "activate it in"
 
-#: payment.php:194
+#: payment.php:196
 msgid "Paramétrage de compte"
 msgstr "Account setup"
 
-#: payment.php:210 payment.php:279 recharge.php:261
+#: payment.php:212 payment.php:281 recharge.php:261
 msgid "Nouveau paiement"
 msgstr "New payment"
 
-#: payment.php:228 payment.php:443 recharge.php:231 recharge.php:609
+#: payment.php:230 payment.php:445 recharge.php:231 recharge.php:609
 msgid "Login du destinataire"
 msgstr "Recipient Login"
 
-#: payment.php:238 payment.php:306
+#: payment.php:240 payment.php:308
 msgid "Ajouter"
 msgstr "Add"
 
-#: payment.php:248 payment.php:317 profil.php:277
+#: payment.php:250 payment.php:319 profil.php:277
 msgid "Entrer votre mot de passe"
 msgstr "Enter your password"
 
-#: payment.php:257 payment.php:326 recharge.php:289
+#: payment.php:259 payment.php:328 recharge.php:289
 msgid "Tranférer"
 msgstr "To transfer"
 
-#: payment.php:258 payment.php:327
+#: payment.php:260 payment.php:329
 msgid "Tranfère…"
 msgstr "Transfered…"
 
-#: payment.php:296 payment.php:462 payment.php:485 recharge.php:279
+#: payment.php:298 payment.php:464 payment.php:487 recharge.php:279
 msgid "Charger le QRcode"
 msgstr "Load the QRcode"
 
-#: payment.php:415
+#: payment.php:417
 msgid "Aucun QRcode trouvé."
 msgstr "No QRcode found."
 
-#: payment.php:443 recharge.php:609
+#: payment.php:445 recharge.php:609
 msgid "Enlever"
 msgstr "Delete"
 
@@ -748,6 +740,10 @@ msgstr "Password Confirmation"
 msgid "Connecter"
 msgstr "Sign In"
 
+#: role.php:31
+msgid "Rôles"
+msgstr "Roles"
+
 #: role.php:33
 msgid ""
 "Les rôles définissent les autorisations accordées aux membres de l'équipe "
@@ -755,6 +751,10 @@ msgid ""
 msgstr ""
 "Roles define the permissions granted to team members in your GANDOKINTCHE "
 "account."
+
+#: settings.php:28
+msgid "Autorisations"
+msgstr "Permissions"
 
 #: settings.php:38
 msgid "Services"
@@ -806,24 +806,33 @@ msgid "montant"
 msgstr "amount"
 
 #: transaction.php:75
-msgid "Virement de fond"
-msgstr "Transfer of funds"
+msgid "Transfert d'argent"
+msgstr "Money transfer"
 
 #: transaction.php:79
-msgid "Reception de fond"
-msgstr "Money reception"
+msgid "Reçeption d'argent"
+msgstr "Receiving money"
 
 #: transaction.php:125
 msgid "Vous n'avez aucune transaction !"
 msgstr "You have no transactions!"
 
-#: transaction_pdf.php:85
+#: transaction_pdf.php:89
 msgid "Générer le"
 msgstr "Generate invoices"
 
-#: transaction_pdf.php:153
+#: transaction_pdf.php:158
 msgid "Date d'opération : Le"
 msgstr "Date of the operation"
+
+#~ msgid "Accedez à la doumentation"
+#~ msgstr "See the documentation"
+
+#~ msgid "Virement de fond"
+#~ msgstr "Transfer of funds"
+
+#~ msgid "Reception de fond"
+#~ msgstr "Money reception"
 
 #~ msgid "Partenaires/Développeurs"
 #~ msgstr "API / Developers"

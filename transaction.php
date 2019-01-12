@@ -72,11 +72,11 @@ include 'pages/control/trans.php';
                             }else{
                                 if($tran->code_user_sender == getUserLogin()){
                                     echo '<span class="status--denied">';
-                                     echo ma_tra("Virement de fond");
+                                     echo ma_tra("Transfert d'argent");
                                     echo '</span>';
                                 }else{
                                     echo '<span class="status--process">';
-                                     echo ma_tra("Reception de fond");
+                                     echo ma_tra("Reçeption d'argent");
                                      echo '</span>';
                                 }
                             }

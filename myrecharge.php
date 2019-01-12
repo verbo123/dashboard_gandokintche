@@ -77,7 +77,7 @@ require 'pages/header.php';?>
                                         else{
                                             ?>
 
-                                            <h3>
+                                            <h3 style="text-align: center">
 
                                             <?php echo ma_tra("Aucune recharge effectuée!")?>
 
@@ -154,12 +154,30 @@ require 'pages/header.php';?>
                 </div>
             </div>
             <!-- end modal medium -->
-
+            <?php
+            require 'pages/htmfooter.php';
+            ?>
 
         </div>
         <!-- END PAGE CONTAINER-->
 
     </div>
+
+<style>
+
+    @media (max-width: 400px) {
+        div.dataTables_wrapper div.dataTables_filter input{
+            display: block;
+        }
+    }
+
+
+    div.dataTables_wrapper div.dataTables_info{
+        white-space:normal;
+    }
+</style>
+
+
 <?php require 'pages/footer.php';?>
 
 <script type="text/javascript">

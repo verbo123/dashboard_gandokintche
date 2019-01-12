@@ -29,7 +29,7 @@ include 'pages/header.php';?>
                                     <i class="mr-2 fa fa-align-justify"></i>
                                     <strong class="card-title" v-if="headerText"><?php echo ma_tra("Mes autorisations")?></strong>
 
-                                    <a href="#" class="pull-right"><?php echo ma_tra("Accedez à la doumentation")?> <span><i class="fa fa-arrow-right"></i> </span></a>
+<!--                                    <a href="#" class="pull-right">--><?php //echo ma_tra("Accedez à la doumentation")?><!-- <span><i class="fa fa-arrow-right"></i> </span></a>-->
                                 </div>
 
                                 <div class="table-data__tool" style="margin-bottom: 0px;">

@@ -6,7 +6,11 @@ include 'pages/header.php';
 ?>
 <div class="page-wrapper">
     <!-- HEADER MOBILE-->
-
+    <style>
+        .table-data__tool{
+            margin-top: 0;
+        }
+    </style>
 
     <?php include 'pages/menus/side_mobile_menu.php';?>
     <!-- END HEADER MOBILE-->
@@ -30,14 +34,14 @@ include 'pages/header.php';
                             <div class="card">
                                 <div class="card-header">
                                     <i class="mr-2 fa fa-align-justify"></i>
-                                    <strong class="card-title" v-if="headerText"><?php echo ma_tra("Facturation")?></strong>
+                                    <strong class="card-title"><?php echo ma_tra("Facturation")?></strong>
                                 </div>
                                 <?php
                                 require 'pages/control/invoice_function.php';
                                 ?>
                                 <div class="table-data__tool" style="margin-bottom: 0px;">
                                     <div class="table-data__tool-left">
-                                        <div class="filters m-b-45">
+                                        <div style="margin-bottom: 0" class="filters m-b-45">
                                              <div style="margin-left: 20px;margin-top: 10px;">
                                                  <strong><?php echo ma_tra("Client")?> : <?php echo infos_user(get_facturation_id($_GET["product"])->client_id)->nom." ".infos_user(get_facturation_id($_GET["product"])->client_id)->prenom; ?> </strong><br>
                                                  <small>Email : <?php echo infos_user(get_facturation_id($_GET["product"])->client_id)->adresse; ?></small>
@@ -45,7 +49,7 @@ include 'pages/header.php';
                                         </div>
                                     </div>
 
-                                    <div style="margin-right: 20px;margin-top: 10px;" class="table-data__tool-right">
+                                    <div style="margin-right: 20px;margin-top: 10px;margin-left: 20px" class="table-data__tool-right">
                                         <a target="_blank" style="color: white" href="invoice_pdf?pdf=<?php echo $_GET["product"]; ?>&token_ID=<?php echo sha1($_GET["product"]); ?>" class="au-btn au-btn-icon au-btn--green au-btn--small">
                                             <i class="zmdi zmdi-collection-pdf"></i><?php echo ma_tra("Générer la facture")?>
                                         </a>
@@ -56,7 +60,7 @@ include 'pages/header.php';
 
                                 <div class="card-body">
 
-                                    <table  class="table table-striped table-bordered" style="width:100%">
+                                    <table  class="example table table-striped table-bordered" style="width:100%">
                                         <thead>
                                          <tr>
                                             <th>   <?php echo ma_tra("Libellé")?></th>
@@ -102,12 +106,24 @@ include 'pages/header.php';
         </div>
 
 
-
+        <?php
+        require 'pages/htmfooter.php';
+        ?>
 
     </div>
     <!-- END PAGE CONTAINER-->
 
     <style type="text/css">
+        @media (max-width: 400px) {
+            div.dataTables_wrapper div.dataTables_filter input{
+                display: block;
+            }
+        }
+
+
+        div.dataTables_wrapper div.dataTables_info{
+            white-space:normal;
+        }
         .table-data-feature
         {
             -webkit-justify-content: inherit;
@@ -130,7 +146,11 @@ include 'pages/header.php';
     }
 </style>
 <script type="text/javascript">
-
-
-
+    if(screen.width <= 500 ){
+        $('.example').addClass(' table-responsive');
+        $(".au-btn--small").css("width","100%");
+    }else {
+        $('.example').removeClass(' table-responsive');
+        $(".au-btn--small").removeStyle("width","100%");
+    }
 </script>

@@ -51,7 +51,7 @@ require 'pages/header.php';
                                     {
                                         ?>
                                         <div class="table-data__tool">
-                                            <div class="table-data__tool-left">
+                                            <div style="text-align: center" class="table-data__tool-left">
                                                 <?php echo ma_tra("Votre solde de recharge")?> : <span style="padding: 8px" class="badge badge-pill badge-warning"><?php echo getMontantUserRecharge(getUserLogin())->solde; ?>
                                                     <?php echo ma_tra("Crédits")?></span>
                                                     <span data-toggle="tooltip" data-placement="right" title="<?php echo ma_tra("Il s'agit du solde de compte de recharge.Vous pouvez nous contactez pour en acheter")?>">
@@ -107,7 +107,7 @@ require 'pages/header.php';
                                     else{
 
                                         ?>
-                                        <div style="text-align: -webkit-center;text-align: -moz-center">
+                                        <div style="text-align: -webkit-center;text-align: -moz-center; text-align: center">
                                             <div class="table-data__tool">
                                                 <div class="table-data__tool-left">
                                                     <?php echo ma_tra("Votre solde de recharge")?> :
@@ -676,7 +676,9 @@ require 'pages/footer.php';
 <script type="text/javascript">
     if(screen.width <= 500 ){
         $('#example').addClass(' table-responsive');
+        $(".au-btn--small").css("width","100%");
     }else {
         $('#example').removeClass(' table-responsive');
+        $(".au-btn--small").removeStyle("width","100%");
     }
 </script>

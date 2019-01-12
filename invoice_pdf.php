@@ -26,16 +26,11 @@ $client = array(
 //    "infos" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium eos tempora, magni delectus porro cum labore eligendi."
 );
 
-//$project = array(
-//    "id" => 1,
-//    "name" => "Création d'un Portfolio",
-//    "status" => 1,
-//    "infos" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium eos tempora, magni delectus porro cum labore eligendi.",
-//    "created" => 1,
-//    "paid" => false,
-//    "client_id" => 1,
-//    "user_id" => 1
-//);
+function generateId($length){
+    $va=openssl_random_pseudo_bytes($length);
+    $va=bin2hex($va);
+    return $va;
+}
 
 $task=array();
 foreach (getProduits($_GET["pdf"]) as $produit)
@@ -90,6 +85,10 @@ $total_tva = 0;
     .10p { width: 10%; } .15p { width: 15%; }
     .25p { width: 25%; } .50p { width: 50%; }
     .60p { width: 60%; } .75p { width: 75%; }
+
+    .wd{
+        width: 200px;
+    }
 </style>
 
 <page backtop="10mm" backleft="10mm" backright="10mm" backbottom="10mm" footer="page;">
@@ -100,7 +99,8 @@ $total_tva = 0;
         <p>&nbsp;</p>
     </page_footer>
 
-    <table style="vertical-align: top;">
+    <img class="wd" src="images/icon/logof.png">
+    <table style="vertical-align: top;margin-top: 20px">
         <tr>
             <td class="75p">
                 <strong><?php echo $user['firstname']; ?></strong><br />
@@ -195,7 +195,7 @@ try {
     $pdf->pdf->SetKeywords('GANDOKINTCHE, Facture, Vente en ligne');
     $pdf->writeHTML($content);
      ob_end_clean();
-    $pdf->Output('Facture'.get_nbre_facture().'.pdf','I');
+    $pdf->Output('Facture'.generateId(4).'.pdf','I');
     // $pdf->Output('Devis.pdf', 'D');
 } catch (HTML2PDF_exception $e) {
     die($e);

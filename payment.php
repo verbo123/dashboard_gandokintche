@@ -5,7 +5,8 @@ require 'pages/header.php';?>
 <div class="page-wrapper">
     <!-- HEADER MOBILE-->
     <?php require 'pages/menus/side_mobile_menu.php';?>
-    <!-- END HEADER MOBILE-->
+    <!--
+    END HEADER MOBILE-->
 
     <!-- MENU SIDEBAR-->
     <?php require 'pages/menus/side_menu.php';?>
@@ -27,13 +28,12 @@ require 'pages/header.php';?>
                         <div class="col-md-12">
                             <div class="card">
 
-
-
                                 <div class="card-header">
                                     <i class="mr-2 fa fa-align-justify"></i>
-                                    <strong class="card-title" v-if="headerText"><?php echo ma_tra("Virement d'argent")?></strong>
+                                    <strong class="card-title"><?php echo ma_tra("Virement d'argent")?></strong>
                                 </div>
                                 <div class="card-body">
+
                                     <?php
                                     include 'pages/control/virement.php';
                                     if(isset($_POST["valider"]))
@@ -117,14 +117,6 @@ require 'pages/header.php';?>
                                                     <td><?php echo infos_user($vire->code_user_receiver)->op_code ?></td>
                                                     <td><?php echo date_conversion($vire->date); ?></td>
                                                     <td><?php echo $vire->montant; ?> FCFA</td>
-<!--                                                    <td>-->
-<!--                                                        <div class="table-data-feature">-->
-<!--                                                        -->
-<!--                                                            <button style="margin-right:35%" class="item" data-toggle="tooltip" data-placement="top" title="Détails">-->
-<!--                                                                <i class="zmdi zmdi-more"></i>-->
-<!--                                                            </button>-->
-<!--                                                        </div>-->
-<!--                                                    </td>-->
                                                 </tr>
                                                 <?php
                                             }
@@ -139,7 +131,7 @@ require 'pages/header.php';?>
                                     else{
 
                                         ?>
-                                        <div style="text-align: -webkit-center;text-align: -moz-center">
+                                        <div style="text-align: -webkit-center;text-align: -moz-center;text-align: center">
                                             <?php
                                             if(permission_service()->virement == "true")
                                             {
@@ -166,11 +158,6 @@ require 'pages/header.php';?>
 
                                 </div>
                             </div>
-
-
-
-
-
 
                         </div>
                     </div>
@@ -201,7 +188,6 @@ require 'pages/header.php';?>
             </div>
         </div>
 
-
         <!-- modal medium -->
         <div class="modal fade" id="mediumModal" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-sm" role="document">
@@ -225,18 +211,13 @@ require 'pages/header.php';?>
                                     <div class="row">
                                         <div class="col-md-8">
                                             <div class="form-group has-success">
-                                                <label for="cc-name" class="control-label mb-1"><?php echo ma_tra("Login du destinataire")?></label>
-                                                <input id="cc-name" name="login[]" type="text" class="form-control cc-name valid" data-val="true"
-                                                       autocomplete="cc-name" aria-required="true" aria-invalid="false" aria-describedby="cc-name-error">
-                                                <span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span>
+                                                <input placeholder="<?php echo ma_tra("Login du destinataire")?>" id="cc-name" name="login[]" type="text" class="form-control cc-name valid">
                                             </div>
                                         </div>
 
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <label for="cc-name" class="control-label mb-1"> &nbsp;&nbsp;&nbsp;&nbsp; </label>
                                                 <button id="ajout" type="button" class="btn btn-primary"> <i class="zmdi zmdi-plus"></i><?php echo ma_tra("Ajouter")?></button>
-                                                <span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span>
                                             </div>
                                         </div>
 
@@ -269,7 +250,6 @@ require 'pages/header.php';?>
             </div>
         </div>
         <!-- end modal medium -->
-
 
         <!-- modal medium -->
         <div class="modal fade" id="qr" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel" aria-hidden="true">
@@ -304,7 +284,6 @@ require 'pages/header.php';?>
                                         <div class="col-md-4">
                                             <div class="ca form-group">
                                                 <button id="ajout2" type="button" class="btn btn-primary"> <i class="zmdi zmdi-plus"></i><?php echo ma_tra("Ajouter")?></button>
-                                                <span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -347,21 +326,17 @@ require 'pages/header.php';?>
 
 
 <style>
-    /*.upload-btn-wrapper {*/
-        /*position: relative;*/
-        /*overflow: hidden;*/
-        /*display: inline-block;*/
-    /*}*/
+    @media (max-width: 500px)
+    {
+        .aj{
+                width: 100%;
+        }
 
-    /*.btn {*/
-        /*border: 2px solid gray;*/
-        /*color: gray;*/
-        /*background-color: white;*/
-        /*padding: 8px 20px;*/
-        /*border-radius: 8px;*/
-        /*font-size: 20px;*/
-        /*font-weight: bold;*/
-    /*}*/
+        .aj2{
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
 
     .upload-btn-wrapper input[type=file] {
         position: absolute;
@@ -383,8 +358,6 @@ require 'pages/header.php';?>
         white-space:normal;
     }
 </style>
-
-
 
 </div>
 <?php
@@ -440,7 +413,7 @@ if(checkIt("edge") || checkIt("msie")){
     $("#ajout").click(function () {
         i++;
         console.log(i);
-        html = '<div class="row" id="sup' + i + '"  ><div  class="col-md-8"><div class="form-group has-success"> <label for="cc-name" class="control-label mb-1"><?php echo ma_tra("Login du destinataire")?></label><input  name="login[]" type="text" class="form-control cc-name valid" data-val="true" autocomplete="cc-name" aria-required="true" aria-invalid="false" aria-describedby="cc-name-error"><span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span></div></div><div class="col-md-3"><div id="' + i + '"  class="form-group"><label for="cc-name" class="control-label mb-1"> &nbsp;&nbsp;&nbsp;&nbsp; </label><button onclick="remove('+ i +')"  type="button" class="btn btn-danger"> <i class="zmdi zmdi-minus"></i> <?php echo ma_tra("Enlever")?></button><span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span></div></div></div>';
+        html = '<div class="row" id="sup' + i + '"  ><div  class="col-md-8"><div class="form-group has-success"><input placeholder="<?php echo ma_tra("Login du destinataire")?>"  name="login[]" type="text" class="form-control cc-name valid" ></div></div><div class="col-md-3"><div id="' + i + '"  class=" form-group"><button onclick="remove('+ i +')"  type="button" class="aj btn btn-danger"> <i class="zmdi zmdi-minus"></i> <?php echo ma_tra("Enlever")?></button></div></div></div>';
         dataContenaire.append(html);
     });
 
@@ -469,7 +442,7 @@ if(checkIt("edge") || checkIt("msie")){
             '</div>' +
             '<div class="col-md-4">' +
             '<div style="float: right"  id="' + i2 + '"  class="form-group">' +
-            '<button onclick="remove2(' + i2 + ')"  type="button" class="btn btn-danger"> ' +
+            '<button onclick="remove2(' + i2 + ')"  type="button" class="aj2 btn btn-danger"> ' +
             '<i class="zmdi zmdi-minus"></i> ' +
             'Enlever' +
             '</button>' +
@@ -492,7 +465,7 @@ if(checkIt("edge") || checkIt("msie")){
             '</div>' +
             '<div class="col-md-4">' +
             '<div id="' + i2 + '"  class="form-group">' +
-            '<button onclick="remove2(' + i2 + ')"  type="button" class="btn btn-danger"> ' +
+            '<button onclick="remove2(' + i2 + ')"  type="button" class="aj2 btn btn-danger"> ' +
             '<i class="zmdi zmdi-minus"></i> ' +
             'Enlever' +
             '</button>' +
@@ -507,11 +480,19 @@ if(checkIt("edge") || checkIt("msie")){
     });
 
 </script>
-
 <script type="text/javascript">
     if(screen.width <= 500 ){
         $('#example').addClass(' table-responsive');
+        $(".au-btn--small").css("width","100%");
+        $("#ajout").css("width","100%");
+        $("#ajout2").css("width","100%");
+        $("#ajout2").css("margin-top","10px");
+
     }else {
         $('#example').removeClass(' table-responsive');
+        $(".au-btn--small").removeStyle("width","100%");
+        $("#ajout").removeStyle("width","100%");
+        $("#ajout2").removeStyle("width","100%");
+        $("#ajout2").removeStyle("margin-top","10px");
     }
 </script>

@@ -22,16 +22,11 @@ $user_receveur = array(
     "address" => $receiver->adresse
 );
 
-//$project = array(
-//    "id" => 1,
-//    "name" => "Création d'un Portfolio",
-//    "status" => 1,
-//    "infos" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium eos tempora, magni delectus porro cum labore eligendi.",
-//    "created" => 1,
-//    "paid" => false,
-//    "client_id" => 1,
-//    "user_id" => 1
-//);
+function generateId($length){
+    $va=openssl_random_pseudo_bytes($length);
+    $va=bin2hex($va);
+    return $va;
+}
 
 $total = $data->montant;
 
@@ -73,6 +68,10 @@ ob_start();
     .10p { width: 10%; } .15p { width: 15%; }
     .25p { width: 25%; } .50p { width: 50%; }
     .60p { width: 60%; } .75p { width: 75%; }
+
+    .wd{
+        width: 200px;
+    }
 </style>
 
 <page backtop="10mm" backleft="10mm" backright="10mm" backbottom="10mm" footer="page;">
@@ -94,7 +93,8 @@ ob_start();
 
     </page_footer>
 
-    <table style="vertical-align: top;margin-bottom: 10px">
+    <img class="wd" src="images/icon/logof.png">
+    <table style="vertical-align: top;margin-bottom: 10px;margin-top: 20px">
         <tr>
             <td style="text-align: center">
                 <h3>N° :  <?php echo $trans; ?></h3>
@@ -176,7 +176,7 @@ try {
     $pdf->pdf->SetKeywords('GANDOKINTCHE, Transaction');
     $pdf->writeHTML($content);
     ob_end_clean();
-    $pdf->Output('transaction.pdf','I');
+    $pdf->Output('transaction'.generateId(4).'.pdf','I');
      //$pdf->Output('Devis.pdf', 'D');
 } catch (HTML2PDF_exception $e) {
     die($e);

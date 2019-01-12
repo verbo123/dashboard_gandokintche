@@ -52,7 +52,11 @@ require 'pages/header.php';?>
                                                             foreach (getAll_app() as $ap)
                                                             {
                                                         ?>
-                                                        <option value="<?php echo $ap->code_app; ?>" ><?php echo $ap->nom_app; ?></option>
+                                                        <option value="<?php echo $ap->code_app; ?>" >
+                                                            <a href="application_key?project=<?php echo $ap->code_app ?>&active=<?php echo $ap->active ?>&ID_token=<?php echo $ap->app_token ?>">
+                                                                <?php echo $ap->nom_app; ?>
+                                                            </a>
+                                                        </option>
                                                         <?php
                                                             }
                                                         ?>
@@ -138,7 +142,7 @@ require 'pages/header.php';?>
                                         ?>
 
                                         <div class="card">
-                                            <div  style="text-align: -webkit-center; text-align: -moz-center"  class="card-body">
+                                            <div  style="text-align: -webkit-center; text-align: -moz-center; text-align: center"  class="card-body">
                                                 <h5 style="text-align: center"><?php echo ma_tra("Aucune application pour le moment")?> !</h5>
                                             <button style="margin-top: 30px" type="button" class="au-btn au-btn-icon au-btn--green au-btn--small" data-toggle="modal" data-target="#staticModal">
                                                 <i class="zmdi zmdi-plus"></i>
@@ -320,4 +324,16 @@ require 'pages/header.php';?>
             }
 
 
+        </script>
+
+        <script type="text/javascript">
+            if(screen.width <= 500 ){
+                $('.example').addClass(' table-responsive');
+                $(".au-btn--small").css("width","100%");
+                $(".rs-select2--md").css("width","100%");
+            }else {
+                $('.example').removeClass(' table-responsive');
+                $(".au-btn--small").removeStyle("width","100%");
+                $(".rs-select2--md").removeStyle("width","100%");
+            }
         </script>

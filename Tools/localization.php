@@ -1,6 +1,9 @@
 <?php
 error_reporting(E_ALL | E_STRICT);
 
+//$jsonip = file_get_contents('http://getcitydetails.geobytes.com/GetCityDetails?fqcn='.get_user_ip());
+//$dataip = json_decode($jsonip);
+
 //// define constants
 //define('PROJECT_DIR', realpath('./'));
 //define('LOCALE_DIR', PROJECT_DIR .'/locale');
@@ -45,3 +48,20 @@ function ma_tra($text)
 
 
 
+function get_user_ip() {
+    // IP si internet partagé
+    if (isset($_SERVER['HTTP_CLIENT_IP'])) {
+        return $_SERVER['HTTP_CLIENT_IP'];
+    }
+    // IP derrière un proxy
+    elseif (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        return $_SERVER['HTTP_X_FORWARDED_FOR'];
+    }
+    // Sinon : IP normale
+    else {
+        return (isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '');
+    }
+
+
+    //  197.234.221.157
+}

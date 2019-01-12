@@ -1,5 +1,6 @@
 ﻿<?php
 session_start();
+header( 'Content-type: text/html; charset=UTF-8' );
 include 'database.php';
 include 'fonction.php';
 if(isset($_POST["valider"]))
@@ -53,7 +54,7 @@ if(isset($_POST["valider"]))
                 $op_code=strtoupper(generateToken(4));
 
                 $to=$adresse;
-                $header = "Content-type: text/html; charset= utf-8 \r\n";
+                $header = "Content-type: text/html; charset=UTF-8 \r\n";
                 $header .= "FROM: "."GANDOKINTCHE"."<contact@gandokintche.com> \r\n";
                 $header .= "MIME-Version: 1.0 \r\n";
                 $header .= "Content-Transfer-Encoding: 8bit \r\n";
@@ -85,11 +86,11 @@ if(isset($_POST["valider"]))
                 if($email_content)
                 {
                     $password=hash("sha256",$password); //password_hash($password,PASSWORD_DEFAULT); //hash("sha256",$password)
-                    $sql=$bdd->prepare("INSERT INTO users(code, op_code, nom, prenom, adresse, password,tmp_token) VALUES(?,?,?,?,?,?,?)");
-                    $sql->execute(array($code,$op_code,$nom,$prenom,$adresse,$password,$tmp_tk));
+                    $sql=$bdd->prepare("INSERT INTO users(code,code_crypt, op_code, nom, prenom, adresse, password,tmp_token) VALUES(?,?,?,?,?,?,?,?)");
+                    $sql->execute(array($code,hash("sha256",$code),$op_code,$nom,$prenom,$adresse,$password,$tmp_tk));
 
                     $sol=$bdd->prepare("insert into solde(code_user_solde,total,montant_test,montant_commerce) values (?,?,?,?)");
-                    $sol->execute(array($code,0,20000,0));
+                    $sol->execute(array($code,0,100000,0));
 
                     $auth=$bdd->prepare("insert into m_autorisation(user_c, virement) values (?,?)");
                     $auth->execute(array($code,true)); //activé le service virement par défaut

@@ -51,7 +51,7 @@ $table="user_autorisation";
 $field="user_sender";
 $pe=_verify($table,$field,_getUserLogin());
 
-
+$devop="";
 ?>
 
 <style type="text/css">
@@ -84,7 +84,7 @@ $pe=_verify($table,$field,_getUserLogin());
     <div class="header-mobile__bar">
         <div class="container-fluid">
             <div class="header-mobile-inner">
-                <a  class="logo log" href="http://www.gandokintche.com">
+                <a  class="logo log" href="https://www.gandokintche.com">
                     <img src="images/icon/logof.png">
                 </a>
                 <button class="hamburger hamburger--slider" type="button">
@@ -166,9 +166,9 @@ $pe=_verify($table,$field,_getUserLogin());
 <!--                            <a  class="" href="prelevement">Prélèvement de fond</a>-->
 <!--                        </li>-->
 
-                        <li class="<?php if($devop == "role"){ echo "active";} ?>">
-                            <a  class="" href="role"><?php echo ma_tra("Rôles")?></a>
-                        </li>
+<!--                        <li class="--><?php //if($devop == "role"){ echo "active";} ?><!--">-->
+<!--                            <a  class="" href="role">--><?php //echo ma_tra("Rôles")?><!--</a>-->
+<!--                        </li>-->
 
                     </ul>
 
@@ -194,10 +194,10 @@ $pe=_verify($table,$field,_getUserLogin());
                     <a href="settings">
                         <img class="ico" src="images/icon/ico_para.png"/><?php echo ma_tra("Paramètres")?></a>
                 </li>
-
-                <li  class="<?php if($active == "Autorisation"){ echo "active";} ?>" style="">
-                    <a  href="permission">  <i class="far fa-user"></i><?php echo ma_tra("Autorisations")?></a>
-                </li>
+<!---->
+<!--                <li  class="--><?php //if($active == "Autorisation"){ echo "active";} ?><!--" style="">-->
+<!--                    <a  href="permission">  <i class="far fa-user"></i>--><?php //echo ma_tra("Autorisations")?><!--</a>-->
+<!--                </li>-->
 
 
                

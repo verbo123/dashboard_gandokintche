@@ -17,6 +17,9 @@ require 'pages/header.php';?>
             <!-- END HEADER DESKTOP-->
 
             <style type="text/css">
+                .table-data__tool{
+                    margin-top: 0;
+                }
                 @keyframes bounce {
                     0%, 20%, 60%, 100% {
                         -webkit-transform: translateY(0);

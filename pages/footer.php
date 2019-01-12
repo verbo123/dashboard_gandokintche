@@ -32,8 +32,16 @@
 <script src="js/jquery.easy-autocomplete.min.js"></script>
 <script src="build/js/intlTelInput.js"></script>
 <script src="js/cookies.js"></script>
+<script src="js/push.min.js"></script>
+<script src="js/moteur.js"></script>
 
 <script type="text/javascript">
+
+    function rech() {
+        Cookies.set("q",$("#recho").val());
+        window.location.href="search?q="+$("#recho").val();
+    }
+
 
     var explo = /*@cc_on!@*/false || !!document.documentMode;
     if(explo == true){
@@ -81,6 +89,7 @@
             if(i < 3){
                 html +='<a href="javascript:change_notify('+item.id+')"  class="notifi__item"><div class="content"><p>'+item.message+'</p><span class="date">'+conver(item.date)+'</span></div></a>';
             }
+
             i++;
         });
         if(i >= 4){
@@ -102,6 +111,7 @@ setInterval(function () {
                 cont = "<p><?php echo ma_tra("Vous n\'avez aucune notification")?></p>";
             }else {
                 cont="<p><?php echo ma_tra("Vous avez")?> "+data+" <?php echo ma_tra("nouvelle(s) notification(s)")?></p>";
+
                 i=0;
                 $.ajax({
                     url:'pages/control/get_all_notif.php',
@@ -121,6 +131,29 @@ setInterval(function () {
         }
     });
 },1000);
+
+    // $.ajax({
+    //     url:'pages/control/get_all_notif.php',
+    //     success : function (donnees) {
+    //         data=JSON.parse(donnees);
+    //         if (data.length > 0){
+    //             $.each(data, function(index, data)
+    //             {
+    //                 Push.create('GandokinTché notification', {
+    //                     body: data.message,
+    //                     icon: "images/logos.png",
+    //                     timeout: 9000,
+    //                     onClick: function () {
+    //                         window.open('https://dashboard.gandokintche.com/balance', '_self');
+    //                     }
+    //                 });
+    //
+    //             });
+    //         }
+    //
+    //     }
+    // });
+
 
 
         $(".marchand").click(function (e) {

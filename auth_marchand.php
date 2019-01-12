@@ -96,7 +96,7 @@ include 'pages/header.php';?>
 
                                         <div class="form-group">
                                             <label for="street" class=" form-control-label"><?php echo ma_tra("Site web")?></label>
-                                            <input  value="<?php if(getcompte_marchand() != null)  if(getcompte_marchand() != null)  echo getcompte_marchand()->site_web ?>" name="site"  type="url" required="required" id="site" placeholder="http://www.monsite.com" class="form-control">
+                                            <input  value="<?php if(getcompte_marchand() != null)  if(getcompte_marchand() != null)  echo getcompte_marchand()->site_web ?>" name="site"  type="url" required="required" id="site" placeholder="https://www.monsite.com" class="form-control">
                                         </div>
 
                                         <div class="form-group">
