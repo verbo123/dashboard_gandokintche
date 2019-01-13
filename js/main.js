@@ -730,6 +730,29 @@
         }
     });
 
+    function textval1() {
+      var data="";
+        if(Cookies.get("lang")=="en_US")
+        {
+          data="Money transfer";
+        }else{
+          data="Transfert d'argent";
+        }
+
+        return data;
+    }
+
+    function textval2() {
+        var data="";
+        if(Cookies.get("lang")=="en_US")
+        {
+            data="Receiving money";
+        }else{
+            data="Réçeption d'argent";
+        }
+
+        return data;
+    }
     try {
     //Sales chart
     var ctx = document.getElementById("sales-chart");
@@ -742,7 +765,7 @@
           type: 'line',
           defaultFontFamily: 'Poppins',
           datasets: [{
-            label:"Transfert d'argent",
+            label:textval1(),
             data: datavalue,
             backgroundColor: 'transparent',
             borderColor: 'rgba(220,53,69,0.75)',
@@ -752,7 +775,7 @@
             pointBorderColor: 'transparent',
             pointBackgroundColor: 'rgba(220,53,69,0.75)',
           }, {
-            label: "Réçeption d'argent",
+            label: textval2(),
             data: datavalue_c,
             backgroundColor: 'transparent',
             borderColor: 'rgba(40,167,69,0.75)',

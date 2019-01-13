@@ -21,6 +21,7 @@
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 <!-- Main JS-->
+<script src="js/cookies.js"></script>
 <script src="js/main.js"></script>
 <script src="mask/jquery.inputmask.bundle.min.js"></script>
 <script src="js/phone.min.js"></script>
@@ -31,7 +32,6 @@
 <script src="js/bootstrap-select.js"></script>
 <script src="js/jquery.easy-autocomplete.min.js"></script>
 <script src="build/js/intlTelInput.js"></script>
-<script src="js/cookies.js"></script>
 <script src="js/push.min.js"></script>
 <script src="js/moteur.js"></script>
 

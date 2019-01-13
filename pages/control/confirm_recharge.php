@@ -18,8 +18,9 @@ if(isset($_POST["passe"]) && isset($_POST["montant"]) && isset($_POST['user']))
         $des=infos_user_op_data($user)->code;
         $op='VIR'; //virement
         $typ="REC"; //recharge
+        $recharge=$montant-getCommission($montant);
         $sq=$bdd->prepare("insert into transaction(no_trans, operation, typ_virement, date, montant, code_user_sender, code_user_receiver) values (?,?,?,NOW(),?,?,?)");
-        $sq->execute(array($no,$op,$typ,$montant,getUserLogin(),$des));
+        $sq->execute(array($no,$op,$typ,$recharge,getUserLogin(),$des));
         if($sq)
         {
             inserNotif($des,"Vous avez reçu une recharge de ".($montant-getCommission($montant))." FCFA venant de ".

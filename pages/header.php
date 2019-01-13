@@ -13,9 +13,9 @@ if(!isset($_COOKIE["account_code"]))
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="au theme template">
-    <meta name="author" content="Hau Nguyen">
-    <meta name="keywords" content="au theme template">
+    <meta name="description" content="Système de paiement en ligne au Bénin">
+    <meta name="author" content="Verbeck DEGBESSE">
+    <meta name="keywords" content="paiement, en ligne, Bénin, payez, gandokintché">
 
  <link rel="icon" href="images/icon/fvicon.png" type="image/x-icon" />
     <!-- Title Page-->
